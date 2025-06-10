@@ -66,6 +66,12 @@ header {
   }
 }
 
+@media (min-width: 992px) {
+  .portada-inferior .container {
+    max-width: 600px; /* limita el ancho si lo ves demasiado largo */
+  }
+}
+
 /* Tablets */
 @media (min-width: 577px) and (max-width: 768px) {
   .portada-superior h1 {
