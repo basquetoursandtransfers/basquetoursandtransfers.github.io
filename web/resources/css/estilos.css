@@ -168,24 +168,24 @@ header {
     }*/
     /* Ajusta altura para móvil: prueba 75vh, 80vh, 85vh... */
     .bloque-carrusel .swiper {
-        width: 100vw !important;
-        height: 50vh !important; /* ocupa el 80% de la pantalla móvil */
+/*        width: 100vw !important;
+        height: 50vh !important;  ocupa el 80% de la pantalla móvil */
     }
     /* Asegúrate de que las imágenes llenen el slide */
     .bloque-carrusel .swiper-slide img {
-        width: 100%;
+/*        width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: cover;*/
     }
     /* Opcional: ocultar flechas en móvil */
     .swiper-button-next,
     .swiper-button-prev {
-        display: none;
+/*        display: none;*/
     }
     /* Reducir espacio bajo sección tours */
     #tours {
-        padding-top: 2rem;
-        padding-bottom: 4rem;
+/*        padding-top: 2rem;
+        padding-bottom: 4rem;*/
     }
 }
 
