@@ -1,0 +1,31 @@
+
+/*.text-justify {
+    text-align: justify;
+}*/
+
+
+header {
+  background-color: white;
+  z-index: 1030;
+  position: sticky;
+  top: 0;
+}
+
+.bloque-carrusel {
+  margin-top: -200px; /* Hace que se solape hacia arriba */
+  position: relative;
+  z-index: 2;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+
+
+
+
+
+
+
+
