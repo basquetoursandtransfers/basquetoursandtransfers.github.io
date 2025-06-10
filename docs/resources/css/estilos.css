@@ -30,35 +30,24 @@ header {
   box-sizing: border-box;
 }
 
-/* Ajustes responsive para móviles */
+/* Ajustes responsive para móviles (max-width: 576px) */
 @media (max-width: 576px) {
   .portada-superior {
     padding-top: 2.5rem; /* más espacio arriba */
   }
-
-  @media (min-width: 992px) {
-  .portada-inferior .container {
-    padding-left: 2rem; /* Reduce separación izquierda en pantallas grandes */
-   
-  }
-}
-
   .portada-inferior {
-    padding-bottom: 0.5rem; /* MENOS espacio debajo */
-    padding-top: 1.5rem; /* AÑADIDO: más separación desde el texto superior */
+    padding-top: 1.5rem; /* separación desde el contenido superior */
+    padding-bottom: 0.5rem; /* menos espacio debajo */
   }
-
   .portada-superior h1 {
     font-size: 2rem !important;
     line-height: 1.2;
     margin-bottom: 1rem;
   }
-
   .portada-inferior h5 {
     font-size: 1rem !important;
     margin-bottom: 0.5rem;
   }
-
   .portada-inferior h1 {
     font-size: 1.5rem !important;
     line-height: 1.2;
@@ -66,23 +55,25 @@ header {
   }
 }
 
-@media (min-width: 992px) {
-  .portada-inferior .container {
-    max-width: 600px; /* limita el ancho si lo ves demasiado largo */
-  }
-}
 
-/* Tablets */
+
+/* Ajustes responsive para tablets (577px - 768px) */
 @media (min-width: 577px) and (max-width: 768px) {
   .portada-superior h1 {
     font-size: 3rem !important;
   }
-
   .portada-inferior h5 {
     font-size: 1.25rem !important;
   }
-
   .portada-inferior h1 {
     font-size: 2rem !important;
+  }
+}
+
+/* Ajustes para pantallas grandes (min-width: 992px) */
+@media (min-width: 992px) {
+  .portada-inferior .container {
+    padding-left: 2rem;  /* Ajuste de margen izquierdo */
+    max-width: 600px;    /* Limita el ancho, si es necesario */
   }
 }
