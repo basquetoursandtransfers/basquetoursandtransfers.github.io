@@ -31,8 +31,16 @@ header {
     padding-top: 2.5rem; /* más espacio arriba */
   }
 
+  @media (min-width: 992px) {
+  .portada-inferior .container {
+    padding-left: 2rem; /* Reduce separación izquierda en pantallas grandes */
+   
+  }
+}
+
   .portada-inferior {
-    padding-bottom: 2.5rem; /* más espacio abajo */
+    padding-bottom: 0.5rem; /* MENOS espacio debajo */
+    padding-top: 1.5rem; /* AÑADIDO: más separación desde el texto superior */
   }
 
   .portada-superior h1 {
