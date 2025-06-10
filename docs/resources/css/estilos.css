@@ -22,10 +22,39 @@ header {
 }
 
 
+/* Ajustes responsive para el texto de portada */
+@media (max-width: 576px) {
+  .portada-superior h1 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+  .portada-inferior h5 {
+    font-size: 1rem !important;
+  }
+  .portada-inferior h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.2;
+  }
+}
 
+@media (min-width: 577px) and (max-width: 768px) {
+  .portada-superior h1 {
+    font-size: 3rem !important;
+  }
+  .portada-inferior h5 {
+    font-size: 1.25rem !important;
+  }
+  .portada-inferior h1 {
+    font-size: 2rem !important;
+  }
+}
 
-
-
-
-
+/* Siempre centramos y limitamos ancho */
+.portada-superior,
+.portada-inferior {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
 
