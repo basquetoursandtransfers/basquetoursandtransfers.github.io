@@ -16,33 +16,6 @@ header {
   text-align: justify;
 }
 
-/* Ajustes responsive para el texto de portada */
-@media (max-width: 576px) {
-  .portada-superior h1 {
-    font-size: 2rem !important;
-    line-height: 1.2;
-  }
-  .portada-inferior h5 {
-    font-size: 1rem !important;
-  }
-  .portada-inferior h1 {
-    font-size: 1.5rem !important;
-    line-height: 1.2;
-  }
-}
-
-@media (min-width: 577px) and (max-width: 768px) {
-  .portada-superior h1 {
-    font-size: 3rem !important;
-  }
-  .portada-inferior h5 {
-    font-size: 1.25rem !important;
-  }
-  .portada-inferior h1 {
-    font-size: 2rem !important;
-  }
-}
-
 /* Siempre centramos y limitamos ancho */
 .portada-superior,
 .portada-inferior {
@@ -52,4 +25,45 @@ header {
   box-sizing: border-box;
 }
 
+/* Ajustes responsive para móviles */
+@media (max-width: 576px) {
+  .portada-superior {
+    padding-top: 2.5rem; /* más espacio arriba */
+  }
 
+  .portada-inferior {
+    padding-bottom: 2.5rem; /* más espacio abajo */
+  }
+
+  .portada-superior h1 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .portada-inferior h5 {
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .portada-inferior h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.2;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+  .portada-superior h1 {
+    font-size: 3rem !important;
+  }
+
+  .portada-inferior h5 {
+    font-size: 1.25rem !important;
+  }
+
+  .portada-inferior h1 {
+    font-size: 2rem !important;
+  }
+}
