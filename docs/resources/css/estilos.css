@@ -39,7 +39,7 @@ header {
     padding-left: 0 !important;
     padding-right: 0 !important;
     /* Ajuste de espacio superior: puedes modificar el valor */
-    padding-top: 1.5rem !important;
+    padding-top: 0 !important;
   }
   /* El container interno también sin padding lateral */
   .portada-superior .container {
