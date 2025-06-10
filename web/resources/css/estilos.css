@@ -157,38 +157,31 @@ header {
 /* MÓVIL: ancho completo y mayor altura del carrusel */
 /* ============================= */
 @media (max-width: 576px) {
-    /* Rompe el container para usar todo el ancho si quieres full-width */
-/*    .bloque-carrusel {
-        position: relative;
-        left: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }*/
-    /* Ajusta altura para móvil: prueba 75vh, 80vh, 85vh... */
-    .bloque-carrusel .swiper {
-/*        width: 100vw !important;
-        height: 50vh !important;  ocupa el 80% de la pantalla móvil */
-    }
-    /* Asegúrate de que las imágenes llenen el slide */
-    .bloque-carrusel .swiper-slide img {
-/*        width: 100%;
-        height: 100%;
-        object-fit: cover;*/
-    }
-    /* Opcional: ocultar flechas en móvil */
-    .swiper-button-next,
-    .swiper-button-prev {
-/*        display: none;*/
-    }
-    /* Reducir espacio bajo sección tours */
-    #tours {
-/*        padding-top: 2rem;
-        padding-bottom: 4rem;*/
-    }
+  /* Forzar cada slide a 100% de ancho para que solo se vea uno a la vez */
+  .bloque-carrusel .swiper-slide {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+  /* Ajustar tamaño del contenedor Swiper en móvil */
+  .bloque-carrusel .swiper {
+    width: 100% !important;
+    height: 50vh !important; /* puedes probar 55vh o 60vh según convenga */
+  }
+  /* Asegurar que la imagen rellene el slide */
+  .bloque-carrusel .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* Ocultar flechas en móvil si solo quieres swipe */
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+  /* Ajuste de padding alrededor si es necesario */
+  #tours {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
 }
-
-
-
 
