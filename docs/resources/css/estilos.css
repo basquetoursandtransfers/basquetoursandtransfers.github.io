@@ -157,18 +157,18 @@ header {
 /* ============================= */
 @media (max-width: 576px) {
     /* Rompe el container para usar todo el ancho si quieres full-width */
-    .bloque-carrusel {
+/*    .bloque-carrusel {
         position: relative;
         left: 50%;
         margin-left: -50vw;
         margin-right: -50vw;
         padding-left: 0 !important;
         padding-right: 0 !important;
-    }
+    }*/
     /* Ajusta altura para móvil: prueba 75vh, 80vh, 85vh... */
     .bloque-carrusel .swiper {
         width: 100vw !important;
-        height: 80vh !important; /* ocupa el 80% de la pantalla móvil */
+        height: 50vh !important; /* ocupa el 80% de la pantalla móvil */
     }
     /* Asegúrate de que las imágenes llenen el slide */
     .bloque-carrusel .swiper-slide img {
