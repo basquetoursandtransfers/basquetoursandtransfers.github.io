@@ -1,74 +1,154 @@
-
+/* ============================= */
+/* Reglas globales / base       */
+/* ============================= */
 header {
-  background-color: white;
-  z-index: 1030;
-  position: sticky;
-  top: 0;
+    background-color: white;
+    z-index: 1030;
+    position: sticky;
+    top: 0;
 }
 
 .bloque-carrusel {
-  margin-top: -200px; /* Hace que se solape hacia arriba */
-  position: relative;
-  z-index: 2;
+    margin-top: -200px; /* Hace que se solape hacia arriba */
+    position: relative;
+    z-index: 2;
 }
 
 .text-justify {
-  text-align: justify;
+    text-align: justify;
 }
 
-/* Siempre centramos y limitamos ancho */
+/* Reglas básicas de .portada-superior e .portada-inferior */
 .portada-superior,
 .portada-inferior {
-  width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  box-sizing: border-box;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Ajustes responsive para móviles (max-width: 576px) */
+/* ============================= */
+/* Ajustes responsive para móviles (<=576px) */
+/* ============================= */
 @media (max-width: 576px) {
-  .portada-superior {
-    padding-top: 2.5rem; /* más espacio arriba */
-  }
-  .portada-inferior {
-    padding-top: 1.5rem; /* separación desde el contenido superior */
-    padding-bottom: 0.5rem; /* menos espacio debajo */
-  }
-  .portada-superior h1 {
-    font-size: 2rem !important;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-  }
-  .portada-inferior h5 {
-    font-size: 1rem !important;
-    margin-bottom: 0.5rem;
-  }
-  .portada-inferior h1 {
-    font-size: 1.5rem !important;
-    line-height: 1.2;
-    margin-top: 0.5rem;
-  }
+    /* ----- Texto superior ----- */
+    .portada-superior {
+        /* Centrado horizontal */
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        text-align: center !important;
+        /* Espacio vertical mínimo para que quede pegado arriba; 0 elimina todo */
+        padding-top: 0.5rem !important; /* Cambia a 0 si quieres sin ningún espacio */
+        /* Márgenes laterales reducidos para que no quede muy pegado al borde extremo */
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+    .portada-superior .container {
+        /* Anula el pt-4 de Bootstrap en móvil */
+        padding-top: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .portada-superior h1 {
+        /* Tamaño más pequeño en móvil */
+        font-size: 1.75rem !important; /* ejemplo: 1.75rem en móvil */
+        line-height: 1.2;
+        margin-bottom: 0.75rem;
+        white-space: normal;
+        hyphens: auto;
+    }
+
+    /* ----- Texto inferior ----- */
+    .portada-inferior {
+        /* Pegado al fondo de la imagen */
+        left: 0 !important;
+        bottom: 0 !important;
+        /* Espacio interno superior: separación respecto a contenido que quede arriba */
+        padding-top: 0.75rem !important;
+        /* No poner padding-bottom para que quede pegado abajo */
+    }
+    .portada-inferior .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .portada-inferior h5 {
+        font-size: 0.875rem !important; /* ejemplo: 14px aproximadamente */
+        margin-bottom: 0.5rem;
+        white-space: normal;
+        hyphens: auto;
+    }
+    .portada-inferior h1 {
+        font-size: 1.5rem !important; /* ejemplo en móvil */
+        line-height: 1.2;
+        margin-top: 0.5rem;
+        white-space: normal;
+        hyphens: auto;
+    }
 }
 
+/* ============================= */
+/* Ajustes para tablets y desktop (>576px) */
+/* ============================= */
+@media (min-width: 577px) {
+    /* ----- Texto superior ----- */
+    .portada-superior {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        text-align: center !important;
+        /* Espacio vertical mayor en pantallas grandes */
+        padding-top: 2rem;  /* ajusta a tu gusto */
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .portada-superior .container {
+        /* Reponer padding-top (pt-4 equivale a 1.5rem), si lo deseas */
+        padding-top: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .portada-superior h1 {
+        /* Tamaño mayor en pantallas amplias */
+        font-size: 3rem !important;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
 
-
-/* Ajustes responsive para tablets (577px - 768px) */
-@media (min-width: 577px) and (max-width: 768px) {
-  .portada-superior h1 {
-    font-size: 3rem !important;
-  }
-  .portada-inferior h5 {
-    font-size: 1.25rem !important;
-  }
-  .portada-inferior h1 {
-    font-size: 2rem !important;
-  }
+    /* ----- Texto inferior ----- */
+    .portada-inferior {
+        left: 0 !important;
+        bottom: 0 !important;
+        padding-top: 1.5rem; /* mayor separación interna superior en desktop */
+    }
+    .portada-inferior .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .portada-inferior h5 {
+        font-size: 1rem !important; /* ejemplo para desktop */
+        margin-bottom: 0.5rem;
+    }
+    .portada-inferior h1 {
+        font-size: 2rem !important; /* ejemplo para desktop */
+        line-height: 1.2;
+        margin-top: 0.5rem;
+    }
 }
 
-/* Ajustes para pantallas grandes (min-width: 992px) */
+/* ============================= */
+/* Ajustes adicionales para pantallas muy grandes (>=992px) si quieres */
+/* ============================= */
 @media (min-width: 992px) {
-  .portada-inferior .container {
-    padding-left: 2rem;  /* Ajuste de margen izquierdo */
-    max-width: 600px;    /* Limita el ancho, si es necesario */
-  }
+    .portada-superior {
+        padding-top: 2.5rem;
+    }
+    .portada-superior h1 {
+        font-size: 3.5rem !important;
+    }
+    .portada-inferior {
+        padding-top: 2rem;
+    }
+    .portada-inferior h1 {
+        font-size: 2.5rem !important;
+    }
+
 }

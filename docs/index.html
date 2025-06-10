@@ -68,22 +68,16 @@
         <div class="position-relative">
             <img src="resources/img/imagenPrime1a.png" alt="Chófer furgoneta Mercedes" class="img-fluid w-100" />
 
-            <!-- Texto superior -->
-            <!-- Mantenemos start-50 y translate-middle-x para centrar en desktop,
-                 pero en móvil se sobrescribirá vía CSS para left: 0 y sin transform. -->
+            <!-- Texto superior centrado en X y anclado arriba -->
             <div class="position-absolute top-0 start-50 translate-middle-x w-100 text-center text-white portada-superior">
-                <div class="container px-3 pt-4">
+                <div class="container px-3">
                     <h1 class="fw-bold" data-i18n="textoUno"></h1>
                 </div>
             </div>
 
-            <!-- Texto inferior -->
-            <!-- Añadimos start-0 para que en todos los tamaños arranque en left:0.
-                 El padding lateral del container se controla en CSS/Bootstrap utilities. -->
+            <!-- Texto inferior alineado a la izquierda y pegado abajo -->
             <div class="position-absolute bottom-0 start-0 w-100 text-start text-white portada-inferior">
-                <!-- Aquí uso px-0 para eliminar padding horizontal por defecto en container en móvil;
-                     en desktop la media query puede reponer padding si se desea. -->
-                <div class="container px-0 pb-3">
+                <div class="container px-0 pb-0">
                     <h5 class="fw-light fst-italic" data-i18n="textoDos"></h5>
                     <h1 class="fw-bold" data-i18n="carruselSubtitulo"></h1>
                 </div>
@@ -97,24 +91,34 @@
             <div class="container">
                 <h2 class="text-uppercase fw-bold mb-4" data-i18n="tituloServicios"></h2>
                 <div class="row justify-content-center">
+                    <!-- Traslados -->
                     <div class="col-md-4 mb-4">
-                        <img src="resources/img/iconT.png" alt="Icono Traslados" class="mb-3" width="100" height="100" />
-                        <h5 class="fw-bold" data-i18n="tituloTrasladosCorto"></h5>
-                        <p class="text-muted px-3" data-i18n="servicioTraslados"></p>
+                        <a href="#traslados" class="d-block text-decoration-none text-dark" aria-label="Ir a sección Traslados">
+                            <img src="resources/img/iconT.png" alt="Icono Traslados" class="mb-3" width="100" height="100" />
+                            <h5 class="fw-bold" data-i18n="tituloTrasladosCorto"></h5>
+                            <p class="text-muted px-3" data-i18n="servicioTraslados"></p>
+                        </a>
                     </div>
+                    <!-- Tours -->
                     <div class="col-md-4 mb-4">
-                        <img src="resources/img/icono_tours.png" alt="Icono Tours" class="mb-3" width="100" height="100" />
-                        <h5 class="fw-bold" data-i18n="tituloToursCorto"></h5>
-                        <p class="text-muted px-3" data-i18n="servicioTours"></p>
+                        <a href="#tours" class="d-block text-decoration-none text-dark" aria-label="Ir a sección Tours">
+                            <img src="resources/img/icono_tours.png" alt="Icono Tours" class="mb-3" width="100" height="100" />
+                            <h5 class="fw-bold" data-i18n="tituloToursCorto"></h5>
+                            <p class="text-muted px-3" data-i18n="servicioTours"></p>
+                        </a>
                     </div>
+                    <!-- Disposiciones -->
                     <div class="col-md-4 mb-4">
-                        <img src="resources/img/iconDispo.png" alt="Icono Disposiciones" class="mb-3" width="100" height="100" />
-                        <h5 class="fw-bold" data-i18n="tituloDisposicionesCorto"></h5>
-                        <p class="text-muted px-3" data-i18n="servicioDisposiciones"></p>
+                        <a href="#disposiciones" class="d-block text-decoration-none text-dark" aria-label="Ir a sección Disposiciones">
+                            <img src="resources/img/iconDispo.png" alt="Icono Disposiciones" class="mb-3" width="100" height="100" />
+                            <h5 class="fw-bold" data-i18n="tituloDisposicionesCorto"></h5>
+                            <p class="text-muted px-3" data-i18n="servicioDisposiciones"></p>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
+
 
         <!-- Sección carrusel -->
         <section id="tours" class="bg-black text-white" style="padding-top: 3rem; padding-bottom: 16rem;">
