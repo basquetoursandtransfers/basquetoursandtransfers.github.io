@@ -14,6 +14,10 @@ header {
     z-index: 2;
 }
 
+/* ============================= */
+/* paa que el texto se vea mas o menos justificado 
+*/
+/* ============================= */
 /* Ya no se usa en el HTML actual */
  /*
 .text-justify {
@@ -40,6 +44,7 @@ header {
         text-align: justify;
     }
 }
+
 
 
 
