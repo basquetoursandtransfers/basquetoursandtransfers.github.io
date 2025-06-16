@@ -52,7 +52,7 @@ if (container) {
         img.src = `resources/img/${name}`;
         img.className = "img-fluid rounded-3 shadow-sm";
         img.alt = name.split(".")[0];
-
+        img.loading = "lazy"; 
         slide.appendChild(img);
         container.appendChild(slide);
     });
