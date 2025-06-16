@@ -16,7 +16,7 @@ const tourImages = [
     "Seleccion Claustro.jpg",
     "Lourdes.jpg",
     "Trasl1a.jpeg"
-   
+
 ];
 
 // Contenedor donde se insertarán las imágenes
@@ -56,6 +56,7 @@ const swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev"
     },
     breakpoints: {
+        0: {slidesPerView: 1},
         992: {slidesPerView: 3},
         768: {slidesPerView: 2},
         576: {slidesPerView: 1}
