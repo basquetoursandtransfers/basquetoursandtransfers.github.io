@@ -12,29 +12,29 @@ const tourImages = [
     "Seleccion_.jpg",
     "Seleccion_Ysios.jpg",
     "Seleccion_Orio.jpg",
-//    "Flysch.jpg",
-//    "Claustro.jpg",
+    "Flysch.jpg",
+    "Claustro.jpg",
     "Lourdes.jpg",
-//    "Anboto1.jpg",
-//    "Etxebarri.jpg",
-//    "aixerrota.jpg",
-//    "Bodega.jpg",
-//    "Boroa.jpg",
-//    "Carcassone3.jpg",
-//    "Castro.jpg",
-//    "Comida5.jpg",
-//    "Cudillero.jpg",
-//    "faro.jpg",
-//    "dolmen.jpg",
-//    "vides.jpg",
-//    "Getaria.jpg",
-//    "granja.jpg",
-//    "baiona.jpg",
-//    "Horreo.jpg",
-//    "flysch2.jpg",
-//    "encartaciones.jpg",
-//    "catalina.jpg",
-//    "gaviota.jpg",
+    "Anboto1.jpg",
+    "Etxebarri.jpg",
+    "aixerrota.jpg",
+    "Bodega.jpg",
+    "Boroa.jpg",
+    "Carcassone3.jpg",
+    "Castro.jpg",
+    "Comida5.jpg",
+    "Cudillero.jpg",
+    "faro.jpg",
+    "dolmen.jpg",
+    "vides.jpg",
+    "Getaria.jpg",
+    "granja.jpg",
+    "baiona.jpg",
+    "Horreo.jpg",
+    "flysch2.jpg",
+    "encartaciones.jpg",
+    "catalina.jpg",
+    "gaviota.jpg",
     "Trasl1a.jpeg"
    
 ];
@@ -52,8 +52,8 @@ if (container) {
         img.src = `resources/img/${name}`;
         img.className = "img-fluid rounded-3 shadow-sm";
         img.alt = name.split(".")[0];
-        img.loading = "lazy"; 
-//        slide.appendChild(img);
+//        img.loading = "lazy"; 
+        slide.appendChild(img);
         container.appendChild(slide);
     });
 }
