@@ -1,4 +1,3 @@
-
 /* ============================= */
 /* Reglas globales / base       */
 /* ============================= */
@@ -9,16 +8,54 @@ header {
     top: 0;
 }
 
-.bloque-carrusel {
-    margin-top: -200px; /* Hace que se solape hacia arriba */
-    position: relative;
-    z-index: 2;
-}
 
+/* ============================= */
+/* paa que el texto se vea mas o menos justificado 
+*/
+/* ============================= */
+/* Ya no se usa en el HTML actual */
+ /*
 .text-justify {
     text-align: justify;
 }
+*/
+/* ============================= */
+/* Ajuste definitivo: compactar bloques beige */
+/* ============================= */
+.text-above-image .container,
+.text-below-image .container {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
 
+.text-above-image h1,
+.text-below-image h1,
+.text-below-image h5 {
+    margin-top: 0 !important;
+    margin-bottom: 0.25rem !important;
+    line-height: 1.2 !important;
+}
+
+.bloque-texto-ajustado {
+    text-align: left;
+    line-height: 1.7;
+    white-space: normal;
+    hyphens: auto;
+    word-break: break-word;
+    font-size: 1rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* En pantallas grandes: justificar automáticamente */
+@media (min-width: 768px) {
+    .bloque-texto-ajustado {
+        text-align: justify;
+    }
+}
 
 .text-above-image,
 .text-below-image {
@@ -26,9 +63,6 @@ header {
     background-color: #f5f5dc; /* beige; ajusta tono si quieres */
     box-sizing: border-box;
 }
-
-/* Si se desea margen entre secciones, puede manejarse con utilidades de Bootstrap en el HTML:
-   por ejemplo: <div class="text-above-image text-center text-white py-3 py-md-5">... */
 
 /* ============================= */
 /* Ajustes responsivos para tamaños de texto (opcional) */
@@ -38,12 +72,14 @@ header {
     .text-below-image h1 {
         font-size: 1.75rem !important;
         line-height: 1.2;
+        /* Esta regla queda sobrescrita abajo */
         margin-bottom: 0.75rem;
         white-space: normal;
         hyphens: auto;
     }
     .text-below-image h5 {
         font-size: 0.875rem !important;
+        /* Esta también será sobrescrita abajo */
         margin-bottom: 0.5rem;
         white-space: normal;
         hyphens: auto;
@@ -70,35 +106,54 @@ header {
     }
 }
 
+
+.bloque-carrusel {
+    margin-top: -200px; /* Hace que se solape hacia arriba */
+    position: relative;
+    z-index: 2;
+}
 /* ============================= */
-/* Ajustes adicionales del carrusel u otros permanecen igual */
+/* Ajustes adicionales del carrusel */
 /* ============================= */
 @media (max-width: 767px) {
-    /* Forzar cada slide a 100% de ancho para que solo se vea uno a la vez */
+    .bloque-carrusel {
+        margin-top: -200px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .bloque-carrusel .swiper {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .bloque-carrusel .swiper-wrapper {
+        display: flex;
+    }
+
     .bloque-carrusel .swiper-slide {
         flex: 0 0 100% !important;
         max-width: 100% !important;
-    }
-    /* Ajustar tamaño del contenedor Swiper en móvil */
-    .bloque-carrusel .swiper {
         width: 100% !important;
-        height: 50vh !important; /* puedes probar 55vh o 60vh según convenga */
     }
-    /* Asegurar que la imagen rellene el slide */
+
     .bloque-carrusel .swiper-slide img {
-        width: 100%;
-        height: 100%;
+        width: 100% !important;
+        height: auto !important;
         object-fit: cover;
+        display: block;
     }
-    /* Ocultar flechas en móvil si solo quieres swipe */
+
     .swiper-button-next,
     .swiper-button-prev {
         display: none;
     }
-    /* Ajuste de padding alrededor si es necesario */
+
     #tours {
         padding-top: 2rem;
         padding-bottom: 4rem;
     }
 }
+
+
 
