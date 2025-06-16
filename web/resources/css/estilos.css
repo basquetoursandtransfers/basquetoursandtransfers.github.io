@@ -60,7 +60,7 @@ header {
 .text-above-image,
 .text-below-image {
     width: 100%;
-    background-color: #f5f5dc; /* beige; ajusta tono si quieres */
+    background-color: #f5b041; /* beige; ajusta tono si quieres */
     box-sizing: border-box;
 }
 
