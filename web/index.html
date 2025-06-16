@@ -15,34 +15,32 @@
     </head>
     <body>
         <header class="sticky-top bg-white" style="z-index:1030;">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container">
+            <nav class="navbar navbar-light bg-light">
+                <div class="container d-flex justify-content-between align-items-center">
+
                     <!-- LOGO -->
                     <a class="navbar-brand" href="#">
                         <img src="resources/img/logoEmp.png" alt="Logo" style="max-height: 70px;" class="img-fluid" />
                     </a>
 
-                    <!-- Menú principal -->
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- Selector de idioma alineado a la derecha -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="idiomaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="resources/img/banderaEsp.jpg" alt="Español" style="height: 20px;" />
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="idiomaDropdown">
+                                <li><a class="dropdown-item lang-selector" href="#" data-lang="es"><img src="resources/img/banderaEsp.jpg" style="height: 20px;" /> Español</a></li>
+                                <li><a class="dropdown-item lang-selector" href="#" data-lang="en"><img src="resources/img/banderaBrit.jpg" style="height: 20px;" /> English</a></li>
+                                <li><a class="dropdown-item lang-selector" href="#" data-lang="fr"><img src="resources/img/banderaFrancia.jpg" style="height: 20px;" /> Français</a></li>
+                                <li><a class="dropdown-item lang-selector" href="#" data-lang="ru"><img src="resources/img/banderaRusa.jpg" style="height: 20px;" /> Русский</a></li>
+                                <li><a class="dropdown-item lang-selector" href="#" data-lang="ja"><img src="resources/img/banderaJap.jpg" style="height: 20px;" /> 日本語</a></li>
+                                <li><a class="dropdown-item lang-selector" href="#" data-lang="ar"><img src="resources/img/banderaArabiaSaudi.jpg" style="height: 20px;" /> العربية</a></li>
+                                <li><a class="dropdown-item lang-selector" href="#" data-lang="zh"><img src="resources/img/banderaChina.jpg" style="height: 20px;" /> 中文</a></li>
+                            </ul>
+                        </li>
+                    </ul>
 
-                            <!-- Selector de idioma -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="idiomaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="resources/img/banderaEsp.jpg" alt="Español" style="height: 20px;" />
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="idiomaDropdown">
-                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="es"><img src="resources/img/banderaEsp.jpg" style="height: 20px;" /> Español</a></li>
-                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="en"><img src="resources/img/banderaBrit.jpg" style="height: 20px;" /> English</a></li>
-                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="fr"><img src="resources/img/banderaFrancia.jpg" style="height: 20px;" /> Français</a></li>
-                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="ru"><img src="resources/img/banderaRusa.jpg" style="height: 20px;" /> Русский</a></li>
-                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="ja"><img src="resources/img/banderaJap.jpg" style="height: 20px;" /> 日本語</a></li>
-                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="ar"><img src="resources/img/banderaArabiaSaudi.jpg" style="height: 20px;" />العربية</a></li>
-                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="zh"><img src="resources/img/banderaChina.jpg" style="height: 20px;" /> 中文</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </nav>
         </header>
