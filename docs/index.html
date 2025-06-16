@@ -31,17 +31,6 @@
                     <!-- Menú principal -->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link active" href="#" data-i18n="menuInicio">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#quienes" data-i18n="menuNosotros">Nosotros</a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-i18n="menuServicios">Servicios</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#tours" data-i18n="menuTours">Tours</a></li>
-                                    <li><a class="dropdown-item" href="#traslados" data-i18n="menuTraslados">Traslados</a></li>
-                                    <li><a class="dropdown-item" href="#disposiciones" data-i18n="menuDisposiciones">Disposiciones</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="#contacto" data-i18n="menuContacto">Contacto</a></li>
 
                             <!-- Selector de idioma -->
                             <li class="nav-item dropdown">
@@ -65,25 +54,25 @@
         </header>
 
         <!-- IMAGE -->
-        <div class="position-relative">
-            <img src="resources/img/imagenPrime1a.png" alt="Chófer furgoneta Mercedes" class="img-fluid w-100" />
-
-            <!-- Texto superior centrado en X y anclado arriba -->
-            <div class="position-absolute top-0 start-50 translate-middle-x w-100 text-center text-white portada-superior">
-                <div class="container px-3">
-                    <h1 class="fw-bold" data-i18n="textoUno"></h1>
-                </div>
-            </div>
-
-            <!-- Texto inferior alineado a la izquierda y pegado abajo -->
-            <div class="position-absolute bottom-0 start-0 w-100 text-start text-white portada-inferior">
-                <div class="container px-0 pb-0">
-                    <h5 class="fw-light fst-italic" data-i18n="textoDos"></h5>
-                    <h1 class="fw-bold" data-i18n="carruselSubtitulo"></h1>
-                </div>
+        <!-- Texto superior (encima de la imagen) -->
+        <div class="text-above-image text-center text-black">
+            <div class="container py-4">
+                <h1 class="fw-bold" data-i18n="textoUno"></h1>
             </div>
         </div>
 
+        <!-- Imagen -->
+        <div class="image-wrapper">
+            <img src="resources/img/imagenPrime1a.png" alt="Chófer furgoneta Mercedes" class="img-fluid w-100" />
+        </div>
+
+        <!-- Texto inferior (debajo de la imagen), ahora centrado -->
+        <div class="text-below-image text-center text-black">
+            <div class="container py-4">
+                <h5 class="fw-light fst-italic" data-i18n="textoDos"></h5>
+                <h1 class="fw-bold" data-i18n="carruselSubtitulo"></h1>
+            </div>
+        </div>
 
 
         <!-- SERVICIOS -->
@@ -125,7 +114,7 @@
             <div class="container">
                 <h2 class="text-center fw-bold text-uppercase mb-4" data-i18n="tituloTours"></h2>
                 <div class="mx-auto px-4 px-md-5" style="max-width: 1140px;">
-                    <p class="text-white text-justify" style="font-family: 'Segoe UI', 'Open Sans', sans-serif;" data-i18n="textoIntro"></p>
+                    <p class="text-white" style="font-family: 'Segoe UI', 'Open Sans', sans-serif;" data-i18n="textoIntro"></p>
                 </div>
             </div>
         </section>
@@ -141,6 +130,8 @@
                 <div class="swiper-pagination"></div>
             </div>
         </div>
+
+
 
         <hr style="border: none; border-top: 4px solid #999; width: 100%; margin-top: 4rem; margin-bottom: 0;" />
 
@@ -194,7 +185,7 @@
                     <!-- Texto -->
                     <div class="col-md-6">
                         <h3 class="fw-bold text-center mb-3" data-i18n="tituloTraslados"></h3>
-                        <p class="lead text-justify" data-i18n="textoTraslados"></p>
+                        <p class="lead" data-i18n="textoTraslados"></p>
                     </div>
 
                 </div>
@@ -290,7 +281,7 @@
                     <!-- Texto -->
                     <div class="col-md-6">
                         <h3 class="fw-bold text-center mb-3" data-i18n="tituloQuienes"></h3>
-                        <p class="lead text-justify" data-i18n="textoQuienes_1"></p>
+                        <p class="lead" data-i18n="textoQuienes_1"></p>
                     </div>
 
                 </div>
