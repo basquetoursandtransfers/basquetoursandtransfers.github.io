@@ -34,7 +34,7 @@ const tourImages = [
     "flysch2.jpg",
     "encartaciones.jpg",
     "catalina.jpg",
-    "gaviotag.jpg",
+    "gaviota.jpg",
     "Trasl1a.jpeg"
    
 ];
