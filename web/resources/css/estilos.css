@@ -157,10 +157,20 @@ header {
 .verde-oscuro {
     color: #117a65 !important;
 }
-.ajuste-natural {
-    display: inline-block;
-    text-align: initial;
+/* Por defecto: móvil */
+.responsive-align {
+  text-align: left;
+  display: inline-block;
 }
+
+/* Pantallas medianas y grandes: centrar */
+@media (min-width: 768px) {
+  .responsive-align {
+    display: block;
+    text-align: center;
+  }
+}
+
 
 
 
