@@ -157,19 +157,33 @@ header {
 .verde-oscuro {
     color: #117a65 !important;
 }
-/* Por defecto: móvil */
+
+/* Estilo general */
 .responsive-align {
-  text-align: left;
   display: inline-block;
+  text-align: left;
+  font-weight: bold;
+  color: #117a65;
+  white-space: nowrap; /* Fuerza una sola línea */
 }
 
-/* Pantallas medianas y grandes: centrar */
+/* Centrado en pantallas grandes */
 @media (min-width: 768px) {
   .responsive-align {
     display: block;
     text-align: center;
+    white-space: normal; /* Permite saltos de línea si es necesario */
   }
 }
+
+/* Tamaño y margen para móviles */
+@media (max-width: 576px) {
+  .responsive-align {
+    font-size: 0.9rem; /* Ajusta si aún es ancho */
+    margin-left: 0.75rem;
+  }
+}
+
 
 
 
