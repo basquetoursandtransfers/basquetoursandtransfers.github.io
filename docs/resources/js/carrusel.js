@@ -2,19 +2,40 @@
 // Lista de imágenes para los tours
 const tourImages = [
     "CostaB.jpeg",
+"CostaB.jpeg",
     "Seleccion Cadavedo ermita Regalina.jpg",
     "CostaV.jpeg",
     "Seleccion_Marques_Riscal.jpg",
     "JSB1.jpg",
     "Imagen2a1.jpeg",
     "ImgEmbarc.jpeg",
-    "JSB8669.jpg",
+    "jsb_panoramica.jpeg",
     "Seleccion_.jpg",
     "Seleccion_Ysios.jpg",
     "Seleccion_Orio.jpg",
-    "Seleccion Flysch Zumaia.jpg",
+    "Flysch.jpg",
     "Seleccion Claustro.jpg",
     "Lourdes.jpg",
+    "Anboto1.jpg",
+    "Asador Etxebarri.jpg",
+    "Bilbao molino aixerrota.jpg",
+    "Bodega.jpg",
+    "Boroa Jatetxea.jpg",
+    "Carcassone3.jpg",
+    "Castro Urdiales.jpg",
+    "Comida5.jpg",
+    "Cudillero.jpg",
+    "Editada Costa Vasca3.jpg",
+    "Editada Dolmen Rioja.jpg",
+    "Getaria panorámica vides.jpg",
+    "Getaria.jpg",
+    "La Granja_Segovia.jpg",
+    "Seleccion Baiona.jpg",
+    "Horreo.jpg",
+    "Seleccion Zumaia flysch 2.jpg",
+    "Seleccion Panorámica encartaciones.jpg",
+    "Seleccion Mundaka ermita Santa Catalina.jpg",
+    "Seleccion Gaviota Bilbao.jpg",
     "Trasl1a.jpeg"
 
 ];
@@ -38,7 +59,7 @@ if (container) {
     });
 }
 
-// Inicializar el carrusel Swiper
+// Inicializar el carrusel Swiper, esto es sin calcular el tiempo según pantalla
 //const swiper = new Swiper(".mySwiper", {
 //    slidesPerView: 3,
 //    spaceBetween: 30,
@@ -61,10 +82,6 @@ if (container) {
 //        768: {slidesPerView: 2, spaceBetween: 20},
 //        992: {slidesPerView: 3, spaceBetween: 30}
 //    }
-
-
-
-
 
 
 
