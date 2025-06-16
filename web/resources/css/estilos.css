@@ -157,6 +157,10 @@ header {
 .verde-oscuro {
     color: #117a65 !important;
 }
+.ajuste-natural {
+    display: inline-block;
+    text-align: initial;
+}
 
 
 
