@@ -28,8 +28,10 @@ header {
 /* LOGO */
 .navbar-brand {
     margin: 0;
-    padding: 0;
+    padding: 0 !important;
+    padding-left: 0 !important; /* Reafirma, aunque algo redundante */
 }
+
 .navbar-brand img {
     max-height: 80px; /* ajusta el tamaño del logo aquí */
     margin: 0;
