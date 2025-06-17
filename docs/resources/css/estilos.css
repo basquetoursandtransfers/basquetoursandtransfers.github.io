@@ -77,6 +77,12 @@ header {
     flex-wrap: nowrap;
     width: 100%;
 }
+@media (max-width: 576px) {
+    .text-center h5 {
+        font-size: clamp(0.65rem, 4vw, 0.85rem); /* se ajusta automáticamente */
+    }
+}
+
 
 /* ==========================///////////////////////////////////////== */
 /* paa que el texto se vea mas o menos justificado 
