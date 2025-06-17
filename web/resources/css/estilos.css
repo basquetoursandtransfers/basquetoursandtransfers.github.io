@@ -1,6 +1,13 @@
 /* ============================= */
 /* Reglas globales / base       */
 /* ============================= */
+/*header {
+    background-color: white;
+    z-index: 1030;
+    position: sticky;
+    top: 0;
+}*/
+/* HEADER fijo y con fondo blanco */
 header {
     background-color: white;
     z-index: 1030;
@@ -8,15 +15,62 @@ header {
     top: 0;
 }
 
+/* NAVBAR compacta */
+.navbar {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: 60px;
+}
+
+/* LOGO */
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+}
+.navbar-brand img {
+    max-height: 80px; /* Ajusta según lo que necesites */
+    margin: 0;
+    padding: 0;
+}
+
+/* TEXTO CENTRAL */
+.text-center h5 {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* BANDERA DE IDIOMA */
+.navbar .nav-link img {
+    height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ajustes de estructura */
+.navbar-nav {
+    margin: 0;
+}
+.nav-item.dropdown {
+    display: flex;
+    align-items: center;
+}
+
+
 
 /* ============================= */
 /* paa que el texto se vea mas o menos justificado 
 */
 /* ============================= */
 /* Ya no se usa en el HTML actual */
- /*
+/*
 .text-justify {
-    text-align: justify;
+   text-align: justify;
 }
 */
 /* ============================= */
@@ -160,28 +214,28 @@ header {
 
 /* Estilo general */
 .responsive-align {
-  display: inline-block;
-  text-align: left;
-  font-weight: bold;
-  color: #117a65;
-  white-space: nowrap; /* Fuerza una sola línea */
+    display: inline-block;
+    text-align: left;
+    font-weight: bold;
+    color: #117a65;
+    white-space: nowrap; /* Fuerza una sola línea */
 }
 
 /* Centrado en pantallas grandes */
 @media (min-width: 768px) {
-  .responsive-align {
-    display: block;
-    text-align: center;
-    white-space: normal; /* Permite saltos de línea si es necesario */
-  }
+    .responsive-align {
+        display: block;
+        text-align: center;
+        white-space: normal; /* Permite saltos de línea si es necesario */
+    }
 }
 
 /* Tamaño y margen para móviles */
 @media (max-width: 576px) {
-  .responsive-align {
-    font-size: 0.9rem; /* Ajusta si aún es ancho */
-    margin-left: 0.75rem;
-  }
+    .responsive-align {
+        font-size: 0.9rem; /* Ajusta si aún es ancho */
+        margin-left: 0.75rem;
+    }
 }
 
 

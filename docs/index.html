@@ -14,44 +14,52 @@
         <link rel="stylesheet" href="resources/css/estilos.css" />
     </head>
     <body>
-        <header class="sticky-top bg-white" style="z-index:1030;">
-            <nav class="navbar navbar-light bg-light">
+         <header>
+            <nav class="navbar navbar-light bg-light py-0">
                 <div class="container d-flex justify-content-between align-items-center">
 
-                    <!-- LOGO -->
-                    <a class="navbar-brand" href="#">
-                        <img src="resources/img/logo_ToursT.png" alt="Logo" style="max-height: 70px;" class="img-fluid" />
-                    </a>
+                    <!-- Columna 1: Logo -->
+                    <div class="d-flex align-items-center" style="flex: 1;">
+                        <a class="navbar-brand m-0" href="#">
+                            <img src="resources/img/logo_ToursT.png" alt="Logo" class="img-fluid" />
+                        </a>
+                    </div>
 
-                    <!-- Selector de idioma alineado a la derecha -->
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="idiomaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="resources/img/banderaEsp.jpg" alt="Español" style="height: 20px;" />
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="idiomaDropdown">
-                                <li><a class="dropdown-item lang-selector" href="#" data-lang="es"><img src="resources/img/banderaEsp.jpg" style="height: 20px;" /> Español</a></li>
-                                <li><a class="dropdown-item lang-selector" href="#" data-lang="en"><img src="resources/img/banderaBrit.jpg" style="height: 20px;" /> English</a></li>
-                                <li><a class="dropdown-item lang-selector" href="#" data-lang="fr"><img src="resources/img/banderaFrancia.jpg" style="height: 20px;" /> Français</a></li>
-                                <li><a class="dropdown-item lang-selector" href="#" data-lang="ru"><img src="resources/img/banderaRusa.jpg" style="height: 20px;" /> Русский</a></li>
-                                <li><a class="dropdown-item lang-selector" href="#" data-lang="ja"><img src="resources/img/banderaJap.jpg" style="height: 20px;" /> 日本語</a></li>
-                                <li><a class="dropdown-item lang-selector" href="#" data-lang="ar"><img src="resources/img/banderaArabiaSaudi.jpg" style="height: 20px;" /> العربية</a></li>
-                                <li><a class="dropdown-item lang-selector" href="#" data-lang="zh"><img src="resources/img/banderaChina.jpg" style="height: 20px;" /> 中文</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <!-- Columna 2: Texto centrado -->
+                    <div class="text-center" style="flex: 2;">
+                        <h5 class="fw-bold verde-oscuro responsive-align m-0" data-i18n="textoDos"></h5>
+                    </div>
+
+                    <!-- Columna 3: Selector de idioma -->
+                    <div class="d-flex justify-content-end" style="flex: 1;">
+                        <ul class="navbar-nav flex-row">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="idiomaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="resources/img/banderaEsp.jpg" alt="Español" />
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="idiomaDropdown">
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="es"><img src="resources/img/banderaEsp.jpg" /> Español</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="en"><img src="resources/img/banderaBrit.jpg" /> English</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="fr"><img src="resources/img/banderaFrancia.jpg" /> Français</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="ru"><img src="resources/img/banderaRusa.jpg" /> Русский</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="ja"><img src="resources/img/banderaJap.jpg" /> 日本語</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="ar"><img src="resources/img/banderaArabiaSaudi.jpg" /> العربية</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="zh"><img src="resources/img/banderaChina.jpg" /> 中文</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
 
                 </div>
             </nav>
         </header>
-
 
         <!-- IMAGE -->
         <!-- Texto superior (encima de la imagen) -->
         <div class="text-above-image text-center text-black">
             <div class="container py-4">
                 <h1 class="fw-bold" data-i18n="textoUno"></h1>
-               <h5 class="fw-bold verde-oscuro responsive-align" data-i18n="textoDos"></h5>
+                <h5 class="fw-bold verde-oscuro responsive-align" data-i18n="textoDos"></h5>
             </div>
         </div>
 
@@ -63,7 +71,7 @@
         <!-- Texto inferior (debajo de la imagen), ahora centrado -->
         <div class="text-below-image text-center text-black">
             <div class="container py-4">
-                
+
                 <h1 class="fw-bold fst-italic" data-i18n="carruselSubtitulo"></h1>
             </div>
         </div>
