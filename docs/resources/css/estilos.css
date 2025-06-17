@@ -7,6 +7,7 @@
     position: sticky;
     top: 0;
 }*/
+
 /* HEADER fijo y con fondo blanco */
 header {
     background-color: white;
@@ -28,7 +29,7 @@ header {
     padding: 0;
 }
 .navbar-brand img {
-    max-height: 80px; /* Ajusta según lo que necesites */
+    max-height: 80px; /* Ajusta aquí el tamaño del logo */
     margin: 0;
     padding: 0;
 }
@@ -60,6 +61,49 @@ header {
     display: flex;
     align-items: center;
 }
+
+/* =========================== */
+/* RESPONSIVE:nav Ajustes móviles */
+/* =========================== */
+@media (max-width: 575.98px) {
+    .navbar .container {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center;
+    }
+
+    .navbar-brand img {
+        max-height: 70px; /* un poco más pequeño para móvil si hace falta */
+        margin-bottom: 0.5rem;
+    }
+
+    .text-center {
+        width: 100%;
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .text-center h5 {
+        font-size: 0.95rem;
+        margin: 0.3rem 0;
+        line-height: 1.3;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    .nav-item.dropdown {
+        justify-content: center;
+    }
+
+    header, .navbar, .container {
+        width: 100%;
+    }
+}
+
 
 
 
