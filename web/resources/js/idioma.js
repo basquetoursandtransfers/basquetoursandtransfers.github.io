@@ -21,16 +21,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function cargarIdioma(codigoIdioma) {
     fetch(`resources/i18n/${codigoIdioma}.json`)
-        .then(response => {
-            if (!response.ok) throw new Error(`No se encontró el archivo: ${codigoIdioma}.json`);
-            return response.json();
-        })
-        .then(textos => {
-            traducirPagina(textos);
-        })
-        .catch(error => {
-            console.error("Error al cargar archivo de idioma:", error);
-        });
+            .then(response => {
+                if (!response.ok)
+                    throw new Error(`No se encontró el archivo: ${codigoIdioma}.json`);
+                return response.json();
+            })
+            .then(textos => {
+                traducirPagina(textos);
+            })
+            .catch(error => {
+                console.error("Error al cargar archivo de idioma:", error);
+            });
 }
 
 function traducirPagina(textos) {
@@ -58,7 +59,8 @@ function actualizarBandera(codigoIdioma) {
         zh: "resources/img/banderaChina.jpg"
     };
 
-    const imgBandera = document.querySelector("#idiomaDropdown img");
+//  const imgBandera = document.querySelector("#idiomaDropdown img");
+    const imgBandera = document.getElementById("banderaActual");
     if (imgBandera && bandera[codigoIdioma]) {
         imgBandera.src = bandera[codigoIdioma];
         imgBandera.alt = codigoIdioma;

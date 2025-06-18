@@ -33,21 +33,20 @@
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="idiomaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="resources/img/banderaEsp.jpg" alt="Español" />
+                                    <img id="banderaActual" src="" alt="Idioma" class="img-bandera" />
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="idiomaDropdown">
-                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="es"><img src="resources/img/banderaEsp.jpg" /> Español</a></li>
-                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="en"><img src="resources/img/banderaBrit.jpg" /> English</a></li>
-                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="fr"><img src="resources/img/banderaFrancia.jpg" /> Français</a></li>
-                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="ru"><img src="resources/img/banderaRusa.jpg" /> Русский</a></li>
-                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="ja"><img src="resources/img/banderaJap.jpg" /> 日本語</a></li>
-                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="ar"><img src="resources/img/banderaArabiaSaudi.jpg" /> العربية</a></li>
-                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="zh"><img src="resources/img/banderaChina.jpg" /> 中文</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="es"><img src="resources/img/banderaEsp.jpg" class="img-bandera" /> Español</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="en"><img src="resources/img/banderaBrit.jpg" class="img-bandera" /> English</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="fr"><img src="resources/img/banderaFrancia.jpg" class="img-bandera"  /> Français</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="ru"><img src="resources/img/banderaRusa.jpg" class="img-bandera" /> Русский</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="ja"><img src="resources/img/banderaJap.jpg" class="img-bandera" /> 日本語</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="ar"><img src="resources/img/banderaArabiaSaudi.jpg" class="img-bandera" /> العربية</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="zh"><img src="resources/img/banderaChina.jpg" class="img-bandera" /> 中文</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    
                 </div>
             </nav>
         </header>
@@ -58,13 +57,16 @@
                 <h1 class="fw-bold" data-i18n="textoUno"></h1>
             </div>
         </div>
+
         <!-- Imagen -->
         <div class="image-wrapper">
             <img src="resources/img/imagenPrime1a.png" alt="Chófer furgoneta Mercedes" class="img-fluid w-100" />
         </div>
+
         <!-- Texto inferior (debajo de la imagen), ahora centrado -->
         <div class="text-below-image text-center text-black">
             <div class="container py-4">
+
                 <h1 class="fw-bold fst-italic" data-i18n="carruselSubtitulo"></h1>
             </div>
         </div>
@@ -79,7 +81,8 @@
                         <a href="#traslados" class="d-block text-decoration-none text-dark" aria-label="Ir a sección Traslados">
                             <img src="resources/img/iconT.png" alt="Icono Traslados" class="mb-3" width="100" height="100" />
                             <h5 class="fw-bold" data-i18n="tituloTrasladosCorto"></h5>
-                            <p class="text-muted px-3" data-i18n="servicioTraslados"></p>
+                            <p class="text-muted px-3 text-center" style="word-break: break-word; white-space: normal;" data-i18n="servicioTraslados"></p>
+
                         </a>
                     </div>
                     <!-- Tours -->
@@ -87,7 +90,7 @@
                         <a href="#tours" class="d-block text-decoration-none text-dark" aria-label="Ir a sección Tours">
                             <img src="resources/img/icono_tours.png" alt="Icono Tours" class="mb-3" width="100" height="100" />
                             <h5 class="fw-bold" data-i18n="tituloToursCorto"></h5>
-                            <p class="text-muted px-3" data-i18n="servicioTours"></p>
+                            <p class="text-muted px-3 text-center" style="word-break: break-word; white-space: normal;" data-i18n="servicioTours"></p>
                         </a>
                     </div>
                     <!-- Disposiciones -->
@@ -95,7 +98,7 @@
                         <a href="#disposiciones" class="d-block text-decoration-none text-dark" aria-label="Ir a sección Disposiciones">
                             <img src="resources/img/iconDispo.png" alt="Icono Disposiciones" class="mb-3" width="100" height="100" />
                             <h5 class="fw-bold" data-i18n="tituloDisposicionesCorto"></h5>
-                            <p class="text-muted px-3" data-i18n="servicioDisposiciones"></p>
+                            <p class="text-muted px-3 text-center" style="word-break: break-word; white-space: normal;" data-i18n="servicioDisposiciones"></p>                          
                         </a>
                     </div>
                 </div>
@@ -103,7 +106,7 @@
         </section>
 
         <!-- Sección carrusel -->
-        <section id="tours" class="bg-dark text-white" style="padding-top: 3rem; padding-bottom: 16rem;">
+        <section id="tours" class="bg-dark  text-white" style="padding-top: 3rem; padding-bottom: 16rem;">
             <div class="container">
                 <h2 class="text-center fw-bold text-uppercase mb-4" data-i18n="tituloTours"></h2>
                 <div class="mx-auto px-4 px-md-5" style="max-width: 1140px;">
@@ -111,6 +114,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Carrusel de tours -->
         <div class="container bloque-carrusel">
             <div class="swiper mySwiper">
@@ -136,10 +140,12 @@
                     </div>
                 </div>
                 <div class="row align-items-center">
+
                     <!-- Imagen -->
                     <div class="col-md-6 mb-4 mb-md-0">
                         <img class="img-fluid rounded shadow-sm" src="resources/img/coche1a.jpg" alt="Vehículo disposición" />
                     </div>
+
                     <!-- Ventajas -->
                     <div class="col-md-6">
                         <h4 class="mb-4 text-primary" data-i18n="subtituloVentajas"></h4>
@@ -158,7 +164,6 @@
         <section id="traslados" class="bg-dark text-white py-5 position-relative" style="z-index: 1;">
             <div class="container">
                 <div class="row align-items-center">
-
                     <!-- Imagen -->
                     <div class="col-md-6 mb-4 mb-md-0">
                         <img src="resources/img/trasladosImagen.png" 
@@ -179,6 +184,7 @@
             <div class="container">
                 <h2 class="fw-bold text-uppercase mb-4" data-i18n="tituloContactanos"></h2>
                 <p class="mb-5 lead" data-i18n="textoIntroContactanos"></p>
+
                 <!-- Contenido del formulario o información de contacto -->
                 <div id="bloqueContacto">
                     <div class="row justify-content-center text-center">
@@ -221,6 +227,7 @@
         <section id="quienes" class="bg-dark text-white py-5 position-relative" style="z-index: 1;">
             <div class="container">
                 <div class="row align-items-center">
+
                     <!-- Imagen -->
                     <div class="col-md-6 mb-4 mb-md-0">
                         <img src="resources/img/imgQuienes.png" 
@@ -300,6 +307,5 @@
                 }
             });
         </script>
-
     </body>
 </html>
