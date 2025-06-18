@@ -53,7 +53,6 @@
                 </div>
             </nav>
         </header>
-
         <!-- IMAGE -->
         <!-- Texto superior (encima de la imagen) -->
         <div class="text-above-image text-center text-black">
@@ -70,6 +69,7 @@
         <!-- Texto inferior (debajo de la imagen), ahora centrado -->
         <div class="text-below-image text-center text-black">
             <div class="container py-4">
+
                 <h1 class="fw-bold fst-italic" data-i18n="carruselSubtitulo"></h1>
             </div>
         </div>
@@ -130,8 +130,6 @@
                 <div class="swiper-pagination"></div>
             </div>
         </div>
-
-
 
         <hr style="border: none; border-top: 4px solid #999; width: 100%; margin-top: 4rem; margin-bottom: 0;" />
 
@@ -200,9 +198,10 @@
                 <!-- Contenido del formulario o información de contacto -->
                 <div id="bloqueContacto">
                     <div class="row justify-content-center text-center">
+
                         <!-- Correo -->
                         <div class="col-12 col-sm-6 col-md-4 mb-3">
-                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=basquetoursandtransfers@gmail.com" target="_blank" class="text-dark text-decoration-none">
+                            <a id="correoLink" class="text-dark text-decoration-none">
                                 <div class="p-2 border rounded shadow-sm d-flex flex-column align-items-center h-100">
                                     <img src="resources/img/gmail_icono.png" alt="Correo" width="30" class="mb-2" />
                                     <p class="mb-0" style="font-size: 0.95rem; font-weight: 500;">basquetoursandtransfers@gmail.com</p>
@@ -268,25 +267,27 @@
 
                     <!-- CENTRO: Iconos -->
                     <div class="d-flex flex-wrap justify-content-center gap-3 flex-grow-1">
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=basquetoursandtransfers@gmail.com" target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="Correo">
+                        <!-- correo -->
+                        <a id="iconoCorreo" target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="Correo">
                             <img src="resources/img/gmail_icono.png" alt="Correo" width="30" />
                         </a>
-
+                        <!-- teléfono -->
                         <a href="tel:+34602026725" target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="Teléfono">
                             <img src="resources/img/telefAzul.png" alt="Teléfono" width="30" />
                         </a>
+                        <!-- whatsapp -->
                         <a href="https://wa.me/34602026725?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20informaci%C3%B3n%20sobre%20traslados%20o%20tours." target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="WhatsApp">
                             <img src="resources/img/whatsapp_icono.png" alt="WhatsApp" width="30" />
                         </a>
-
-
-
+                        <!-- instagram -->
                         <a href="https://www.instagram.com/basque_tours_and_transfers/" target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="Instagram">
                             <img src="resources/img/instag.png" alt="Instagram" width="30" />
                         </a>
+                        <!-- facebook -->
                         <a href="https://www.facebook.com/basquetoursandtransfers"  target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="Facebook">
                             <img src="resources/img/facebook_icono.png" alt="Facebook" width="30" />
                         </a>
+                        <!-- telegram -->
                         <a href="https://t.me/basquetoursandtransfers" target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="Telegram">
                             <img src="resources/img/telegram_icono.png" alt="Telegram" width="30" />
                         </a>
@@ -305,5 +306,19 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         <script src="resources/js/carruselDos.js"></script>
         <script src="resources/js/idioma.js"></script> 
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+                const correoLink = document.getElementById("correoLink");
+
+                if (correoLink) {
+                    correoLink.href = isMobile
+                            ? "mailto:basquetoursandtransfers@gmail.com"
+                            : "https://mail.google.com/mail/?view=cm&fs=1&to=basquetoursandtransfers@gmail.com&tf=cm";
+                    correoLink.target = "_blank"; // se abre en nueva pestaña, opcional
+                }
+            });
+        </script>
+
     </body>
 </html>
