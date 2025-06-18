@@ -21,8 +21,10 @@ header {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     min-height: 60px;
-    overflow-x: auto; /* evita saltos si no cabe todo */
+/*    overflow-x: auto;  evita saltos si no cabe todo 
+    overflow-y: visible !important;  ← permite desplegarse hacia abajo */
     white-space: nowrap;
+    overflow: visible !important;
 }
 
 /* LOGO */
@@ -63,6 +65,11 @@ header {
     margin: 0;
     flex-direction: row;
 }
+/*.navbar-nav {
+  display: flex;           ya lo tenías 
+  overflow-x: auto;        ahora el scroll vive aquí 
+  white-space: nowrap;
+}*/
 .nav-item.dropdown {
     display: flex;
     align-items: center;
@@ -258,10 +265,54 @@ header {
         margin-left: 0.75rem;
     }
 }
-.img-bandera {
-  width: 24px;
-  height: auto;
+
+/* ----------------------------------------------------------
+   AJUSTES SELECTOR DE IDIOMA
+   ---------------------------------------------------------- */
+.img-bandera{
+  width:24px;
+  height:auto;
 }
+
+/* --- Escritorio ----------------------------------------- */
+.navbar .dropdown-menu{
+  position:absolute;          /* ya lo pone Bootstrap, reforzamos */
+  right:0;                    /* pega a la derecha del botón     */
+  left:auto;
+  min-width:160px;            /* lo mínimo para que quepa texto  */
+  max-width:220px;            /* evita que ensanche el header    */
+  width:max-content;          /* solo lo necesario               */
+  white-space:nowrap;         /* texto sin partir                */
+  z-index: 2000;     
+}
+
+/* --- Ítems con bandera + texto --------------------------- */
+.dropdown-menu .dropdown-item{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.5rem 1rem;
+}
+
+/* --- MÓVILES (-576 px) ----------------------------------- */
+@media (max-width:576px){
+  /* 1) colocar el menú centrado bajo el botón */
+  .navbar .dropdown-menu{
+    left:50%!important;
+    transform:translateX(-50%)!important;
+    right:auto!important;
+  }
+  /* 2) estrechar un poco para que no tape medio viewport */
+  .navbar .dropdown-menu{
+    min-width:180px;
+    max-width:200px;
+  }
+}
+.navbar .dropdown-menu {
+  z-index: 2000;       /* muy por encima de todo */
+  /* no hace falta redeclarar position ni width aquí */
+}
+
 
 
 
