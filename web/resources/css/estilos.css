@@ -313,6 +313,13 @@ header {
   /* no hace falta redeclarar position ni width aquí */
 }
 
+.modal {
+  animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
 
 
 
