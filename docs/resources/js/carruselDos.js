@@ -122,7 +122,7 @@ const autoplayDelay = window.innerWidth < 576 ? 1500 : 3000;
 // 4) Inicializar Swiper (bundle incluye Autoplay + Zoom)
 const swiper = new Swiper(".mySwiper", {
   // Muestra 3 slides por defecto (se ajusta en breakpoints)
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
 
