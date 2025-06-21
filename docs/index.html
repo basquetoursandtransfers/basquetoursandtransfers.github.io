@@ -59,280 +59,292 @@
             </div>
         </div>
 
-        <!-- Imagen -->
-        <div class="image-wrapper">
-            <img src="resources/img/imagenPrime1a.png" alt="Chófer furgoneta Mercedes" class="img-fluid w-100" />
+        <!-- Imagen optimizada responsive -->
+    <picture class="image-wrapper">
+        <source type="image/webp"
+                srcset="
+                resources/img/imagenPrime1a_480.webp 480w,
+                resources/img/imagenPrime1a_768.webp 768w,
+                resources/img/imagenPrime1a_1280.webp 1280w"
+                sizes="(max-width: 576px) 100vw, (max-width: 992px) 768px, 1280px">
+        <img src="resources/img/imagenPrime1a_768.webp"
+             alt="Chófer furgoneta Mercedes"
+             width="1280" height="720"
+             decoding="async"
+             loading="eager"
+             class="img-fluid w-100" />
+    </picture>
+
+
+    <!-- Texto inferior (debajo de la imagen), ahora centrado -->
+    <div class="text-below-image text-center text-black">
+        <div class="container py-4">
+
+            <h1 class="fw-bold fst-italic" data-i18n="carruselSubtitulo"></h1>
         </div>
+    </div>
 
-        <!-- Texto inferior (debajo de la imagen), ahora centrado -->
-        <div class="text-below-image text-center text-black">
-            <div class="container py-4">
+    <!-- SERVICIOS -->
+    <section class="py-5 bg-white text-center">
+        <div class="container">
+            <h2 class="text-uppercase fw-bold mb-4" data-i18n="tituloServicios"></h2>
+            <div class="row justify-content-center">
+                <!-- Traslados -->
+                <div class="col-md-4 mb-4">
+                    <a href="#traslados" class="d-block text-decoration-none text-dark" aria-label="Ir a sección Traslados">
+                        <img src="resources/img/iconT.png" alt="Icono Traslados" class="mb-3" width="100" height="100" />
+                        <h5 class="fw-bold" data-i18n="tituloTrasladosCorto"></h5>
+                        <p class="text-muted px-3 text-center" style="word-break: break-word; white-space: normal;" data-i18n="servicioTraslados"></p>
 
-                <h1 class="fw-bold fst-italic" data-i18n="carruselSubtitulo"></h1>
-            </div>
-        </div>
-
-        <!-- SERVICIOS -->
-        <section class="py-5 bg-white text-center">
-            <div class="container">
-                <h2 class="text-uppercase fw-bold mb-4" data-i18n="tituloServicios"></h2>
-                <div class="row justify-content-center">
-                    <!-- Traslados -->
-                    <div class="col-md-4 mb-4">
-                        <a href="#traslados" class="d-block text-decoration-none text-dark" aria-label="Ir a sección Traslados">
-                            <img src="resources/img/iconT.png" alt="Icono Traslados" class="mb-3" width="100" height="100" />
-                            <h5 class="fw-bold" data-i18n="tituloTrasladosCorto"></h5>
-                            <p class="text-muted px-3 text-center" style="word-break: break-word; white-space: normal;" data-i18n="servicioTraslados"></p>
-
-                        </a>
-                    </div>
-                    <!-- Tours -->
-                    <div class="col-md-4 mb-4">
-                        <a href="#tours" class="d-block text-decoration-none text-dark" aria-label="Ir a sección Tours">
-                            <img src="resources/img/icono_tours.png" alt="Icono Tours" class="mb-3" width="100" height="100" />
-                            <h5 class="fw-bold" data-i18n="tituloToursCorto"></h5>
-                            <p class="text-muted px-3 text-center" style="word-break: break-word; white-space: normal;" data-i18n="servicioTours"></p>
-                        </a>
-                    </div>
-                    <!-- Disposiciones -->
-                    <div class="col-md-4 mb-4">
-                        <a href="#disposiciones" class="d-block text-decoration-none text-dark" aria-label="Ir a sección Disposiciones">
-                            <img src="resources/img/iconDispo.png" alt="Icono Disposiciones" class="mb-3" width="100" height="100" />
-                            <h5 class="fw-bold" data-i18n="tituloDisposicionesCorto"></h5>
-                            <p class="text-muted px-3 text-center" style="word-break: break-word; white-space: normal;" data-i18n="servicioDisposiciones"></p>                          
-                        </a>
-                    </div>
+                    </a>
                 </div>
-            </div>
-        </section>
-
-        <!-- Sección carrusel -->
-        <section id="tours" class="bg-dark  text-white" style="padding-top: 3rem; padding-bottom: 16rem;">
-            <div class="container">
-                <h2 class="text-center fw-bold text-uppercase mb-4" data-i18n="tituloTours"></h2>
-                <div class="mx-auto px-4 px-md-5" style="max-width: 1140px;">
-                    <p class="text-white bloque-texto-ajustado" style="font-family: 'Segoe UI', 'Open Sans', sans-serif;" data-i18n="textoIntro"></p>
+                <!-- Tours -->
+                <div class="col-md-4 mb-4">
+                    <a href="#tours" class="d-block text-decoration-none text-dark" aria-label="Ir a sección Tours">
+                        <img src="resources/img/icono_tours.png" alt="Icono Tours" class="mb-3" width="100" height="100" />
+                        <h5 class="fw-bold" data-i18n="tituloToursCorto"></h5>
+                        <p class="text-muted px-3 text-center" style="word-break: break-word; white-space: normal;" data-i18n="servicioTours"></p>
+                    </a>
                 </div>
-            </div>
-        </section>
-
-        <!-- Carrusel de tours -->
-        <div class="container bloque-carrusel">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper" id="tour-slides">
-                    <!-- Las imágenes se insertan dinámicamente desde carrusel.js -->
+                <!-- Disposiciones -->
+                <div class="col-md-4 mb-4">
+                    <a href="#disposiciones" class="d-block text-decoration-none text-dark" aria-label="Ir a sección Disposiciones">
+                        <img src="resources/img/iconDispo.png" alt="Icono Disposiciones" class="mb-3" width="100" height="100" />
+                        <h5 class="fw-bold" data-i18n="tituloDisposicionesCorto"></h5>
+                        <p class="text-muted px-3 text-center" style="word-break: break-word; white-space: normal;" data-i18n="servicioDisposiciones"></p>                          
+                    </a>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
             </div>
         </div>
+    </section>
 
-        <hr style="border: none; border-top: 4px solid #999; width: 100%; margin-top: 4rem; margin-bottom: 0;" />
-
-        <!-- SECCIÓN DE DISPOSICIONES -->
-        <section id="disposiciones" class="py-5 bg-white">
-            <div class="container">
-                <h2 class="text-uppercase text-center fw-bold mb-4" data-i18n="tituloDisposiciones"></h2>
-                <!-- Texto introductorio -->
-                <div class="row mb-3">
-                    <div class="col-12">
-                        <p class="bloque-texto-ajustado" data-i18n="textoIntroDisposiciones"></p>
-                    </div>
-                </div>
-                <div class="row align-items-center">
-
-                    <!-- Imagen -->
-                    <div class="col-md-6 mb-4 mb-md-0">
-                        <img class="img-fluid rounded shadow-sm" src="resources/img/coche1a.jpg" alt="Vehículo disposición" />
-                    </div>
-
-                    <!-- Ventajas -->
-                    <div class="col-md-6">
-                        <h4 class="mb-4 text-primary" data-i18n="subtituloVentajas"></h4>
-                        <ul class="list-unstyled ps-2">
-                            <li class="mb-3">✅ <strong data-i18n="ventajaDispo1"></strong></li>
-                            <li class="mb-3">✅ <strong data-i18n="ventajaDispo2"></strong></li>
-                            <li class="mb-3">✅ <strong data-i18n="ventajaDispo3"></strong></li>
-                            <li class="mb-3">✅ <strong data-i18n="ventajaDispo4"></strong></li>
-                        </ul>
-                    </div>
-                </div>
+    <!-- Sección carrusel -->
+    <section id="tours" class="bg-dark  text-white" style="padding-top: 3rem; padding-bottom: 16rem;">
+        <div class="container">
+            <h2 class="text-center fw-bold text-uppercase mb-4" data-i18n="tituloTours"></h2>
+            <div class="mx-auto px-4 px-md-5" style="max-width: 1140px;">
+                <p class="text-white bloque-texto-ajustado" style="font-family: 'Segoe UI', 'Open Sans', sans-serif;" data-i18n="textoIntro"></p>
             </div>
-        </section>
-
-        <!-- sección traslados -->
-        <section id="traslados" class="bg-dark text-white py-5 position-relative" style="z-index: 1;">
-            <div class="container">
-                <div class="row align-items-center">
-                    <!-- Imagen -->
-                    <div class="col-md-6 mb-4 mb-md-0">
-                        <img src="resources/img/trasladosImagen.png" 
-                             alt="Traslados desde aeropuerto y puerto"
-                             class="img-fluid rounded shadow-sm" />
-                    </div>
-                    <!-- Texto -->
-                    <div class="col-md-6">
-                        <h3 class="fw-bold text-center mb-3" data-i18n="tituloTraslados"></h3>
-                        <p class="bloque-texto-ajustado" data-i18n="textoTraslados"></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de contacto -->
-        <section id="contacto" class="bg-light py-5 text-center">
-            <div class="container">
-                <h2 class="fw-bold text-uppercase mb-4" data-i18n="tituloContactanos"></h2>
-                <p class="mb-5 lead text-center text-wrap" style="word-break: break-word; white-space: normal;" data-i18n="textoIntroContactanos"></p>
-
-                <!-- Contenido del formulario o información de contacto -->
-                <div id="bloqueContacto">
-                    <div class="row justify-content-center text-center">
-
-                        <!-- Correo -->
-                        <div class="col-12 col-sm-6 col-md-4 mb-3">
-                            <a id="correoLink" class="text-dark text-decoration-none">
-                                <div class="p-2 border rounded shadow-sm d-flex flex-column align-items-center h-100">
-                                    <img src="resources/img/gmail_icono.png" alt="Correo" width="30" class="mb-2" />
-                                    <p class="mb-0" style="font-size: 0.95rem; font-weight: 500;">basquetoursandtransfers@gmail.com</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Teléfono -->
-                        <div class="col-12 col-sm-6 col-md-4 mb-3">
-                            <a href="tel:+34602026725" class="text-dark text-decoration-none">
-                                <div class="p-2 border rounded shadow-sm d-flex flex-column align-items-center h-100">
-                                    <img src="resources/img/telefAzul.png" alt="Teléfono" width="30" class="mb-2" />
-                                    <p class="mb-0" style="font-size: 0.95rem; font-weight: 500;">+34 602 02 67 25</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- WhatsApp -->
-                        <div class="col-12 col-sm-6 col-md-4 mb-3">
-                            <a href="https://wa.me/34602026725" target="_blank" class="text-dark text-decoration-none">
-                                <div class="p-2 border rounded shadow-sm d-flex flex-column align-items-center h-100">
-                                    <img src="resources/img/whatsapp_icono.png" alt="WhatsApp" width="30" class="mb-2" />
-                                    <p class="mb-0" style="font-size: 0.95rem; font-weight: 500;">+34 602 02 67 25</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Quiénes somos -->
-        <section id="quienes" class="bg-dark text-white py-5 position-relative" style="z-index: 1;">
-            <div class="container">
-                <div class="row align-items-center">
-
-                    <!-- Imagen -->
-                    <div class="col-md-6 mb-4 mb-md-0">
-                        <img src="resources/img/imgQuienes.png" 
-                             alt="Quiénes somos"
-                             class="img-fluid rounded shadow-sm" />
-                    </div>
-                    <!-- Texto -->
-                    <div class="col-md-6">
-                        <h3 class="fw-bold text-center mb-3" data-i18n="tituloQuienes"></h3>
-                        <p class="bloque-texto-ajustado" data-i18n="textoQuienes_1"></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer con solo iconos sociales -->
-        <footer class="bg-light py-4 mt-auto">
-            <div class="container">
-                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 mt-3 mb-2">
-
-                    <!-- IZQUIERDA: Copyright -->
-                    <p class="text-muted small mb-0 text-center text-md-start flex-grow-1" id="footerCopyright" data-i18n="footerCopyright">
-                        <!-- Traducido dinámicamente -->
-                    </p>
-
-                    <!-- CENTRO: Iconos -->
-                    <div class="d-flex flex-wrap justify-content-center gap-3 flex-grow-1">
-                        <!-- correo -->
-                        <a id="iconoCorreo" target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="Correo">
-                            <img src="resources/img/gmail_icono.png" alt="Correo" width="30" />
-                        </a>
-                        <!-- teléfono -->
-                        <a href="tel:+34602026725" target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="Teléfono">
-                            <img src="resources/img/telefAzul.png" alt="Teléfono" width="30" />
-                        </a>
-                        <!-- whatsapp -->
-                        <a href="https://wa.me/34602026725?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20informaci%C3%B3n%20sobre%20traslados%20o%20tours." target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="WhatsApp">
-                            <img src="resources/img/whatsapp_icono.png" alt="WhatsApp" width="30" />
-                        </a>
-                        <!-- instagram -->
-                        <a href="https://www.instagram.com/basque_tours_and_transfers/" target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="Instagram">
-                            <img src="resources/img/instag.png" alt="Instagram" width="30" />
-                        </a>
-                        <!-- facebook -->
-                        <a href="https://www.facebook.com/basquetoursandtransfers"  target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="Facebook">
-                            <img src="resources/img/facebook_icono.png" alt="Facebook" width="30" />
-                        </a>
-                        <!-- telegram -->
-                        <a href="https://t.me/basquetoursandtransfers" target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="Telegram">
-                            <img src="resources/img/telegram_icono.png" alt="Telegram" width="30" />
-                        </a>
-                    </div>
-
-                    <!-- DERECHA: Frase -->
-                    <p class="text-muted small mb-0 text-center text-md-end flex-grow-1" id="fraseFooter" data-i18n="fraseFooter">
-                        <!-- Traducido dinámicamente -->
-                    </p>
-                </div>
-            </div>
-        </footer>
-
-        <!-- Modal lightbox -->
-        <div id="img-modal" class="modal" style="
-             display: none;
-             position: fixed;
-             top: 0; left: 0;
-             width: 100%; height: 100%;
-             background: rgba(0,0,0,0.8);
-             align-items: center;
-             justify-content: center;
-             z-index: 9999;
-             ">
-            <span id="modal-close" style="
-                  position: absolute;
-                  top: 20px; right: 30px;
-                  font-size: 2rem;
-                  color: #fff;
-                  cursor: pointer;
-                  ">&times;</span>
-            <img id="modal-img" src="" alt="" style="
-                 max-width: 90%;
-                 max-height: 90%;
-                 border-radius: 4px;
-                 "/>
         </div>
+    </section>
 
-        <!-- Scripts -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-        <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
-        <script src="resources/js/carruselDos.js"></script>
-        <script src="resources/js/idioma.js"></script> 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-                const correoLink = document.getElementById("correoLink");
+    <!-- Carrusel de tours -->
+    <div class="container bloque-carrusel">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper" id="tour-slides">
+                <!-- Las imágenes se insertan dinámicamente desde carrusel.js -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
 
-                if (correoLink) {
-                    correoLink.href = isMobile
-                            ? "mailto:basquetoursandtransfers@gmail.com"
-                            : "https://mail.google.com/mail/?view=cm&fs=1&to=basquetoursandtransfers@gmail.com&tf=cm";
-                    correoLink.target = "_blank"; // se abre en nueva pestaña
-                }
-            });
-        </script>
-    </body>
+    <hr style="border: none; border-top: 4px solid #999; width: 100%; margin-top: 4rem; margin-bottom: 0;" />
+
+    <!-- SECCIÓN DE DISPOSICIONES -->
+    <section id="disposiciones" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-uppercase text-center fw-bold mb-4" data-i18n="tituloDisposiciones"></h2>
+            <!-- Texto introductorio -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <p class="bloque-texto-ajustado" data-i18n="textoIntroDisposiciones"></p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+
+                <!-- Imagen -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img class="img-fluid rounded shadow-sm" src="resources/img/coche1a.jpg" alt="Vehículo disposición" />
+                </div>
+
+                <!-- Ventajas -->
+                <div class="col-md-6">
+                    <h4 class="mb-4 text-primary" data-i18n="subtituloVentajas"></h4>
+                    <ul class="list-unstyled ps-2">
+                        <li class="mb-3">✅ <strong data-i18n="ventajaDispo1"></strong></li>
+                        <li class="mb-3">✅ <strong data-i18n="ventajaDispo2"></strong></li>
+                        <li class="mb-3">✅ <strong data-i18n="ventajaDispo3"></strong></li>
+                        <li class="mb-3">✅ <strong data-i18n="ventajaDispo4"></strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sección traslados -->
+    <section id="traslados" class="bg-dark text-white py-5 position-relative" style="z-index: 1;">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Imagen -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="resources/img/trasladosImagen.png" 
+                         alt="Traslados desde aeropuerto y puerto"
+                         class="img-fluid rounded shadow-sm" />
+                </div>
+                <!-- Texto -->
+                <div class="col-md-6">
+                    <h3 class="fw-bold text-center mb-3" data-i18n="tituloTraslados"></h3>
+                    <p class="bloque-texto-ajustado" data-i18n="textoTraslados"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto" class="bg-light py-5 text-center">
+        <div class="container">
+            <h2 class="fw-bold text-uppercase mb-4" data-i18n="tituloContactanos"></h2>
+            <p class="mb-5 lead text-center text-wrap" style="word-break: break-word; white-space: normal;" data-i18n="textoIntroContactanos"></p>
+
+            <!-- Contenido del formulario o información de contacto -->
+            <div id="bloqueContacto">
+                <div class="row justify-content-center text-center">
+
+                    <!-- Correo -->
+                    <div class="col-12 col-sm-6 col-md-4 mb-3">
+                        <a id="correoLink" class="text-dark text-decoration-none">
+                            <div class="p-2 border rounded shadow-sm d-flex flex-column align-items-center h-100">
+                                <img src="resources/img/gmail_icono.png" alt="Correo" width="30" class="mb-2" />
+                                <p class="mb-0" style="font-size: 0.95rem; font-weight: 500;">basquetoursandtransfers@gmail.com</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div class="col-12 col-sm-6 col-md-4 mb-3">
+                        <a href="tel:+34602026725" class="text-dark text-decoration-none">
+                            <div class="p-2 border rounded shadow-sm d-flex flex-column align-items-center h-100">
+                                <img src="resources/img/telefAzul.png" alt="Teléfono" width="30" class="mb-2" />
+                                <p class="mb-0" style="font-size: 0.95rem; font-weight: 500;">+34 602 02 67 25</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <div class="col-12 col-sm-6 col-md-4 mb-3">
+                        <a href="https://wa.me/34602026725" target="_blank" class="text-dark text-decoration-none">
+                            <div class="p-2 border rounded shadow-sm d-flex flex-column align-items-center h-100">
+                                <img src="resources/img/whatsapp_icono.png" alt="WhatsApp" width="30" class="mb-2" />
+                                <p class="mb-0" style="font-size: 0.95rem; font-weight: 500;">+34 602 02 67 25</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiénes somos -->
+    <section id="quienes" class="bg-dark text-white py-5 position-relative" style="z-index: 1;">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Imagen -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="resources/img/imgQuienes.png" 
+                         alt="Quiénes somos"
+                         class="img-fluid rounded shadow-sm" />
+                </div>
+                <!-- Texto -->
+                <div class="col-md-6">
+                    <h3 class="fw-bold text-center mb-3" data-i18n="tituloQuienes"></h3>
+                    <p class="bloque-texto-ajustado" data-i18n="textoQuienes_1"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer con solo iconos sociales -->
+    <footer class="bg-light py-4 mt-auto">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 mt-3 mb-2">
+
+                <!-- IZQUIERDA: Copyright -->
+                <p class="text-muted small mb-0 text-center text-md-start flex-grow-1" id="footerCopyright" data-i18n="footerCopyright">
+                    <!-- Traducido dinámicamente -->
+                </p>
+
+                <!-- CENTRO: Iconos -->
+                <div class="d-flex flex-wrap justify-content-center gap-3 flex-grow-1">
+                    <!-- correo -->
+                    <a id="iconoCorreo" target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="Correo">
+                        <img src="resources/img/gmail_icono.png" alt="Correo" width="30" />
+                    </a>
+                    <!-- teléfono -->
+                    <a href="tel:+34602026725" target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="Teléfono">
+                        <img src="resources/img/telefAzul.png" alt="Teléfono" width="30" />
+                    </a>
+                    <!-- whatsapp -->
+                    <a href="https://wa.me/34602026725?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20informaci%C3%B3n%20sobre%20traslados%20o%20tours." target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="WhatsApp">
+                        <img src="resources/img/whatsapp_icono.png" alt="WhatsApp" width="30" />
+                    </a>
+                    <!-- instagram -->
+                    <a href="https://www.instagram.com/basque_tours_and_transfers/" target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="Instagram">
+                        <img src="resources/img/instag.png" alt="Instagram" width="30" />
+                    </a>
+                    <!-- facebook -->
+                    <a href="https://www.facebook.com/basquetoursandtransfers"  target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="Facebook">
+                        <img src="resources/img/facebook_icono.png" alt="Facebook" width="30" />
+                    </a>
+                    <!-- telegram -->
+                    <a href="https://t.me/basquetoursandtransfers" target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="Telegram">
+                        <img src="resources/img/telegram_icono.png" alt="Telegram" width="30" />
+                    </a>
+                </div>
+
+                <!-- DERECHA: Frase -->
+                <p class="text-muted small mb-0 text-center text-md-end flex-grow-1" id="fraseFooter" data-i18n="fraseFooter">
+                    <!-- Traducido dinámicamente -->
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal lightbox -->
+    <div id="img-modal" class="modal" style="
+         display: none;
+         position: fixed;
+         top: 0; left: 0;
+         width: 100%; height: 100%;
+         background: rgba(0,0,0,0.8);
+         align-items: center;
+         justify-content: center;
+         z-index: 9999;
+         ">
+        <span id="modal-close" style="
+              position: absolute;
+              top: 20px; right: 30px;
+              font-size: 2rem;
+              color: #fff;
+              cursor: pointer;
+              ">&times;</span>
+        <img id="modal-img" src="" alt="" style="
+             max-width: 90%;
+             max-height: 90%;
+             border-radius: 4px;
+             "/>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+    <script src="resources/js/carruselDos.js"></script>
+    <script src="resources/js/idioma.js"></script> 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+            const correoLink = document.getElementById("correoLink");
+
+            if (correoLink) {
+                correoLink.href = isMobile
+                        ? "mailto:basquetoursandtransfers@gmail.com"
+                        : "https://mail.google.com/mail/?view=cm&fs=1&to=basquetoursandtransfers@gmail.com&tf=cm";
+                correoLink.target = "_blank"; // se abre en nueva pestaña
+            }
+        });
+    </script>
+</body>
 </html>
