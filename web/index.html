@@ -18,13 +18,22 @@
         <script type="application/ld+json">
             {
             "@context": "https://schema.org",
-            "@type": "TravelAgency",
+            "@type": ["TouristTransportation", "LocalBusiness"],
             "name": "Basque Tours & Transfers",
+            "image": [
+            "https://basquetoursandtransfers.github.io/resources/img/logo_ToursT.png",
+            "https://basquetoursandtransfers.github.io/resources/img/imagenPrime1a.png"
+            ],
             "url": "https://basquetoursandtransfers.github.io/",
-            "description": "Servicio profesional de chófer privado, traslados aeropuerto y tours personalizados por el País Vasco.",
+            "description": "Servicio profesional de chófer privado, traslados al aeropuerto y tours personalizados por el País Vasco, La Rioja y el suroeste de Francia.",
             "telephone": "+34 602 02 67 25",
-            "areaServed": ["Bilbao", "San Sebastián", "Vitoria", "Biarritz"],
-            "image": "https://basquetoursandtransfers.github.io/resources/img/imagenPrime1a.png",
+            "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "ES",
+            "addressRegion": "País Vasco",
+            "addressLocality": "San Sebastián"
+            },
+            "areaServed": ["Bilbao", "San Sebastián", "La Rioja", "Biarritz", "País Vasco"],
             "sameAs": [
             "https://www.instagram.com/basque_tours_and_transfers/",
             "https://www.facebook.com/basquetoursandtransfers",
@@ -32,6 +41,7 @@
             ]
             }
         </script>
+
 
     </head>
     <body>
@@ -343,17 +353,17 @@
         <script src="resources/js/carruselDos.js"></script>
         <script src="resources/js/idioma.js"></script> 
         <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    const correoLink = document.getElementById("correoLink");
+            document.addEventListener("DOMContentLoaded", function () {
+                const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+                const correoLink = document.getElementById("correoLink");
 
-    if (correoLink) {
-        correoLink.href = isMobile
-                ? "mailto:basquetoursandtransfers@gmail.com"
-                : "https://mail.google.com/mail/?view=cm&fs=1&to=basquetoursandtransfers@gmail.com&tf=cm";
-        correoLink.target = "_blank"; // se abre en nueva pestaña, opcional
-    }
-});
+                if (correoLink) {
+                    correoLink.href = isMobile
+                            ? "mailto:basquetoursandtransfers@gmail.com"
+                            : "https://mail.google.com/mail/?view=cm&fs=1&to=basquetoursandtransfers@gmail.com&tf=cm";
+                    correoLink.target = "_blank"; // se abre en nueva pestaña, opcional
+                }
+            });
 //probando después de problema con clave
         </script>
     </body>
