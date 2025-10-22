@@ -135,6 +135,15 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Botón Solicitar Presupuesto -->
+            <div class="text-center mt-4">
+                <a href="formulario.html"  target="_blank" class="btn btn-success btn-lg px-5 py-3 fw-bold shadow-sm" 
+                   style="background-color: #00695c; border: none; border-radius: 50px;">
+                    📩 Solicitar presupuesto
+                </a>
+            </div>
+
         </section>
 
         <!-- Sección carrusel -->
@@ -250,6 +259,14 @@
                                 </div>
                             </a>
                         </div>
+
+                        <!-- Botón Solicitar Presupuesto -->
+                        <div class="text-center mt-4">
+                            <a href="formulario.html"  target="_blank" class="btn btn-success btn-lg px-5 py-3 fw-bold shadow-sm" 
+                               style="background-color: #00695c; border: none; border-radius: 50px;">
+                                📩 Solicitar presupuesto
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -353,17 +370,17 @@
         <script src="resources/js/carruselDos.js"></script>
         <script src="resources/js/idioma.js"></script> 
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-                const correoLink = document.getElementById("correoLink");
+document.addEventListener("DOMContentLoaded", function () {
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const correoLink = document.getElementById("correoLink");
 
-                if (correoLink) {
-                    correoLink.href = isMobile
-                            ? "mailto:basquetoursandtransfers@gmail.com"
-                            : "https://mail.google.com/mail/?view=cm&fs=1&to=basquetoursandtransfers@gmail.com&tf=cm";
-                    correoLink.target = "_blank"; // se abre en nueva pestaña, opcional
-                }
-            });
+    if (correoLink) {
+        correoLink.href = isMobile
+                ? "mailto:basquetoursandtransfers@gmail.com"
+                : "https://mail.google.com/mail/?view=cm&fs=1&to=basquetoursandtransfers@gmail.com&tf=cm";
+        correoLink.target = "_blank"; // se abre en nueva pestaña, opcional
+    }
+});
 //probando después de problema con clave
         </script>
     </body>
