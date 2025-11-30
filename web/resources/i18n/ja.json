@@ -32,5 +32,40 @@
   "fraseFooter": "安心の旅。プロフェッショナルなサービス。いつでも。",
   "tituloTrasladosCorto": "送迎",
   "tituloToursCorto": "ツアー",
-  "tituloDisposicionesCorto": "時間貸し"
+  "tituloDisposicionesCorto": "時間貸し", 
+    "formTitulo": "お見積り依頼",
+  "formNombre": "氏名 *",
+  "formEmail": "メールアドレス *",
+  "formTelefono": "連絡先電話番号 *",
+
+  "formServicio": "サービスの種類 *",
+  "formServicioTraslados": "送迎サービス",
+  "formServicioTours": "ツアー",
+  "formServicioDisposiciones": "時間貸し運転サービス",
+
+  "formVehiculo": "車種",
+  "formVehiculoV": "メルセデス・Vクラス（7名）",
+  "formVehiculoE": "メルセデス・Eクラス（4名）",
+
+  "formFecha": "お迎え日 *",
+  "formHora": "時間 *",
+  "formMinutos": "分 *",
+
+  "formLugarRecogida": "お迎え場所 *",
+  "formLugarDestino": "目的地 *",
+
+  "formPasajeros": "乗客人数",
+  "formDetalles": "追加情報",
+  "formPlaceholderDetalles": "例：チャイルドシート、特別な荷物、車椅子サポートなど…",
+
+  "formEnviar": "送信する",
+  "formAviso": "このフォームを送信すると、お見積りのためにご連絡させていただくことに同意したものとみなされます。",
+
+  "formGracias": "ご依頼ありがとうございます！",
+  "formGraciasTexto": "お客様の情報を受け付けました。追ってご連絡いたします。",
+  "formVolver": "ホームページに戻る",
+
+  "formError": "送信エラーが発生しました。再度お試しください。",
+    "formSeleccione": "オプションを選択してください",
+    "botonSolicitar": "📩 見積もりを依頼する"
 }
