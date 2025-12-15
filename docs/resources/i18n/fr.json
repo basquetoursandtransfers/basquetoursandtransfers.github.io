@@ -1,6 +1,6 @@
 {
     "textoUno": "Basque Tours & Transfers",
-    "textoDos": "Une référence au Pays basque", 
+    "textoDos": "Une référence au Pays basque",
     "carruselSubtitulo": "Voyagez à travers le Pays basque avec nous !",
     "menuInicio": "Accueil",
     "menuNosotros": "Qui sommes-nous",
@@ -32,5 +32,40 @@
     "fraseFooter": "Bon voyage. Service professionnel. Toujours.",
     "tituloTrasladosCorto": "Transferts",
     "tituloToursCorto": "Excursions",
-    "tituloDisposicionesCorto": "Service horaire"
+    "tituloDisposicionesCorto": "Service horaire",
+    "formTitulo": "Demande de devis",
+    "formNombre": "Nom complet *",
+    "formEmail": "Adresse e-mail *",
+    "formTelefono": "Téléphone de contact *",
+
+    "formServicio": "Type de service *",
+    "formServicioTraslados": "Transferts",
+    "formServicioTours": "Tours",
+    "formServicioDisposiciones": "Chauffeur à disposition",
+
+    "formVehiculo": "Type de véhicule",
+    "formVehiculoV": "Mercedes Classe V (7 places)",
+    "formVehiculoE": "Mercedes Classe E (4 places)",
+
+    "formFecha": "Date de prise en charge *",
+    "formHora": "Heure *",
+    "formMinutos": "Minutes *",
+
+    "formLugarRecogida": "Lieu de prise en charge *",
+    "formLugarDestino": "Destination *",
+
+    "formPasajeros": "Nombre de passagers",
+    "formDetalles": "Détails supplémentaires",
+    "formPlaceholderDetalles": "Exemple : siège bébé, bagages spéciaux, assistance mobilité...",
+
+    "formEnviar": "Envoyer la demande",
+    "formAviso": "En envoyant ce formulaire, vous acceptez d'être contacté pour recevoir votre devis.",
+
+    "formGracias": "Merci pour votre demande !",
+    "formGraciasTexto": "Nous avons bien reçu vos informations. Nous vous contacterons prochainement.",
+    "formVolver": "Retour à l'accueil",
+
+    "formError": "Une erreur s'est produite lors de l'envoi du formulaire. Veuillez réessayer.",
+    "formSeleccione": "Sélectionnez une option",
+    "botonSolicitar": "📩 Demander un devis"
 }

@@ -1,8 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Detectar idioma del navegador (no usamos localStorage)
-    const idiomaNavegador = navigator.language.slice(0, 2);
-    const idiomasSoportados = ["es", "en", "fr", "ru", "ja", "ar", "zh"];
-    const idiomaActual = idiomasSoportados.includes(idiomaNavegador) ? idiomaNavegador : "es";
+    const idiomaNavegador = navigator.language.slice(0, 2);//SE MANTIENE
+    const idiomasSoportados = ["es", "en", "fr", "ru", "ja", "ar", "zh"];//SE MANTIENE
+    const idiomaGuardado = localStorage.getItem("idioma");
+
+    // const idiomaActual = idiomasSoportados.includes(idiomaNavegador) ? idiomaNavegador : "es";
+
+    const idiomaActual = idiomasSoportados.includes(idiomaGuardado) ? idiomaGuardado
+            : (idiomasSoportados.includes(idiomaNavegador) ? idiomaNavegador : "es");
 
     // Cargar idioma
     cargarIdioma(idiomaActual);
@@ -13,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
         boton.addEventListener("click", (e) => {
             e.preventDefault();
             const nuevoIdioma = boton.dataset.lang;
+            // ✅ Guardar idioma para que el formulario lo lea
+            localStorage.setItem("idioma", nuevoIdioma);
             cargarIdioma(nuevoIdioma);
             actualizarBandera(nuevoIdioma);
         });
@@ -33,20 +40,23 @@ function cargarIdioma(codigoIdioma) {
                 console.error("Error al cargar archivo de idioma:", error);
             });
 }
-
 function traducirPagina(textos) {
     document.querySelectorAll("[data-i18n]").forEach(elemento => {
         const clave = elemento.getAttribute("data-i18n");
         const textoTraducido = textos[clave];
-        if (textoTraducido) {
-            if (elemento.tagName === "INPUT" || elemento.tagName === "TEXTAREA") {
-                elemento.placeholder = textoTraducido;
-            } else {
-                elemento.innerText = textoTraducido;
-            }
+        if (!textoTraducido)
+            return;
+
+        if (elemento.tagName === "INPUT" || elemento.tagName === "TEXTAREA") {
+            elemento.placeholder = textoTraducido;
+        } else if (elemento.tagName === "OPTION") {
+            elemento.textContent = textoTraducido;
+        } else {
+            elemento.innerText = textoTraducido;
         }
     });
 }
+
 
 function actualizarBandera(codigoIdioma) {
     const bandera = {

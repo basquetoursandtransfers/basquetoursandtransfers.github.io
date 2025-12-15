@@ -1,166 +1,171 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solicitud de Presupuesto | Basque Tours & Transfers</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
-    body {
-      background-color: #f9fafb;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    .container {
-      max-width: 700px;
-      background: white;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-top: 3rem;
-    }
-    h1 {
-      color: #004d40;
-      text-align: center;
-      font-weight: bold;
-      margin-bottom: 1.5rem;
-    }
-    .btn-custom {
-      background-color: #004d40;
-      color: white;
-      font-weight: 500;
-      border-radius: 8px;
-    }
-    .btn-custom:hover {
-      background-color: #00796b;
-    }
-    #mensajeExito {
-      display: none;
-    }
-  </style>
-</head>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Solicitud de Presupuesto | Basque Tours & Transfers</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <style>
+            body {
+                background-color: #f9fafb;
+                font-family: 'Segoe UI', sans-serif;
+            }
+            .container {
+                max-width: 700px;
+                background: white;
+                padding: 2rem;
+                border-radius: 15px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                margin-top: 3rem;
+            }
+            h1 {
+                color: #004d40;
+                text-align: center;
+                font-weight: bold;
+                margin-bottom: 1.5rem;
+            }
+            .btn-custom {
+                background-color: #004d40;
+                color: white;
+                font-weight: 500;
+                border-radius: 8px;
+            }
+            .btn-custom:hover {
+                background-color: #00796b;
+            }
+            #mensajeExito {
+                display: none;
+            }
+        </style>
+    </head>
 
 <body>
-  <div class="container">
-    <h1>Solicitud de Presupuesto</h1>
+    <div class="container">
+        <h1 data-i18n="formTitulo">Solicitud de Presupuesto</h1>
 
-    <!-- FORMULARIO -->
-    <form id="presupuestoForm" action="https://formspree.io/f/mblzvgbb" method="POST">
-      <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre completo *</label>
-        <input type="text" id="nombre" name="nombre" class="form-control" required>
-      </div>
+        <!-- FORMULARIO -->
+        <form id="presupuestoForm" action="https://formspree.io/f/mblzvgbb" method="POST">
 
-      <div class="mb-3">
-        <label for="email" class="form-label">Correo electrónico *</label>
-        <input type="email" id="email" name="email" class="form-control" required>
-      </div>
+            <div class="mb-3">
+                <label for="nombre" class="form-label" data-i18n="formNombre">Nombre completo *</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" required>
+            </div>
 
-      <div class="mb-3">
-        <label for="telefono" class="form-label">Teléfono de contacto *</label>
-        <input type="tel" id="telefono" name="telefono" class="form-control" required>
-      </div>
+            <div class="mb-3">
+                <label for="email" class="form-label" data-i18n="formEmail">Correo electrónico *</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
 
-      <div class="mb-3">
-        <label for="servicio" class="form-label">Tipo de servicio *</label>
-        <select id="servicio" name="servicio" class="form-select" required>
-          <option value="">Seleccione una opción</option>
-          <option value="Traslados">Traslados</option>
-          <option value="Tours">Tours</option>
-          <option value="Disposiciones">Disposiciones</option>
-        </select>
-      </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label" data-i18n="formTelefono">Teléfono de contacto *</label>
+                <input type="tel" id="telefono" name="telefono" class="form-control" required>
+            </div>
 
-      <div class="mb-3">
-        <label for="vehiculo" class="form-label">Tipo de vehículo</label>
-        <select id="vehiculo" name="vehiculo" class="form-select">
-          <option value="">Seleccione una opción</option>
-          <option value="Mercedes Clase V (7 plazas)">Mercedes Clase V (7 plazas)</option>
-          <option value="Mercedes Clase E (4 plazas)">Mercedes Clase E (4 plazas)</option>
-        </select>
-      </div>
+            <div class="mb-3">
+                <label for="servicio" class="form-label" data-i18n="formServicio">Tipo de servicio *</label>
+                <select id="servicio" name="servicio" class="form-select" required>
+                    <option value="" data-i18n="formSeleccione">Seleccione una opción</option>
+                    <option value="Traslados" data-i18n="formServicioTraslados">Traslados</option>
+                    <option value="Tours" data-i18n="formServicioTours">Tours</option>
+                    <option value="Disposiciones" data-i18n="formServicioDisposiciones">Disposiciones</option>
+                </select>
+            </div>
 
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <label for="fecha" class="form-label">Fecha de recogida *</label>
-          <input type="date" id="fecha" name="fecha" class="form-control" required>
+            <div class="mb-3">
+                <label for="vehiculo" class="form-label" data-i18n="formVehiculo">Tipo de vehículo</label>
+                <select id="vehiculo" name="vehiculo" class="form-select">
+                    <option value="" data-i18n="formSeleccione">Seleccione una opción</option>
+                    <option value="Mercedes Clase V (7 plazas)" data-i18n="formVehiculoV">Mercedes Clase V (7 plazas)</option>
+                    <option value="Mercedes Clase E (4 plazas)" data-i18n="formVehiculoE">Mercedes Clase E (4 plazas)</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="fecha" class="form-label" data-i18n="formFecha">Fecha de recogida *</label>
+                    <input type="date" id="fecha" name="fecha" class="form-control" required>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <label for="hora" class="form-label" data-i18n="formHora">Hora *</label>
+                    <select id="hora" name="hora" class="form-select" required>
+                        <option value="">HH</option>
+                        <option>00</option><option>01</option><option>02</option><option>03</option>
+                        <option>04</option><option>05</option><option>06</option><option>07</option>
+                        <option>08</option><option>09</option><option>10</option><option>11</option>
+                        <option>12</option><option>13</option><option>14</option><option>15</option>
+                        <option>16</option><option>17</option><option>18</option><option>19</option>
+                        <option>20</option><option>21</option><option>22</option><option>23</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <label for="minutos" class="form-label" data-i18n="formMinutos">Minutos *</label>
+                    <input type="number" id="minutos" name="minutos" class="form-control" min="0" max="59" placeholder="Ej: 30" required>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="origen" class="form-label" data-i18n="formLugarRecogida">Lugar de recogida *</label>
+                <input type="text" id="origen" name="origen" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="destino" class="form-label" data-i18n="formLugarDestino">Lugar de destino *</label>
+                <input type="text" id="destino" name="destino" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="pasajeros" class="form-label" data-i18n="formPasajeros">Número de pasajeros</label>
+                <input type="number" id="pasajeros" name="pasajeros" class="form-control" min="1">
+            </div>
+
+            <div class="mb-3">
+                <label for="detalles" class="form-label" data-i18n="formDetalles">Detalles adicionales</label>
+                <textarea id="detalles" name="detalles" rows="4" class="form-control"></textarea>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-custom px-4" data-i18n="formEnviar">Enviar solicitud</button>
+            </div>
+
+            <p class="text-muted text-center mt-3 small" data-i18n="formAviso">
+                Al enviar este formulario, aceptas ser contactado por Basque Tours & Transfers para recibir tu presupuesto.
+            </p>
+        </form>
+
+        <!-- MENSAJE DE ÉXITO -->
+        <div id="mensajeExito" class="alert alert-success text-center mt-4">
+            <h4 data-i18n="formGracias">¡Gracias por tu solicitud!</h4>
+            <p data-i18n="formGraciasTexto">Hemos recibido tus datos correctamente. En breve nos pondremos en contacto contigo.</p>
+            <a href="index.html" class="btn btn-success mt-3" data-i18n="formVolver">Volver al inicio</a>
         </div>
-
-        <div class="col-md-3 mb-3">
-          <label for="hora" class="form-label">Hora *</label>
-          <select id="hora" name="hora" class="form-select" required>
-            <option value="">HH</option>
-            <option>00</option><option>01</option><option>02</option><option>03</option>
-            <option>04</option><option>05</option><option>06</option><option>07</option>
-            <option>08</option><option>09</option><option>10</option><option>11</option>
-            <option>12</option><option>13</option><option>14</option><option>15</option>
-            <option>16</option><option>17</option><option>18</option><option>19</option>
-            <option>20</option><option>21</option><option>22</option><option>23</option>
-          </select>
-        </div>
-
-        <div class="col-md-3 mb-3">
-          <label for="minutos" class="form-label">Minutos *</label>
-          <input type="number" id="minutos" name="minutos" class="form-control" min="0" max="59" placeholder="Ej: 30" required>
-        </div>
-      </div>
-
-      <div class="mb-3">
-        <label for="origen" class="form-label">Lugar de recogida *</label>
-        <input type="text" id="origen" name="origen" class="form-control" required>
-      </div>
-
-      <div class="mb-3">
-        <label for="destino" class="form-label">Lugar de destino *</label>
-        <input type="text" id="destino" name="destino" class="form-control" required>
-      </div>
-
-      <div class="mb-3">
-        <label for="pasajeros" class="form-label">Número de pasajeros</label>
-        <input type="number" id="pasajeros" name="pasajeros" class="form-control" min="1">
-      </div>
-
-      <div class="mb-3">
-        <label for="detalles" class="form-label">Detalles adicionales</label>
-        <textarea id="detalles" name="detalles" rows="4" class="form-control" placeholder="Ejemplo: silla para bebé, equipaje especial, persona con movilidad reducida..."></textarea>
-      </div>
-
-      <div class="text-center">
-        <button type="submit" class="btn btn-custom px-4">Enviar solicitud</button>
-      </div>
-
-      <p class="text-muted text-center mt-3 small">
-        Al enviar este formulario, aceptas ser contactado por Basque Tours & Transfers para recibir tu presupuesto.
-      </p>
-    </form>
-
-    <!-- MENSAJE DE ÉXITO -->
-    <div id="mensajeExito" class="alert alert-success text-center mt-4">
-      <h4>¡Gracias por tu solicitud!</h4>
-      <p>Hemos recibido tus datos correctamente. En breve nos pondremos en contacto contigo.</p>
-      <a href="index.html" class="btn btn-success mt-3">Volver al inicio</a>
     </div>
-  </div>
 
-  <script>
-    document.getElementById("presupuestoForm").addEventListener("submit", async function(e) {
-      e.preventDefault();
-      const form = e.target;
-      const data = new FormData(form);
+    <script>
+        document.getElementById("presupuestoForm").addEventListener("submit", async function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = new FormData(form);
 
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: {'Accept': 'application/json'}
+            });
 
-      if (response.ok) {
-        form.style.display = "none";
-        document.getElementById("mensajeExito").style.display = "block";
-        form.reset();
-      } else {
-        alert("Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.");
-      }
-    });
-  </script>
+            if (response.ok) {
+                form.style.display = "none";
+                document.getElementById("mensajeExito").style.display = "block";
+                form.reset();
+            } else {
+                alert("Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.");
+            }
+        });
+    </script>
+
+    <script src="resources/js/formulario-i18n.js"></script>
 </body>
+
+
 </html>
