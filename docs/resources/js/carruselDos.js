@@ -2,12 +2,8 @@
 // Lista de imágenes para los tours
 const tourImages = [
     "CostaBORIGINAL.webp",
-    "cadavedoORIGINAL.webp",
-    "CostaV.jpeg",
-    "MarquesRiscalORIGINAL.webp",
-    "JSB1.jpg",
-    "Imagen2a1.jpeg",
-    "ImgEmbarc.jpeg",
+    "cadavedoORIGINAL.webp",   
+    "MarquesRiscalORIGINAL.webp",  
     "jsb_panoramicaORIGINAL.webp",
     "Seleccion_ORIGINAL.webp",
     "Seleccion_YsiosORIGINAL.webp",
@@ -23,8 +19,7 @@ const tourImages = [
     "Carcassone3.webp",
     "Castro.webp",
     "Comida5.webp",
-    "CudilleroORIGINAL.webp",
-    "faro.jpg",
+    "CudilleroORIGINAL.webp",    
     "dolmen.webp",
     "vides.webp",
     "Getaria.webp",
@@ -35,6 +30,11 @@ const tourImages = [
     "encartaciones.webp",
     "catalina.webp",
     "gaviota.webp",
+    "CostaV.jpeg", 
+    "JSB1.jpg",
+    "Imagen2a1.jpeg",
+    "ImgEmbarc.jpeg",
+    "faro.jpg",
     "Trasl1a.jpeg"
 
 ];
