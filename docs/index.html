@@ -11,7 +11,7 @@
         <!-- Bootstrap y Swiper -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-     
+
         <!-- Estilos personalizados -->
         <link rel="stylesheet" href="resources/css/estilos.css" />
 
@@ -21,8 +21,8 @@
             "@type": ["TouristTransportation", "LocalBusiness"],
             "name": "Basque Tours & Transfers",
             "image": [
-            "https://basquetoursandtransfers.github.io/resources/img/logoToursT.png",
-            "https://basquetoursandtransfers.github.io/resources/img/Prime1aORIGINAL_.webp"
+            "https://basquetoursandtransfers.github.io/resources/img/logo_ToursT.png",
+            "https://basquetoursandtransfers.github.io/resources/img/Prime1aORIGINAL_.png"
             ],
             "url": "https://basquetoursandtransfers.github.io/",
             "description": "Servicio profesional de chófer privado, traslados al aeropuerto y tours personalizados por el País Vasco, La Rioja y el suroeste de Francia.",
@@ -52,7 +52,7 @@
                     <!-- Columna 1: Logo -->
                     <div class="d-flex align-items-center flex-shrink-0 me-1">
                         <a class="navbar-brand m-0" href="#">
-                            <img src="resources/img/logo_ToursT.png" alt="Logo" class="img-fluid" />
+                            <img src="resources/img/logoBTT.webp" alt="Logo" class="img-fluid" />
                         </a>
                     </div>
                     <!-- Columna 2: Texto centrado -->
@@ -338,6 +338,37 @@
             </div>
         </footer>
 
+        <!-- boton prueba cookies 
+        <div class="text-center py-2" style="background:#f8f9fa;">
+            <a href="cookies.html" class="text-muted small">
+                Política de cookies
+            </a>
+        </div>
+
+        <button id="resetCookiesTest" style="
+position: fixed;
+bottom: 80px;
+right: 20px;
+z-index: 100000;
+padding: 8px 12px;
+font-size: 12px;
+">
+  Reset cookies (solo pruebas)
+</button>
+
+        <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const resetBtn = document.getElementById("resetCookiesTest");
+    if (resetBtn) {
+      resetBtn.addEventListener("click", function () {
+        localStorage.removeItem("cookiesAccepted");
+        location.reload();
+      });
+    }
+  });
+</script>
+
+-->
         <!-- Modal lightbox -->
         <div id="img-modal" class="modal" style="
              display: none;
@@ -363,10 +394,80 @@
                  "/>
         </div>
 
+        <!-- Banner de cookies -->
+        <div id="cookie-banner" style="
+             position: fixed;
+             bottom: 0;
+             left: 0;
+             right: 0;
+             background: #00695c;
+             color: #fff;
+             padding: 15px 20px;
+             font-size: 14px;
+             display: none;
+             z-index: 99999;
+             ">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <span>
+                    Usamos cookies técnicas para el funcionamiento del sitio.
+                    <a href="cookies.html" target="_blank" rel="noopener noreferrer" 
+                       style="color:#c8f7e5; text-decoration: underline;">
+                        Más información
+                    </a>
+                </span>
+
+                <div>
+                    <button id="btn-accept-cookies" class="btn btn-light btn-sm me-2">Aceptar</button>
+                    <button id="btn-reject-cookies" class="btn btn-outline-light btn-sm">Rechazar</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function hideCookieBanner() {
+                const banner = document.getElementById("cookie-banner");
+                if (banner)
+                    banner.style.display = "none";
+            }
+
+            function showCookieBanner() {
+                const banner = document.getElementById("cookie-banner");
+                if (banner)
+                    banner.style.display = "block";
+            }
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const choice = localStorage.getItem("cookiesAccepted");
+
+                // Si todavía no hay elección, mostramos banner
+                if (!choice)
+                    showCookieBanner();
+
+                // Botones
+                const btnAccept = document.getElementById("btn-accept-cookies");
+                const btnReject = document.getElementById("btn-reject-cookies");
+
+                if (btnAccept) {
+                    btnAccept.addEventListener("click", function () {
+                        localStorage.setItem("cookiesAccepted", "true");
+                        hideCookieBanner();
+                        // Aquí cargarías analytics en el futuro si quieres
+                    });
+                }
+
+                if (btnReject) {
+                    btnReject.addEventListener("click", function () {
+                        localStorage.setItem("cookiesAccepted", "false");
+                        hideCookieBanner();
+                    });
+                }
+            });
+        </script>
+
         <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-     
+
         <script src="resources/js/carruselDos.js"></script>
         <script src="resources/js/idioma.js"></script> 
         <script>
