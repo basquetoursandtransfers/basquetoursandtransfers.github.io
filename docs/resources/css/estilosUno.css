@@ -1,3 +1,12 @@
+/* ============================= */
+/* Reglas globales / base       */
+/* ============================= */
+/*header {
+    background-color: white;
+    z-index: 1030;
+    position: sticky;
+    top: 0;
+}*/
 
 /* HEADER fijo y con fondo blanco   ///////////////////////////////////////  */
 header {
@@ -56,7 +65,11 @@ header {
     margin: 0;
     flex-direction: row;
 }
-
+/*.navbar-nav {
+  display: flex;           ya lo tenías 
+  overflow-x: auto;        ahora el scroll vive aquí 
+  white-space: nowrap;
+}*/
 .nav-item.dropdown {
     display: flex;
     align-items: center;
@@ -78,8 +91,18 @@ header {
 }
 
 
+/* ==========================///////////////////////////////////////== */
+/* paa que el texto se vea mas o menos justificado 
+*/
 /* ============================= */
-/* Ajuste definitivo: compactar bloques  */
+/* Ya no se usa en el HTML actual */
+/*
+.text-justify {
+   text-align: justify;
+}
+*/
+/* ============================= */
+/* Ajuste definitivo: compactar bloques beige */
 /* ============================= */
 .text-above-image .container,
 .text-below-image .container {
@@ -115,60 +138,35 @@ header {
         text-align: justify;
     }
 }
-/*
+
 .text-above-image,
 .text-below-image {
     width: 100%;
-    background-color: #eceff1; 
+    background-color: #d6e6c8; /* beige; ajusta tono si quieres */
     box-sizing: border-box;
 }
-*/
-/* beige; ajusta tono si quieres, ESTE ES VERDE #d6e6c8 */
 
-
-/*    ***********************************
-.text-above-image,
-.text-below-image {
-    width: 100%;
-    box-sizing: border-box;
-}
-.text-above-image {
-    background-color: #D2D4D9;          
-    border-bottom: 1px solid #dcdfe3;   
-}
-
-.text-above-image .container {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-}
-.text-below-image {
-    background-color: #EBECF0; 
-}
-.text-below-image h1 {
-    font-size: 1.6rem;
-    font-weight: 500;
-    font-style: italic;
-}
-
-
-
+/* ============================= */
+/* Ajustes responsivos para tamaños de texto (opcional) */
+/* ============================= */
 @media (max-width: 576px) {
     .text-above-image h1,
-    .text-below-image {
+    .text-below-image h1 {
         font-size: 1.75rem !important;
         line-height: 1.2;
+        /* Esta regla queda sobrescrita abajo */
         margin-bottom: 0.75rem;
         white-space: normal;
         hyphens: auto;
     }
     .text-below-image h5 {
         font-size: 0.875rem !important;
+        /* Esta también será sobrescrita abajo */
         margin-bottom: 0.5rem;
         white-space: normal;
         hyphens: auto;
     }
 }
-
 
 @media (min-width: 577px) {
     .text-above-image h1,
@@ -190,77 +188,9 @@ header {
     }
 }
 
-*/
-
-/* ============================= */
-/* BLOQUES ABOVE / BELOW (PRO)   */
-/* ============================= */
-
-.text-above-image,
-.text-below-image {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* ----- BLOQUE SUPERIOR (TÍTULO PRINCIPAL) ----- */
-.text-above-image {
-    background-color: #D2D4D9;          /* gris elegante */
-    border-bottom: 1px solid #dcdfe3;   /* línea fina PRO */
-}
-
-.text-above-image .container {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-}
-
-/* ----- BLOQUE INFERIOR (CLAIM) ----- */
-.text-below-image {
-    background-color: #EBECF0; /* un pelín más claro */
-}
-
-.text-below-image h1 {
-    font-size: 1.6rem;
-    font-weight: 500;
-    font-style: italic;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
-}
-
-/* ============================= */
-/* RESPONSIVE CORRECTO           */
-/* ============================= */
-
-/* 📱 MÓVIL */
-@media (max-width: 576px) {
-    .text-above-image h1 {
-        font-size: 1.75rem;
-        white-space: normal;
-        hyphens: auto;
-    }
-
-    .text-below-image h1 {
-        font-size: 1.3rem;
-        white-space: normal;
-        hyphens: auto;
-    }
-}
-
-/* 💻 TABLET / DESKTOP */
-@media (min-width: 577px) {
-    .text-above-image h1 {
-        font-size: 2.5rem;
-    }
-}
-
-@media (min-width: 992px) {
-    .text-above-image h1 {
-        font-size: 3rem;
-    }
-}
-
 
 .bloque-carrusel {
-    margin-top: -200px; 
+    margin-top: -200px; /* Hace que se solape hacia arriba */
     position: relative;
     z-index: 2;
 }
@@ -383,6 +313,7 @@ header {
   /* no hace falta redeclarar position ni width aquí */
 }
 
+
 .modal {
   animation: fadeIn 0.3s ease;
 }
@@ -390,4 +321,6 @@ header {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+
+
 
