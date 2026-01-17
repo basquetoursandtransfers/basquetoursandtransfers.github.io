@@ -44,8 +44,8 @@
     "formServicioDisposiciones": "Аренда автомобиля с водителем",
 
     "formVehiculo": "Тип автомобиля",
-    "formVehiculoV": "Mercedes V-Class (7 мест)",
-    "formVehiculoE": "Mercedes E-Class (4 места)",
+   "formVehiculoV": "Mercedes V-Class или аналогичный (7 мест)",
+    "formVehiculoE": "Mercedes E-Class или аналогичный (4 места)",
 
     "formFecha": "Дата подачи автомобиля *",
     "formHora": "Время *",

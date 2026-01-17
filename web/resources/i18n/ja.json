@@ -44,8 +44,8 @@
     "formServicioDisposiciones": "時間貸し運転サービス",
 
     "formVehiculo": "車種",
-    "formVehiculoV": "メルセデス・Vクラス（7名）",
-    "formVehiculoE": "メルセデス・Eクラス（4名）",
+    "formVehiculoV": "メルセデス・Vクラスまたは同等（7名）",
+    "formVehiculoE": "メルセデス・Eクラスまたは同等（4名）",
 
     "formFecha": "お迎え日 *",
     "formHora": "時間 *",

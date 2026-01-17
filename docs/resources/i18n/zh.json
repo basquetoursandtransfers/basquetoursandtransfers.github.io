@@ -44,8 +44,8 @@
     "formServicioDisposiciones": "专属司机服务",
 
     "formVehiculo": "车型",
-    "formVehiculoV": "梅赛德斯 V 级（7 座）",
-    "formVehiculoE": "梅赛德斯 E 级（4 座）",
+    "formVehiculoV": "梅赛德斯 V 级或同级（7 座）",
+  "formVehiculoE": "梅赛德斯 E 级或同级（4 座）",
 
     "formFecha": "接车日期 *",
     "formHora": "时间 *",

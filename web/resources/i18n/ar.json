@@ -44,8 +44,8 @@
     "formServicioDisposiciones": "خدمة السائق بالساعة",
 
     "formVehiculo": "نوع المركبة",
-    "formVehiculoV": "مرسيدس فئة V (7 مقاعد)",
-    "formVehiculoE": "مرسيدس فئة E (4 مقاعد)",
+    "formVehiculoV": "مرسيدس فئة V أو ما شابه (7 مقاعد)",
+    "formVehiculoE": "مرسيدس فئة E أو ما شابه (4 مقاعد)",
 
     "formFecha": "تاريخ الاستلام *",
     "formHora": "الساعة *",
