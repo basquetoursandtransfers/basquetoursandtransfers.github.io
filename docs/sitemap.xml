@@ -1,36 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://basquetoursandtransfers.github.io/</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://basquetoursandtransfers.github.io/#tours</loc>
+    <loc>https://basquetoursandtransfers.github.io/formulario.html</loc>
+    <lastmod>2026-01-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://basquetoursandtransfers.github.io/#traslados</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://basquetoursandtransfers.github.io/gracias.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
+
   <url>
-    <loc>https://basquetoursandtransfers.github.io/#disposiciones</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://basquetoursandtransfers.github.io/cookies.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
-  <url>
-    <loc>https://basquetoursandtransfers.github.io/#contacto</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://basquetoursandtransfers.github.io/#quienes</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+
 </urlset>
 
 
