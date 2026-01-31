@@ -27,7 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function cargarIdioma(codigoIdioma) {
-    fetch(`resources/i18n/${codigoIdioma}.json`)
+    //fetch(`resources/i18n/${codigoIdioma}.json`)
+     fetch(`resources/i18n/${codigoIdioma}.json?v=${Date.now()}`)
             .then(response => {
                 if (!response.ok)
                     throw new Error(`No se encontró el archivo: ${codigoIdioma}.json`);

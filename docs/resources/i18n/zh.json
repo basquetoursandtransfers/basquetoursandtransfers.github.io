@@ -45,7 +45,7 @@
 
     "formVehiculo": "车型",
     "formVehiculoV": "梅赛德斯 V 级或同级（7 座）",
-  "formVehiculoE": "梅赛德斯 E 级或同级（4 座）",
+    "formVehiculoE": "梅赛德斯 E 级或同级（4 座）",
 
     "formFecha": "接车日期 *",
     "formHora": "时间 *",
@@ -67,6 +67,10 @@
 
     "formError": "提交表单时出现错误，请重试。",
     "formSeleccione": "请选择一个选项",
-    "botonSolicitar": "📩 请求报价"
+    "botonSolicitar": "📩 请求报价",
+    "tituloAlquilerCocheConductorCorto": "配备司机的车辆租赁",
+    "servicioAlquilerCocheConductor": "专业的配备司机车辆租赁服务，适合希望在无需操心驾驶的情况下舒适出行的客户，提供个性化服务和高度灵活性。",
+    "tituloAlquiler": "配备司机的车辆租赁服务",
+    "textoAlquiler": "尊享配备专业司机的高端车辆租赁服务，为您提供舒适、高效且灵活的出行体验。Basque Tours & Transfers 为您提供高端车型和经验丰富的专业司机，确保每一次行程都准时、私密且贴心服务。本服务非常适合城市出行、整日包车、商务会议、各类活动、私人行程或定制化观光路线。我们将根据您的时间安排和个人需求灵活调整，让您无需操心驾驶和行程细节，安心高效地完成每一次出行。"
 }
 
