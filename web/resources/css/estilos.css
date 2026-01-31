@@ -426,43 +426,6 @@ header {
   font-size: 3rem !important;
 }
 
-.servicios-top{
-  font-weight: 400;        /* sin negrita */
-  font-size: 1.45rem;
-  color: #2f5fa7; 
-}
-
-.servicios-top a{
-  color: inherit;
-  text-decoration: none;
-}
-
-.servicios-top a:hover{
-  text-decoration: underline;
-}
-.servicios-top a,
-.servicios-top span{
-  margin: 0 0.5rem;
-}
-
-
-@media (max-width:576px){
-  .servicios-top{
-    font-size: 1.1rem;
-  }
-}
-
-.servicios-bar{
-  display: flex;
-  align-items: center;
-}
-
-/* servicios centrados ocupando espacio */
-.servicios-top{
-  flex: 1;
-  text-align: center;
-}
-
 /* Botón flotante volver arriba */
 #btnScrollTop{
   position: fixed;
@@ -493,3 +456,46 @@ header {
     display: none !important;
   }
 } 
+
+/* Servicios centrados y sin corte */
+.servicios-bar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Para separar el botón de los servicios */
+  gap: 1rem; /* Ajusta la distancia entre las palabras */
+  flex-wrap: wrap; /* Permite que las palabras se pasen a una nueva línea si es necesario */
+  width: 100%;
+}
+
+/* Servicios en una sola línea, pero que se envuelven si es necesario */
+.servicios-top{
+  flex: 1;
+  text-align: center;
+  white-space: normal; /* Permite que las palabras se envuelvan en lugar de cortarse */
+  font-weight: 400;        /* sin negrita */
+  font-size: 1.45rem;
+  color: #2f5fa7; /* Azul metálico */
+}
+
+/* Ajuste para los enlaces (eliminar subrayado) */
+.servicios-top a {
+  color: #2f5fa7; /* Color azul metálico */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+.servicios-top a:hover {
+  color: #1f3a5f; /* Un tono más oscuro de azul para el hover */
+  text-decoration: none; /* Asegura que no se subraye al pasar el cursor */
+}
+
+/* Ajuste para las palabras de los enlaces */
+.servicios-top a,
+.servicios-top span {
+  margin: 0 0.5rem;
+}
+
+@media (max-width:576px){
+  .servicios-top{
+    font-size: 1.1rem; /* Ajustamos el tamaño de las palabras en móvil */
+  }
+}
