@@ -60,13 +60,14 @@ header {
 /* Ajuste en pantallas pequeñas (móviles) */
 @media (max-width: 576px) {
     .text-center h5 {
-         font-size: 1.2rem;  /* Ajusta el tamaño del texto en móviles */
+         font-size: 0.75rem;  /* Ajusta el tamaño del texto en móviles */
         text-align: center; /* Asegura que el texto esté centrado */
-         white-space: normal;
-        /*white-space: nowrap; /* Evita el salto de línea */
+        white-space: nowrap; /* Evita el salto de línea */
         overflow: hidden; /* Mantiene el texto dentro del límite del contenedor */
+        max-width: 100%;  /* Evita que el texto se desborde */
     }
 }
+
 
 
 /* Añadido para manejar el tamaño del texto */
