@@ -6,7 +6,7 @@
         <title>Alquiler de coche con conductor | Traslados y tours en el País Vasco | Basque Tours & Transfers</title>
         <meta name="description" content="Servicio de coche con conductor privado, traslados desde el aeropuerto de Bilbao y San Sebastián, y tours personalizados por el País Vasco con atención en varios idiomas." />
         <meta name="keywords" content="coche con conductor, conductor privado, alquiler de coche con conductor, traslados privados, traslado aeropuerto Bilbao, traslado aeropuerto San Sebastián, tours privados, País Vasco, Bilbao, San Sebastián, Vitoria, airport transfer, guía turístico" />
-        
+
         <!-- Bootstrap y Swiper -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -55,8 +55,9 @@
                     </div>
                     <!-- Columna 2: Texto centrado -->
                     <div class="text-center flex-grow-1">
-                        <h5 class="fw-medium  verde-oscuro responsive-align m-0" data-i18n="textoDos"></h5>
+                        <h1 class="fw-bold nav-h1 m-0" data-i18n="textoUno"></h1>
                     </div>
+
                     <!-- Columna 3: Selector de idioma -->
                     <div class="d-flex align-items-center flex-shrink-0">
                         <ul class="navbar-nav">
@@ -82,11 +83,34 @@
         </header>
 
         <!-- Texto superior (encima de la imagen) -->
-        <div class="text-above-image text-center text-black">
+        <div class="text-above-image text-black">
             <div class="container py-4">
-                <h1 class="fw-bold" data-i18n="textoUno"></h1>
+
+                <div class="servicios-bar">
+
+                    <!-- Servicios centrados -->
+                    <div class="servicios-top">
+                        <a href="#traslados" data-i18n="tituloTrasladosCorto"></a>
+                        <span> · </span>
+                        <a href="#tours" data-i18n="tituloToursCorto"></a>
+                        <span> · </span>
+                        <a href="#disposiciones" data-i18n="tituloDisposicionesCorto"></a>
+                        <span> · </span>
+                        <a href="#alquiler" data-i18n="tituloAlquilerCocheConductorCorto"></a>
+                    </div>
+
+                    <!-- CTA a la derecha -->
+                    <a href="formulario.html"
+                       target="_blank"
+                       class="cta-presupuesto-top"
+                       data-i18n="botonSolicitar">
+                    </a>
+
+                </div>
+
             </div>
         </div>
+
 
         <!-- Imagen -->
         <div class="image-wrapper">
@@ -106,7 +130,7 @@
                 <h2 class="text-uppercase fw-bold mb-4" data-i18n="tituloServicios"></h2>
                 <div class="row justify-content-center">
                     <!-- Traslados -->
-                   <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <div class="col-12 col-sm-6 col-md-3 mb-4">
                         <a href="#traslados" class="d-block text-decoration-none text-dark" aria-label="Ir a sección Traslados">
                             <img src="resources/img/iconT.png" alt="Icono Traslados" class="icon-servicio mb-3" width="100" height="100" />
                             <h5 class="fw-bold" data-i18n="tituloTrasladosCorto"></h5>
@@ -123,23 +147,23 @@
                         </a>
                     </div>
                     <!-- Disposiciones -->
-                   <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <div class="col-12 col-sm-6 col-md-3 mb-4">
                         <a href="#disposiciones" class="d-block text-decoration-none text-dark" aria-label="Ir a sección Disposiciones">
                             <img src="resources/img/iconDispo.png" alt="Icono Disposiciones" class="icon-servicio mb-3" width="100" height="100" />
                             <h5 class="fw-bold" data-i18n="tituloDisposicionesCorto"></h5>
                             <p class="text-muted px-3 text-center" style="word-break: break-word; white-space: normal;" data-i18n="servicioDisposiciones"></p>                          
                         </a>
                     </div>
-                    
-                     <!-- Alquiler de coche con conductor -->
-                     <div class="col-12 col-sm-6 col-md-3 mb-4">
+
+                    <!-- Alquiler de coche con conductor -->
+                    <div class="col-12 col-sm-6 col-md-3 mb-4">
                         <a href="#alquiler" class="d-block text-decoration-none text-dark" aria-label="Ir a sección alquiler Coche">
                             <img src="resources/img/iconCC_1.webp" alt="Icono AlquilerCoche" class="icon-servicio icon-servicio--cc mb-3" width="100" height="100" />
                             <h5 class="fw-bold" data-i18n="tituloAlquilerCocheConductorCorto"></h5>
                             <p class="text-muted px-3 text-center" style="word-break: break-word; white-space: normal;" data-i18n="servicioAlquilerCocheConductor"></p>                          
                         </a>
                     </div>
-                     
+
                 </div>
             </div>
 
@@ -298,8 +322,8 @@
                 </div>
             </div>
         </section>
-        
-             <!-- Quiénes somos -->
+
+        <!-- Quiénes somos -->
         <section id="quienes" class="bg-light text-dark py-5 position-relative" style="z-index: 1;">
             <div class="container">
                 <div class="row align-items-center">
@@ -510,5 +534,11 @@ font-size: 12px;
                 }
             });
         </script>
+        <!-- Botón volver arriba -->
+        <button id="btnScrollTop" aria-label="Volver arriba">
+            ↑
+        </button>
+        <script src="resources/js/scrollTop.js"></script>
+
     </body>
 </html>
