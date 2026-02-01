@@ -62,33 +62,17 @@ header {
     .text-center h5 {
          font-size: 0.75rem;  /* Ajusta el tamaño del texto en móviles */
         text-align: center; /* Asegura que el texto esté centrado */
-        white-space: nowrap; /* Evita el salto de línea */
+        white-space: normal; /* Evita el salto de línea */
         overflow: hidden; /* Mantiene el texto dentro del límite del contenedor */
         max-width: 100%;  /* Evita que el texto se desborde */
     }
 }
 
 
-
+/*
 /* Añadido para manejar el tamaño del texto */
-.nav-h1 {
-    font-size: 2rem; /* Tamaño de fuente por defecto para pantallas grandes */
-    font-weight: 400; /* Sin negrita */
-    text-align: center;
-    white-space: nowrap; /* Evita que el texto se divida en dos líneas */
-    overflow: hidden; /* Asegura que el texto no se desborde */
-    max-width: 100%; /* Evita que el texto se desborde */
-}
 
-/* Ajuste en pantallas pequeñas (móviles) */
-@media (max-width: 576px) {
-    .nav-h1 {
-        font-size: clamp(1rem, 4vw, 1.5rem); /* Tamaño más pequeño para móviles, ajustable */
-        text-align: center; /* Asegura que el texto esté centrado */
-        white-space: normal; /* Permite que el texto se divida en varias líneas si es necesario */
-        overflow-wrap: break-word; /* Permite que el texto largo se ajuste a la siguiente línea */
-    }
-}
+
 
 /* BANDERA DE IDIOMA */
 .navbar .nav-link img {
