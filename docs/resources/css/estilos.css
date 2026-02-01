@@ -494,13 +494,16 @@ header {
 }
 
 /* Servicios en una sola línea, pero que se envuelven si es necesario */
-.servicios-top{
-    flex: 1;
-    text-align: center;
-    white-space: normal; /* Permite que las palabras se envuelvan en lugar de cortarse */
-    font-weight: 400;        /* sin negrita */
+
+.servicios-top {
+    display: flex; /* Usamos flexbox para los enlaces */
+    align-items: center;
+    text-align: center; /* Asegura que el texto esté centrado */
+    white-space: nowrap; /* Mantiene los enlaces en una sola línea */
+    font-weight: 400; /* Sin negrita */
     font-size: 1.45rem;
     color: #2f5fa7; /* Azul metálico */
+    gap: 0.5rem; /* Espacio entre los enlaces */
 }
 
 /* Ajuste para los enlaces (eliminar subrayado) */
@@ -520,16 +523,20 @@ header {
     margin: 0 0.5rem;
 }
 
-@media (max-width:576px){
-    .servicios-top{
-        font-size: 1.1rem; /* Ajustamos el tamaño de las palabras en móvil */
-        text-align: center; /* Asegura que el texto esté centrado */
-        white-space: normal; /* Permite que el texto se divida si es necesario */
-        overflow-wrap: break-word; /* Permite que las palabras largas se ajusten a la siguiente línea */
-        width: 100%; /* Asegura que los servicios ocupen todo el ancho disponible */
+/* Ajuste en pantallas móviles (menos de 576px) */
+@media (max-width: 576px) {
+    .servicios-top {
+        font-size: 1.1rem; /* Ajuste de tamaño de la fuente en móvil */
+        flex-wrap: wrap; /* Permite que los enlaces se acomoden en varias líneas si no caben */
+        gap: 0.3rem; /* Ajusta el espacio entre los enlaces en móviles */
     }
-     .servicios-bar {
-        justify-content: center; /* Centra los servicios cuando están en varias líneas */
-        gap: 0.5rem; /* Ajusta el espacio entre los servicios en móviles */
+
+    .servicios-bar {
+        justify-content: space-between; /* El espacio entre el grupo de servicios y el botón */
+    }
+
+    /* Asegura que el botón siempre esté a la derecha */
+    .cta-presupuesto-top {
+        margin-left: auto; /* Esto empuja el botón hacia la derecha */
     }
 }
