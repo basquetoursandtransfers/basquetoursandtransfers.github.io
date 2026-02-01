@@ -31,14 +31,6 @@ header {
 }
 
 /* TEXTO CENTRAL */
-.text-center {
-    flex: 2;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 /*
 .text-center h5 {
     margin: 0;
@@ -47,9 +39,16 @@ header {
     line-height: 1.2;
 }
 */
+.text-center {
+    flex: 2;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 /* Estilo para el h5 con la clase nav-h1, centrado */
 .text-center h5 {
-    font-size: 2rem; /* Tamaño de fuente por defecto para pantallas grandes */
+    font-size: 1.25rem; /* Tamaño de fuente por defecto para pantallas grandes */
     font-weight: 400; /* Sin negrita */
     text-align: center; /* Asegura que el texto esté centrado */
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
@@ -60,15 +59,14 @@ header {
 /* Ajuste en pantallas pequeñas (móviles) */
 @media (max-width: 576px) {
     .text-center h5 {
-         font-size: 0.75rem;  /* Ajusta el tamaño del texto en móviles */
+         /*font-size: 1rem !important;  /* Ajusta el tamaño del texto en móviles */
+         font-size: clamp(0.65rem, 4vw, 0.85rem); /* Ajuste dinámico del tamaño de texto para móviles */
         text-align: center; /* Asegura que el texto esté centrado */
-        white-space: normal; /* Evita el salto de línea */
+        white-space: nowrap; /* Evita el salto de línea */
         overflow: hidden; /* Mantiene el texto dentro del límite del contenedor */
         max-width: 100%;  /* Evita que el texto se desborde */
     }
 }
-
-
 /*
 /* Añadido para manejar el tamaño del texto */
 
