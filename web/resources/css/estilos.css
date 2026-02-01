@@ -519,5 +519,13 @@ header {
 @media (max-width:576px){
     .servicios-top{
         font-size: 1.1rem; /* Ajustamos el tamaño de las palabras en móvil */
+        text-align: center; /* Asegura que el texto esté centrado */
+        white-space: normal; /* Permite que el texto se divida si es necesario */
+        overflow-wrap: break-word; /* Permite que las palabras largas se ajusten a la siguiente línea */
+        width: 100%; /* Asegura que los servicios ocupen todo el ancho disponible */
+    }
+     .servicios-bar {
+        justify-content: center; /* Centra los servicios cuando están en varias líneas */
+        gap: 0.5rem; /* Ajusta el espacio entre los servicios en móviles */
     }
 }
