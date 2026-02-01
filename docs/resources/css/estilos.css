@@ -503,7 +503,7 @@ header {
     font-weight: 400; /* Sin negrita */
     font-size: 1.45rem;
     color: #2f5fa7; /* Azul metálico */
-    gap: 0.5rem; /* Espacio entre los enlaces */
+    gap: 0.3rem; /* Espacio entre los enlaces */
 }
 
 /* Ajuste para los enlaces (eliminar subrayado) */
