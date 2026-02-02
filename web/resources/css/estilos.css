@@ -59,7 +59,7 @@ header {
 /* Ajuste en pantallas pequeñas (móviles) */
 @media (max-width: 576px) {
     .text-center h5 {
-         font-size: 1rem !important;  /* Tamaño fijo y más pequeño para móviles */
+        font-size: 1rem !important;  /* Tamaño fijo y más pequeño para móviles */
         text-align: center; /* Asegura que el texto esté centrado */
         white-space: nowrap; /* Evita el salto de línea */
         overflow: hidden; /* Mantiene el texto dentro del límite del contenedor */
@@ -427,6 +427,7 @@ header {
     transform: scale(1.95);
 }
 
+
 .footer-premium {
     background-color: #0f0f0f;
     color: #ffffff;
@@ -444,6 +445,17 @@ header {
     transform: translateY(-2px);
     opacity: 0.85;
 }
+@media (max-width: 576px) {
+    .footer-premium img {
+        width: 22px;
+    }
+
+    .footer-premium a.btn {
+        padding: 6px;
+    }
+}
+
+
 .nav-h1{
     font-size: 3rem !important;
 }
@@ -532,7 +544,96 @@ header {
     }
 
     /* Asegura que el botón siempre esté a la derecha */
-    .cta-presupuesto-top {
-        margin-left: auto; /* Esto empuja el botón hacia la derecha */
+   
+}
+
+/* Estilo para los enlaces nuevos (sin fondo) */
+.image-wrapper {
+    position: relative; /* Para asegurar que los elementos con position: absolute se posicionen dentro */
+}
+.enlaceNuevo {
+    position: absolute; /* Permite colocar los enlaces encima de la imagen */
+    top: 0px; /* Ajuste para no pegarlos demasiado a la parte superior */
+    right: 15px; /* Alinea los enlaces a la derecha */
+    width: auto;
+    text-align: right; /* Alineación de los enlaces a la derecha */
+    z-index: 10; /* Asegura que los enlaces estén por encima de la imagen */
+    display: block; /* Alineación vertical */
+
+}
+/* Estilo de los enlaces dentro de .enlaceNuevo */
+.enlaceNuevo a {
+    color: #1F7A55; /* Color más oscuro */
+    text-decoration: none; /* Sin subrayado por defecto */
+    font-weight: normal; /* Elimina la negrita */
+    font-size: 0.8rem; /* Ajuste de tamaño de la fuente */
+    padding: 3px 0; /* Espaciado entre los enlaces */
+    display: block; /* Cada enlace en una nueva línea */
+}
+/* Ajustes para pantallas grandes (escritorio) */
+@media (min-width: 577px) {
+    .enlaceNuevo a {
+        font-size: 2rem; /* Tamaño de la fuente más grande para pantallas grandes */
     }
 }
+
+
+/* Enlaces alineados verticalmente en pantallas pequeñas */
+@media (max-width: 576px) {
+    .enlaceNuevo {
+        position: absolute;
+        top: 0px;
+        right: 15px;
+        width: auto;
+        text-align: right;
+        z-index: 10;
+        padding-right: 5px;
+        display: block; /* Alineación vertical */
+    }
+    /* Estilo de los enlaces dentro de .enlaceNuevo */
+    .enlaceNuevo a {
+        color: #1F7A55; /* Color  */
+        text-decoration: none; /* Sin subrayado por defecto */
+        font-weight: normal; /* Elimina la negrita */
+        font-size: 0.8rem; /* Ajuste de tamaño de la fuente */
+        padding: 0 5px; /* Espaciado entre los enlaces */
+        display: block; /* Cada enlace en una nueva línea */
+    }
+}
+.enlaceNuevo a:hover {
+    text-decoration: underline; /* Subraya el enlace cuando pasa el ratón */
+}
+
+/* Estilo para el nuevo botón flotante (izquierda) */
+#btnSolicitarPresupuesto {
+    position: fixed;
+    bottom: 20%; /* Ajusta su posición verticalmente un poco más abajo del centro */
+    left: 05px; /* Se mantiene a la izquierda */
+    width: auto;
+    height: 30px;
+    padding: 0 08px; /* Reduce el espacio a la izquierda y derecha */
+    border-radius: 15px;
+    border: none;
+    background-color: #3b7a57; /* Mismo color verde */
+    color: #fff;
+    font-size: 0.5rem;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Efecto al pasar el mouse */
+#btnSolicitarPresupuesto:hover {
+    transform: translateY(-2px); /* Efecto hover */
+}
+
+/* Estilo del texto dentro del botón */
+#btnSolicitarPresupuesto span {
+    font-size: 0.5rem;
+}
+
