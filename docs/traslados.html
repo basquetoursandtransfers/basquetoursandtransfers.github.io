@@ -126,6 +126,121 @@
                 object-position: center 85%;
                 display: block;
             }
+            
+            
+            /*para texto encima de la imagen */
+
+            @media (max-width: 576px) {
+
+                .dispo-hero-content {
+                    align-items: flex-start;
+                }
+
+                .dispo-hero-content .container {
+                    padding-top: 2.1rem !important;
+                    padding-bottom: 0.4rem !important;
+                    padding-left: 0.9rem !important;
+                    padding-right: 0.9rem !important;
+                }
+
+                .hero-title {
+                    font-size: 0.95rem !important;
+                    line-height: 1.12 !important;
+                    margin-bottom: 0.45rem !important;
+                    max-width: 100%;
+                    white-space: normal;
+                    overflow-wrap: break-word;
+                    word-break: normal;
+                }
+
+                .hero-lead {
+                    font-size: 0.72rem !important;
+                    line-height: 1.28 !important;
+                    margin-top: 0 !important;
+                    margin-bottom: 0.55rem !important;
+                    max-width: 100%;
+                }
+
+                .dispo-hero-cta {
+                    gap: 0.4rem !important;
+                    margin-bottom: 2rem !important;
+                }
+
+                .dispo-hero-cta a,
+                .dispo-hero-cta .btn-lg {
+                    font-size: 0.78rem !important;
+                    padding: 0.38rem 0.75rem !important;
+                    line-height: 1.15 !important;
+                }
+
+                .dispo-intro {
+                    margin-top: 0.75rem;
+                }
+
+                .dispo-hero-cta a:last-child {
+                     margin-bottom: 0.8rem !important
+                }
+            }
+            /*ara texto debajo de la imagen*/
+              .text-below-image {
+                background-color: #f5f6f8;
+            }
+
+            .text-below-image h2 {
+                font-size: 2.2rem;
+                line-height: 1.2;
+                margin-bottom: 0.75rem;
+                white-space: normal;
+                overflow-wrap: break-word;
+                word-break: normal;
+            }
+
+            .text-below-image p {
+                font-size: 1.35rem;
+                line-height: 1.5;
+                margin-bottom: 0;
+                white-space: normal;
+                overflow-wrap: break-word;
+                word-break: normal;
+            }
+
+            @media (max-width: 768px) {
+                .text-below-image .container {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                }
+
+                .text-below-image h2 {
+                    font-size: 1.6rem;
+                    line-height: 1.25;
+                }
+
+                .text-below-image p {
+                    font-size: 1.05rem;
+                    line-height: 1.45;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .text-below-image .container {
+                    padding-top: 1.25rem !important;
+                    padding-bottom: 1.25rem !important;
+                    padding-left: 0.9rem;
+                    padding-right: 0.9rem;
+                }
+
+                .text-below-image h2 {
+                    font-size: 1.25rem;
+                    line-height: 1.3;
+                    text-align: center;
+                }
+
+                .text-below-image p {
+                    font-size: 0.98rem;
+                    line-height: 1.45;
+                    text-align: center;
+                }
+            }
         </style>
         <script type="application/ld+json">
             {
@@ -185,9 +300,7 @@
         <div class="text-below-image text-center text-black">
             <div class="container py-4">
                 <h2 class="fw-bold fst-italic" data-i18n="trasladosPaginaIntroTitulo">Trayectos privados con recogida puntual y destino definido</h2>
-                <p class="lead fst-italic text-muted" data-i18n="trasladosPaginaIntroLead">
-                    Del aeropuerto, hotel, puerto o empresa a su destino, sin desvíos innecesarios ni esperas.
-                </p>
+               
             </div>
         </div>
 

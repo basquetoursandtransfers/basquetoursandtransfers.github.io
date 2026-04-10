@@ -16,6 +16,27 @@
         <link rel="apple-touch-icon" href="https://basquetoursandtransfers.github.io/resources/img/logoBTT.webp">
         <link rel="stylesheet" href="resources/css/estilos.css" />
         <style>
+
+            @media (max-width: 576px) {
+
+                .hero-title {
+                    font-size: 1.3rem !important;
+                    line-height: 1.2;
+                }
+
+                .hero-lead {
+                    font-size: 0.9rem !important;
+                    line-height: 1.4;
+                }
+
+                .cta-inline a,
+                .cta-inline .btn-lg {
+                    font-size: 0.85rem !important;
+                    padding: 0.5rem 0.7rem !important;
+                    display: inline-block;
+                }
+
+            }
             .hero-overlay {
                 position: absolute;
                 inset: 0;
@@ -39,14 +60,18 @@
                 font-size: 2rem;
                 line-height: 1.2;
                 max-width: 760px;
+                margin-bottom: 1rem;
             }
 
             .hero-lead {
                 color: #f5f5f5;
                 max-width: 700px;
-                font-size: 1.05rem;
+                font-size: 1.1rem;
+                line-height: 1.55;
             }
 
+
+            /* A PARTIR DE AQUI NO TOCAR */
             .section-soft {
                 background-color: #f5f6f8;
             }
@@ -122,6 +147,65 @@
                 object-position: center;
                 display: block;
             }
+            .text-below-image {
+                background-color: #f5f6f8;
+            }
+
+            .text-below-image h2 {
+                font-size: 2.2rem;
+                line-height: 1.2;
+                margin-bottom: 0.75rem;
+                white-space: normal;
+                overflow-wrap: break-word;
+                word-break: normal;
+            }
+
+            .text-below-image p {
+                font-size: 1.35rem;
+                line-height: 1.5;
+                margin-bottom: 0;
+                white-space: normal;
+                overflow-wrap: break-word;
+                word-break: normal;
+            }
+
+            @media (max-width: 768px) {
+                .text-below-image .container {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                }
+
+                .text-below-image h2 {
+                    font-size: 1.6rem;
+                    line-height: 1.25;
+                }
+
+                .text-below-image p {
+                    font-size: 1.05rem;
+                    line-height: 1.45;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .text-below-image .container {
+                    padding-top: 1.25rem !important;
+                    padding-bottom: 1.25rem !important;
+                    padding-left: 0.9rem;
+                    padding-right: 0.9rem;
+                }
+
+                .text-below-image h2 {
+                    font-size: 1.25rem;
+                    line-height: 1.3;
+                    text-align: center;
+                }
+
+                .text-below-image p {
+                    font-size: 0.98rem;
+                    line-height: 1.45;
+                    text-align: center;
+                }
+            }
         </style>
         <script type="application/ld+json">
             {
@@ -180,8 +264,10 @@
 
         <div class="text-below-image text-center text-black">
             <div class="container py-4">
-                <h2 class="fw-bold fst-italic" data-i18n="alquilerPaginaIntroTitulo">Servicio premium con conductor para una agenda personalizada</h2>
-                <p class="lead fst-italic text-muted" data-i18n="alquilerPaginaIntroLead">
+                <h2 class="fw-bold fst-italic mb-3" data-i18n="alquilerPaginaIntroTitulo">
+                    Servicio premium con conductor para una agenda personalizada
+                </h2>
+                <p class="fst-italic text-muted mb-0" data-i18n="alquilerPaginaIntroLead">
                     Una solución elegante para quien necesita coche con chófer sin conducir ni ocuparse de la logística.
                 </p>
             </div>
