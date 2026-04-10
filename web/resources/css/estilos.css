@@ -47,7 +47,7 @@ header {
 }
 
 /* Estilo para el h5 con la clase nav-h1, centrado */
-.text-center h5 {
+.nav-h1 {
     font-size: 1.25rem; /* Tamaño de fuente por defecto para pantallas grandes */
     font-weight: 400; /* Sin negrita */
     text-align: center; /* Asegura que el texto esté centrado */
@@ -58,7 +58,7 @@ header {
 
 /* Ajuste en pantallas pequeñas (móviles) */
 @media (max-width: 576px) {
-    .text-center h5 {
+    .nav-h1 {
         font-size: 1rem !important;  /* Tamaño fijo y más pequeño para móviles */
         text-align: center; /* Asegura que el texto esté centrado */
         white-space: nowrap; /* Evita el salto de línea */
@@ -66,6 +66,28 @@ header {
         max-width: 100%;  /* Evita que el texto se desborde */
     }
 }
+
+/* ESTO ESTA EN GITHUB (CONSERVAR PORQUE EN ESTA SUBIDA HA CAMBIADO) Estilo para el h5 con la clase nav-h1, centrado 
+.text-center h5 {
+    font-size: 1.25rem; 
+    font-weight: 400; 
+    text-align: center; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    max-width: 100%;
+}
+
+
+@media (max-width: 576px) {
+    .text-center h5 {
+        font-size: 1rem !important; 
+        text-align: center; 
+        white-space: nowrap; 
+        overflow: hidden; 
+        max-width: 100%;  
+    }
+}
+*/
 
 /* BANDERA DE IDIOMA */
 .navbar .nav-link img {
@@ -666,3 +688,4 @@ En pantallas grandes: justificar automáticamente
 #btnSolicitarPresupuesto span {
     font-size: 0.5rem;
 }
+

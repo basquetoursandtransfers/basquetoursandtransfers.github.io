@@ -3,30 +3,37 @@
 
   <url>
     <loc>https://basquetoursandtransfers.github.io/</loc>
-    <lastmod>2026-01-26</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://basquetoursandtransfers.github.io/formulario.html</loc>
-    <lastmod>2026-01-26</lastmod>
+    <loc>https://basquetoursandtransfers.github.io/alquiler-coche-con-conductor.html</loc>
+    <lastmod>2026-04-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://basquetoursandtransfers.github.io/gracias.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://basquetoursandtransfers.github.io/traslados.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://basquetoursandtransfers.github.io/cookies.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <loc>https://basquetoursandtransfers.github.io/disposiciones.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://basquetoursandtransfers.github.io/tours.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
-
-
