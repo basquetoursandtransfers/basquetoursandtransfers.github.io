@@ -99,7 +99,12 @@
                 min-width: 220px;
             }
 
-
+            .faq-item {
+                background: #fff;
+                border-radius: 12px;
+                padding: 1rem 1.25rem;
+                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+            }
 
             @media (max-width: 576px) {
                 .hero-title {
@@ -109,22 +114,6 @@
                 .hero-lead {
                     font-size: 0.95rem;
                 }
-            }
-            /*
-             .imagen-bloque-servicio {
-                 width: 100%;
-                 height: 360px;
-                 object-fit: cover;
-                 object-position: center 85%;
-                 display: block;
-             }
-            */
-               .imagen-bloque-servicio {
-                width: 100%;
-                height: 360px;
-                object-fit: cover;
-                object-position: center;
-                display: block;
             }
         </style>
     </head>
@@ -140,16 +129,34 @@
                     <div class="text-center flex-grow-1">
                         <h5 class="fw-bold nav-h1 m-0" data-i18n="textoUno">Basque Tours & Transfers</h5>
                     </div>
+                    <div class="d-flex align-items-center flex-shrink-0">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="idiomaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img id="banderaActual" src="resources/img/banderaEsp.jpg" alt="Idioma" class="img-bandera" />
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="idiomaDropdown">
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="es"><img src="resources/img/banderaEsp.jpg" class="img-bandera" alt="Espanol" title="Espanol" /> Espanol</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="en"><img src="resources/img/banderaBrit.jpg" class="img-bandera" alt="English" title="English" /> English</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="fr"><img src="resources/img/banderaFrancia.jpg" class="img-bandera" alt="Francais" title="Francais" /> Francais</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="ru"><img src="resources/img/banderaRusa.jpg" class="img-bandera" alt="Russkiy" title="Russkiy" /> Russkiy</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="ja"><img src="resources/img/banderaJap.jpg" class="img-bandera" alt="Nihongo" title="Nihongo" /> Nihongo</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="ar"><img src="resources/img/banderaArabiaSaudi.jpg" class="img-bandera" alt="Arabic" title="Arabic" /> Arabic</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="zh"><img src="resources/img/banderaChina.jpg" class="img-bandera" alt="Chinese" title="Chinese" /> Chinese</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </header>
 
         <div class="image-wrapper position-relative">
-            <img src="resources/img/coche1a.jpg" alt="Vehículo con conductor a disposición en el País Vasco" class="img-fluid w-100" />
+            <img src="resources/img/coche1a.jpg" alt="Vehiculo con conductor a disposicion en el Pais Vasco" class="img-fluid w-100" />
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <div class="container py-5">
-                    <h1 class="hero-title fw-bold fst-italic" data-i18n="disposicionesPaginaHeroTitulo">Disposiciones con conductor en el País Vasco</h1>
+                    <h1 class="hero-title fw-bold fst-italic" data-i18n="disposicionesPaginaHeroTitulo">Disposiciones con conductor en el Pais Vasco</h1>
                     <p class="hero-lead mt-3 mb-4" data-i18n="disposicionesPaginaHeroLead">
                         Vehículos premium a su disposición por horas o jornadas completas, sin itinerario cerrado y con total flexibilidad.
                     </p>
@@ -186,7 +193,7 @@
                         </p>
                     </div>
                     <div class="col-md-6">
-                        <img src="resources/img/imgBoroa.webp" alt="Servicio de disposicion con conductor privado" class="img-fluid rounded shadow-sm imagen-bloque-servicio"  />
+                        <img src="resources/img/dispo6.webp" alt="Servicio de disposicion con conductor privado" class="img-fluid rounded shadow-sm" />
                     </div>
                 </div>
             </div>
@@ -201,7 +208,7 @@
                             <div class="feature-icon">
                                 <img src="resources/img/iconDispo.png" alt="Icono flexibilidad" />
                             </div>
-                            <h3 class="h5 fw-bold" data-i18n="disposicionesPaginaCard1Titulo">Máxima flexibilidad</h3>
+                            <h3 class="h5 fw-bold" data-i18n="disposicionesPaginaCard1Titulo">Maxima flexibilidad</h3>
                             <p class="text-muted" data-i18n="disposicionesPaginaCard1Texto">Servicio por horas o jornada completa, adaptado a su agenda y a cambios razonables durante el dia.</p>
                         </div>
                     </div>
@@ -210,8 +217,8 @@
                             <div class="feature-icon feature-icon--wide">
                                 <img src="resources/img/iconCC_1.webp" alt="Icono vehiculo premium" class="icon-servicio--cc" />
                             </div>
-                            <h3 class="h5 fw-bold" data-i18n="disposicionesPaginaCard2Titulo">Vehículos premium</h3>
-                            <p class="text-muted" data-i18n="disposicionesPaginaCard2Texto">Turismos y vans de alta gama para desplazamientos cómodos, discretos y bien cuidados.</p>
+                            <h3 class="h5 fw-bold" data-i18n="disposicionesPaginaCard2Titulo">Vehiculos premium</h3>
+                            <p class="text-muted" data-i18n="disposicionesPaginaCard2Texto">Turismos y vans de alta gama para desplazamientos comodos, discretos y bien cuidados.</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3">
@@ -220,7 +227,7 @@
                                 <img src="resources/img/iconT.png" alt="Icono conductor profesional" />
                             </div>
                             <h3 class="h5 fw-bold" data-i18n="disposicionesPaginaCard3Titulo">Conductor profesional</h3>
-                            <p class="text-muted" data-i18n="disposicionesPaginaCard3Texto">Puntualidad, discrecion y trato personalizado para acompañarle durante toda la disposición.</p>
+                            <p class="text-muted" data-i18n="disposicionesPaginaCard3Texto">Puntualidad, discrecion y trato personalizado para acompanarle durante toda la disposicion.</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3">
@@ -245,10 +252,10 @@
                     <div class="col-md-6 order-1 order-md-2">
                         <h2 class="fw-bold text-center mb-3" data-i18n="disposicionesPaginaIdealTitulo">Ideal para distintos tipos de servicio</h2>
                         <p class="bloque-texto-ajustado" data-i18n="disposicionesPaginaIdealTexto1">
-                            Este servicio resulta especialmente util para jornadas de trabajo con varias reuniones, eventos corporativos, acompañamiento de invitados, atencion a clientes, desplazamientos institucionales, celebraciones privadas o visitas turísticas con paradas libres y horario adaptable.
+                            Este servicio resulta especialmente util para jornadas de trabajo con varias reuniones, eventos corporativos, acompanamiento de invitados, atencion a clientes, desplazamientos institucionales, celebraciones privadas o visitas turisticas con paradas libres y horario adaptable.
                         </p>
                         <p class="bloque-texto-ajustado" data-i18n="disposicionesPaginaIdealTexto2">
-                            Trabajamos habitualmente en Bilbao, San Sebastian, Vitoria, La Rioja y otras zonas del entorno, ajustando el servicio al número de pasajeros, al tipo de vehículo necesario y al ritmo de la jornada.
+                            Trabajamos habitualmente en Bilbao, San Sebastian, Vitoria, La Rioja y otras zonas del entorno, ajustando el servicio al numero de pasajeros, al tipo de vehiculo necesario y al ritmo de la jornada.
                         </p>
                     </div>
                 </div>
@@ -261,25 +268,25 @@
                 <div class="row g-3">
                     <div class="col-12 col-md-6">
                         <div class="faq-item">
-                            <h3 class="h6 fw-bold" data-i18n="disposicionesPaginaFaq1Q">¿Se puede contratar por horas?</h3>
+                            <h3 class="h6 fw-bold" data-i18n="disposicionesPaginaFaq1Q">&iquest;Se puede contratar por horas?</h3>
                             <p class="mb-0 text-muted" data-i18n="disposicionesPaginaFaq1A">Si. Podemos organizar disposiciones por varias horas o para jornadas completas segun sus necesidades.</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="faq-item">
-                            <h3 class="h6 fw-bold" data-i18n="disposicionesPaginaFaq2Q">¿El itinerario puede cambiar durante el servicio?</h3>
+                            <h3 class="h6 fw-bold" data-i18n="disposicionesPaginaFaq2Q">&iquest;El itinerario puede cambiar durante el servicio?</h3>
                             <p class="mb-0 text-muted" data-i18n="disposicionesPaginaFaq2A">Si. Dentro de una planificacion razonable, el servicio esta pensado precisamente para ofrecer flexibilidad durante el dia.</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="faq-item">
-                            <h3 class="h6 fw-bold" data-i18n="disposicionesPaginaFaq3Q">¿Es un servicio adecuado para empresa o eventos?</h3>
+                            <h3 class="h6 fw-bold" data-i18n="disposicionesPaginaFaq3Q">&iquest;Es un servicio adecuado para empresa o eventos?</h3>
                             <p class="mb-0 text-muted" data-i18n="disposicionesPaginaFaq3A">Si. Es una opcion muy util para directivos, clientes, congresos, bodas, ferias y eventos corporativos o privados.</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="faq-item">
-                            <h3 class="h6 fw-bold" data-i18n="disposicionesPaginaFaq4Q">¿Cómo solicito presupuesto?</h3>
+                            <h3 class="h6 fw-bold" data-i18n="disposicionesPaginaFaq4Q">&iquest;C&oacute;mo solicito presupuesto?</h3>
                             <p class="mb-0 text-muted" data-i18n="disposicionesPaginaFaq4A">Solo tiene que usar el formulario y detallar fecha, horario aproximado, zonas de servicio y numero de pasajeros.</p>
                         </div>
                     </div>
