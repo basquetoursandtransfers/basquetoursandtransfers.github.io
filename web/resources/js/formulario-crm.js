@@ -2,15 +2,23 @@
     "use strict";
 
     const WORKER_URL =
-        "https://crm-btt-inbox.basquetoursandtransfers.workers.dev";
+            "https://crm-btt-inbox.basquetoursandtransfers.workers.dev";
 
     const formulario = document.getElementById("presupuestoForm");
 
     if (!formulario) {
         return;
     }
+    let copiaEnviada = false;
 
     formulario.addEventListener("submit", () => {
+
+        if (copiaEnviada) {
+            return;
+        }
+
+        copiaEnviada = true;
+
         try {
             const datos = new FormData(formulario);
             const hora = obtenerTexto(datos, "hora");
@@ -22,13 +30,13 @@
                 email: obtenerTexto(datos, "email"),
                 phone: obtenerTexto(datos, "telefono"),
                 serviceType: convertirTipoServicio(
-                    obtenerTexto(datos, "servicio")
-                ),
+                        obtenerTexto(datos, "servicio")
+                        ),
                 requestedVehicle: obtenerOpcional(datos, "vehiculo"),
                 serviceDate: obtenerOpcional(datos, "fecha"),
                 serviceTime: hora
-                    ? `${hora}:${minutos || "00"}`
-                    : null,
+                        ? `${hora}:${minutos || "00"}`
+                        : null,
                 origin: obtenerOpcional(datos, "origen"),
                 destination: obtenerOpcional(datos, "destino"),
                 passengerCount: obtenerNumero(datos, "pasajeros"),
@@ -36,8 +44,8 @@
                 message: obtenerOpcional(datos, "detalles"),
                 sourcePage: window.location.href.split("#")[0],
                 language: (
-                    document.documentElement.lang || "es"
-                ).slice(0, 5),
+                        document.documentElement.lang || "es"
+                        ).slice(0, 5),
                 website: ""
             };
 
@@ -57,7 +65,7 @@
         } catch {
             // Cualquier fallo local deja intacto el envío a Formspree.
         }
-    }, { capture: true });
+    }, {capture: true});
 
     function obtenerTexto(datos, nombre) {
         return String(datos.get(nombre) || "").trim();
@@ -80,8 +88,8 @@
 
     function convertirTipoServicio(valor) {
         const normalizado = valor
-            .trim()
-            .toLocaleLowerCase("es");
+                .trim()
+                .toLocaleLowerCase("es");
 
         return {
             "traslados": "TRANSFER",
@@ -92,15 +100,15 @@
 
     function crearIdentificador() {
         if (
-            window.crypto &&
-            typeof window.crypto.randomUUID === "function"
-        ) {
+                window.crypto &&
+                typeof window.crypto.randomUUID === "function"
+                ) {
             return window.crypto.randomUUID();
         }
 
         return `web-${Date.now()}-${Math.random()
-            .toString(36)
-            .slice(2, 12)}`;
+                .toString(36)
+                .slice(2, 12)}`;
     }
 })();
 
