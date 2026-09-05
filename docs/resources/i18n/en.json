@@ -43,7 +43,7 @@
     "formServicioDisposiciones": "Hourly chauffeuring",
     "formVehiculo": "Vehicle type",
     "formVehiculoV": "Mercedes V Class or similar (7 seats)",
-    "formVehiculoE": "Mercedes E-Class or similar (4 seats)",
+    "formVehiculoE": "Mercedes E-Class or similar (3 or 4 seats)",
     "formFecha": "Pickup date *",
     "formHora": "Time *",
     "formMinutos": "Minutes *",
