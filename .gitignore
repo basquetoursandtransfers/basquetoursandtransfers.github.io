@@ -1,0 +1,6 @@
+# Archivos generados por NetBeans / Ant
+/build/
+/dist/
+
+# Configuración local de NetBeans
+/nbproject/private/
