@@ -581,14 +581,15 @@ font-size: 12px;
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-                const correoLink = document.getElementById("correoLink");
+                const enlacesCorreo = [document.getElementById("correoLink"), document.getElementById("iconoCorreo")];
 
-                if (correoLink) {
+                enlacesCorreo.forEach(correoLink => {
+                    if (!correoLink) return;
                     correoLink.href = isMobile
                             ? "mailto:basquetoursandtransfers@gmail.com"
                             : "https://mail.google.com/mail/?view=cm&fs=1&to=basquetoursandtransfers@gmail.com&tf=cm";
                     correoLink.target = "_blank"; // se abre en nueva pestaña, opcional
-                }
+                });
             });
         </script>
         <!-- Botón volver arriba -->
