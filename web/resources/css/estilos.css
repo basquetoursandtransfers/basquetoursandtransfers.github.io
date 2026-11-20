@@ -715,3 +715,7 @@ En pantallas grandes: justificar automáticamente
     .site-nav-cta { margin: .5rem 0; }
 }
 @media (max-width: 420px) { .site-brand { font-size: .85rem; gap: .3rem; } .site-brand img { max-height: 54px; } }
+
+/* Selector de idiomas compacto */
+.site-nav .language-menu .dropdown-menu { min-width: 6.5rem; width: 6.5rem; }
+@media (max-width: 991.98px) { .site-nav .language-menu .dropdown-menu { width: 6.5rem; } }
