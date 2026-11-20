@@ -689,3 +689,29 @@ En pantallas grandes: justificar automáticamente
     font-size: 0.5rem;
 }
 
+
+/* Navegación principal */
+.site-header { background: #fff; box-shadow: 0 2px 14px rgba(20, 35, 45, .08); }
+.site-nav { min-height: 78px; white-space: normal; }
+.site-nav .container { flex-wrap: wrap; }
+.site-brand { display: flex; align-items: center; gap: .65rem; color: #192d35; font-size: 1rem; font-weight: 700; }
+.site-brand img { max-height: 65px; width: auto; }
+.site-nav .navbar-nav { gap: .25rem; }
+.site-nav .nav-item.dropdown { display: block; }
+.site-nav .nav-link { color: #25363d; font-weight: 600; padding: .75rem .8rem !important; }
+.site-nav .nav-link:hover, .site-nav .nav-link:focus { color: #00695c; }
+.site-nav .dropdown-menu { min-width: 13rem; padding: .5rem; border: 1px solid #e3e8e7; border-radius: .65rem; box-shadow: 0 12px 30px rgba(20, 35, 45, .12); }
+.site-nav .dropdown-item { border-radius: .35rem; padding: .65rem .8rem; white-space: normal; }
+.site-nav .dropdown-item:hover, .site-nav .dropdown-item:focus { background: #edf5f3; color: #00695c; }
+.site-nav .language-toggle { display: flex; align-items: center; gap: .4rem; }
+.site-nav .language-toggle img, .site-nav .lang-selector img { width: 25px; height: 17px; object-fit: cover; margin-right: .35rem; }
+.site-nav-cta { display: inline-block; padding: .7rem 1.1rem; border-radius: 2rem; background: #00695c; color: white; text-decoration: none; font-weight: 700; }
+.site-nav-cta:hover, .site-nav-cta:focus { background: #004d43; color: white; }
+@media (max-width: 991.98px) {
+    .site-nav .navbar-collapse { flex-basis: 100%; padding: .5rem 0 1rem; }
+    .site-nav .navbar-nav { flex-direction: column; align-items: stretch; }
+    .site-nav .dropdown-menu { position: static; transform: none !important; left: auto !important; right: auto !important; width: 100%; max-width: none; box-shadow: none; }
+    .site-nav .nav-link { width: 100%; text-align: left; }
+    .site-nav-cta { margin: .5rem 0; }
+}
+@media (max-width: 420px) { .site-brand { font-size: .85rem; gap: .3rem; } .site-brand img { max-height: 54px; } }

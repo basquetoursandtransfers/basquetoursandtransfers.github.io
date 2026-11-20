@@ -71,6 +71,9 @@ function actualizarBandera(codigoIdioma) {
     };
 
 //  const imgBandera = document.querySelector("#idiomaDropdown img");
+    const codigo = document.getElementById("codigoIdiomaActual");
+    if (codigo) codigo.textContent = codigoIdioma.toUpperCase();
+    document.documentElement.lang = codigoIdioma;
     const imgBandera = document.getElementById("banderaActual");
     if (imgBandera && bandera[codigoIdioma]) {
         imgBandera.src = bandera[codigoIdioma];

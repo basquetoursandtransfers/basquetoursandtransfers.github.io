@@ -261,16 +261,45 @@
         </script>
     </head>
     <body>
-        <header>
-            <nav class="navbar navbar-light bg-light py-0">
+        <header class="site-header">
+            <nav class="navbar navbar-expand-lg site-nav" aria-label="Navegación principal">
                 <div class="container">
-                    <div class="d-flex align-items-center flex-shrink-0 me-1">
-                        <a class="navbar-brand m-0" href="/">
-                            <img src="resources/img/logoBTT.webp" alt="Logo Basque Tours & Transfers" class="img-fluid" />
-                        </a>
-                    </div>
-                    <div class="text-center flex-grow-1">
-                        <h5 class="fw-bold nav-h1 m-0" data-i18n="textoUno">Basque Tours & Transfers</h5>
+                    <a class="navbar-brand site-brand" href="index.html" aria-label="Basque Tours &amp; Transfers - Inicio">
+                        <img src="resources/img/logoBTT.webp" alt="Basque Tours &amp; Transfers" />
+                        <span>Basque Tours &amp; Transfers</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Abrir menú">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="siteNavigation">
+                        <ul class="navbar-nav ms-auto align-items-lg-center">
+                            <li class="nav-item dropdown">
+                                <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="menuServicios">Servicios</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="traslados.html" data-i18n="menuTraslados">Traslados</a></li>
+                                    <li><a class="dropdown-item" href="tours.html" data-i18n="menuTours">Tours</a></li>
+                                    <li><a class="dropdown-item" href="disposiciones.html" data-i18n="menuDisposiciones">Disposiciones</a></li>
+                                    <li><a class="dropdown-item" href="alquiler-coche-con-conductor.html" data-i18n="tituloAlquilerCocheConductorCorto">Alquiler con conductor</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#quienes" data-i18n="menuNosotros">Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#contacto" data-i18n="menuContacto">Contacto</a></li>
+                            <li class="nav-item dropdown language-menu">
+                                <button class="nav-link dropdown-toggle language-toggle" type="button" id="idiomaDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Idioma / Language">
+                                    <img id="banderaActual" src="resources/img/banderaEsp.jpg" alt="" /><span id="codigoIdiomaActual">ES</span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="idiomaDropdown">
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="es"><img src="resources/img/banderaEsp.jpg" alt="" /> Español</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="en"><img src="resources/img/banderaBrit.jpg" alt="" /> English</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="fr"><img src="resources/img/banderaFrancia.jpg" alt="" /> Français</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="ru"><img src="resources/img/banderaRusa.jpg" alt="" /> Русский</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="ja"><img src="resources/img/banderaJap.jpg" alt="" /> 日本語</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="ar"><img src="resources/img/banderaArabiaSaudi.jpg" alt="" /> العربية</a></li>
+                                    <li><a class="dropdown-item lang-selector" href="#" data-lang="zh"><img src="resources/img/banderaChina.jpg" alt="" /> 中文</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="site-nav-cta" href="formulario.html" data-i18n="botonSolicitar">Solicitar presupuesto</a></li>
+                        </ul>
                     </div>
                 </div>
             </nav>
