@@ -15,6 +15,22 @@
         <link rel="apple-touch-icon" href="https://basquetoursandtransfers.com/resources/img/logoBTT.webp">
         <!-- Estilos personalizados -->
         <link rel="stylesheet" href="resources/css/estilos.css?v=20261120" />
+        <style>
+            /* Paleta de la página principal */
+            body.home-page { background-color: #EBECF0; }
+            .home-page .text-below-image { background-color: #DCE3E8; }
+            .home-page .text-below-image .container { padding-bottom: .3rem !important; }
+            .home-page .text-below-image p { margin-bottom: .25rem; }
+            .home-page .bloque-carrusel .swiper-zoom-container { aspect-ratio: 4 / 3; overflow: hidden; border-radius: .5rem; }
+            .home-page .bloque-carrusel .swiper-slide img { width: 100% !important; height: 100% !important; max-height: none; object-fit: cover; }
+            .home-page .bloque-carrusel .swiper-slide img[src$="/cocheAlberto.webp"] { object-position: right center; }
+            .home-page main, .home-page section.bg-white, .home-page section.bg-light {
+                background-color: #EBECF0 !important;
+            }
+            .home-page section.bg-dark { background-color: #20292D !important; }
+            .home-page .footer-premium { background-color: #171E21; }
+            .home-page .home-footer-bottom { background-color: #EBECF0; }
+        </style>
 
         <meta property="og:title" content="Basque Tours & Transfers - Alquiler de coche con conductor" />
         <meta property="og:description" content="Alquiler de coche con conductor en País Vasco y La Rioja. Traslados, tours y transfers privados." />
@@ -50,7 +66,7 @@
         </script>
 
     </head>
-    <body>
+    <body class="home-page">
         <header class="site-header">
             <nav class="navbar navbar-expand-lg site-nav" aria-label="Navegación principal">
                 <div class="container">
@@ -103,8 +119,8 @@
         <!-- Texto inferior (debajo de la imagen), ahora centrado -->
         <div class="text-below-image text-center text-black">
             <div class="container py-4">
-                <h1 class="fw-bold fst-italic" data-i18n="seoH1">Alquiler de coche con conductor en el País Vasco: traslados, tours y transfers privados</h1>
-                <p class="lead fst-italic text-muted" data-i18n="carruselSubtitulo">
+                <h1 class="fw-bold fst-italic" style="color: #21638A;" data-i18n="seoH1">Alquiler de coche con conductor en el País Vasco: traslados, tours y transfers privados</h1>
+                <p class="lead fst-italic" style="color: #58666A;" data-i18n="carruselSubtitulo">
                     Travel the Basque Country with us!
                 </p>
             </div>
@@ -128,7 +144,7 @@
                     <!-- Tours -->
                     <div class="col-12 col-sm-6 col-md-3 mb-4">
                         <a href="#tours" class="d-block text-decoration-none text-dark" aria-label="Ir a sección Tours">
-                            <img src="resources/img/iconotORIGINAL.webp" alt="Icono Tours" class="icon-servicio mb-3" width="100" height="100" />
+                            <img src="resources/img/iconoTours.webp" alt="Icono Tours" class="icon-servicio mb-3" width="100" height="100" />
                             <h5 class="fw-bold" data-i18n="tituloToursCorto">Tours</h5>
                             <p class="text-muted px-3 text-center" style="word-break: break-word; white-space: normal;" data-i18n="servicioTours">
                                 Descubra el País Vasco con nuestros tours guiados. Ofrecemos cuatro rutas principales y experiencias personalizadas 
@@ -388,7 +404,7 @@
             </div>
         </section>
         <!-- Footer con solo iconos sociales -->
-        <footer class="footer-premium py-4 mt-auto">
+        <footer class="footer-premium py-3 mt-auto">
             <div class="container">
                 <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 mt-3 mb-2">
 
@@ -444,7 +460,7 @@
         </footer>
 
         <!-- boton prueba cookies 
-        <div class="text-center py-2" style="background:#f8f9fa;">
+        <div class="text-center py-2 home-footer-bottom">
             <a href="cookies.html" class="text-muted small">
                 Política de cookies
             </a>
