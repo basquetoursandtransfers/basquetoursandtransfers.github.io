@@ -1,0 +1,63 @@
+/* Ajustes compactos para las páginas de servicios en móvil. */
+@media (max-width: 767.98px) {
+    .pagina-detalle section.py-5 {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+    .pagina-detalle section :is(p, li) {
+        line-height: 1.4;
+    }
+    .pagina-detalle section :is(.bloque-texto-ajustado, .feature-card p, .faq-item p) {
+        line-height: 1.4;
+        margin-bottom: .5rem;
+    }
+    .pagina-detalle section :is(h2, h3, h4) {
+        line-height: 1.2;
+    }
+    .pagina-detalle section :is(h2.mb-4, h3.mb-4, h4.mb-4) {
+        margin-bottom: .75rem !important;
+    }
+    .pagina-detalle section .row.g-4 {
+        --bs-gutter-y: .75rem;
+    }
+    .pagina-detalle section .row.g-3 {
+        --bs-gutter-y: .5rem;
+    }
+    .pagina-detalle section .feature-card {
+        padding: 1rem;
+    }
+    .pagina-detalle section .feature-icon {
+        width: 72px;
+        height: 72px;
+        margin-bottom: .5rem;
+    }
+    .pagina-detalle section .feature-icon img {
+        max-width: 64px;
+        max-height: 64px;
+        object-fit: contain;
+    }
+    .pagina-detalle section .feature-card h3 {
+        min-height: 0;
+        margin-bottom: .4rem;
+    }
+    .pagina-detalle section .faq-item {
+        padding: .75rem 1rem;
+    }
+    .pagina-detalle :is(.text-below-image, .dispo-intro) .container {
+        padding-top: .75rem !important;
+        padding-bottom: .75rem !important;
+    }
+    .pagina-detalle :is(.text-below-image, .dispo-intro) h2 {
+        line-height: 1.2;
+        margin-bottom: .4rem;
+    }
+    .pagina-detalle :is(.text-below-image, .dispo-intro) p {
+        line-height: 1.4;
+        margin-bottom: .4rem;
+    }
+    .pagina-detalle .imagen-bloque-servicio {
+        height: auto;
+        max-height: 240px;
+        object-fit: cover;
+    }
+}
