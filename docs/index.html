@@ -14,23 +14,7 @@
         <link rel="icon" href="https://basquetoursandtransfers.com/resources/img/logoBTT.webp">
         <link rel="apple-touch-icon" href="https://basquetoursandtransfers.com/resources/img/logoBTT.webp">
         <!-- Estilos personalizados -->
-        <link rel="stylesheet" href="resources/css/estilos.css?v=20261120" />
-        <style>
-            /* Paleta de la página principal */
-            body.home-page { background-color: #EBECF0; }
-            .home-page .text-below-image { background-color: #DCE3E8; }
-            .home-page .text-below-image .container { padding-bottom: .3rem !important; }
-            .home-page .text-below-image p { margin-bottom: .25rem; }
-            .home-page .bloque-carrusel .swiper-zoom-container { aspect-ratio: 4 / 3; overflow: hidden; border-radius: .5rem; }
-            .home-page .bloque-carrusel .swiper-slide img { width: 100% !important; height: 100% !important; max-height: none; object-fit: cover; }
-            .home-page .bloque-carrusel .swiper-slide img[src$="/cocheAlberto.webp"] { object-position: right center; }
-            .home-page main, .home-page section.bg-white, .home-page section.bg-light {
-                background-color: #EBECF0 !important;
-            }
-            .home-page section.bg-dark { background-color: #20292D !important; }
-            .home-page .footer-premium { background-color: #171E21; }
-            .home-page .home-footer-bottom { background-color: #EBECF0; }
-        </style>
+        <link rel="stylesheet" href="resources/css/estilos.css?v=20261121-17" />
 
         <meta property="og:title" content="Basque Tours & Transfers - Alquiler de coche con conductor" />
         <meta property="og:description" content="Alquiler de coche con conductor en País Vasco y La Rioja. Traslados, tours y transfers privados." />
@@ -119,24 +103,33 @@
         <!-- Texto inferior (debajo de la imagen), ahora centrado -->
         <div class="text-below-image text-center text-black">
             <div class="container py-4">
-                <h1 class="fw-bold fst-italic" style="color: #21638A;" data-i18n="seoH1">Alquiler de coche con conductor en el País Vasco: traslados, tours y transfers privados</h1>
-                <p class="lead fst-italic" style="color: #58666A;" data-i18n="carruselSubtitulo">
+                <h1 class="fw-bold fst-italic titulo-principal" data-i18n="seoH1">Alquiler de coche con conductor en el País Vasco: traslados, tours y transfers privados</h1>
+                <p class="lead fst-italic subtitulo-principal" data-i18n="carruselSubtitulo">
                     Travel the Basque Country with us!
                 </p>
             </div>
         </div>
 
         <!-- SERVICIOS -->
-        <section class="py-5 bg-white text-center">
+        <section class="py-5 bg-white text-center seccion-servicios">
             <div class="container">
                 <h2 class="text-uppercase fw-bold mb-4" data-i18n="tituloServicios">Nuestros Servicios</h2>
                 <div class="row justify-content-center">
+                    <!-- Alquiler de coche con conductor -->
+                    <div class="col-12 col-sm-6 col-md-3 mb-4">
+                        <a href="#alquiler" class="d-block text-decoration-none text-dark" aria-label="Ir a sección alquiler Coche">
+                            <img src="resources/img/iconCC_1.webp" alt="Icono AlquilerCoche" class="icon-servicio icon-servicio--cc mb-3" width="100" height="100" />
+                            <h5 class="fw-bold" data-i18n="tituloAlquiler">Alquiler de coche con conductor</h5>
+                            <p class="text-muted px-3 text-center texto-ajustable" data-i18n="servicioAlquilerCocheConductor">
+                                Servicio de alquiler de coche con conductor profesional, pensado para moverse con total comodidad y sin preocuparse por la conducción</p>
+                        </a>
+                    </div>
                     <!-- Traslados -->
                     <div class="col-12 col-sm-6 col-md-3 mb-4">
                         <a href="#traslados" class="d-block text-decoration-none text-dark" aria-label="Ir a sección Traslados">
                             <img src="resources/img/iconT.png" alt="Icono Traslados" class="icon-servicio mb-3" width="100" height="100" />
                             <h5 class="fw-bold" data-i18n="tituloTrasladosCorto">Traslados</h5>
-                            <p class="text-muted px-3 text-center" style="word-break: break-word; white-space: normal;" data-i18n="servicioTraslados">
+                            <p class="text-muted px-3 text-center texto-ajustable" data-i18n="servicioTraslados">
                                 Traslados privados desde aeropuerto, puerto, hotel o cualquier punto de partida, al destino que nos indique; con puntualidad
                                 y confort garantizados</p>
                         </a>
@@ -146,8 +139,8 @@
                         <a href="#tours" class="d-block text-decoration-none text-dark" aria-label="Ir a sección Tours">
                             <img src="resources/img/iconoTours.webp" alt="Icono Tours" class="icon-servicio mb-3" width="100" height="100" />
                             <h5 class="fw-bold" data-i18n="tituloToursCorto">Tours</h5>
-                            <p class="text-muted px-3 text-center" style="word-break: break-word; white-space: normal;" data-i18n="servicioTours">
-                                Descubra el País Vasco con nuestros tours guiados. Ofrecemos cuatro rutas principales y experiencias personalizadas 
+                            <p class="text-muted px-3 text-center texto-ajustable" data-i18n="servicioTours">
+                                Descubra el País Vasco con nuestros tours guiados. Ofrecemos cuatro rutas principales y experiencias personalizadas
                                 según sus intereses
                             </p>
                         </a>
@@ -157,20 +150,10 @@
                         <a href="#disposiciones" class="d-block text-decoration-none text-dark" aria-label="Ir a sección Disposiciones">
                             <img src="resources/img/iconDispo.png" alt="Icono Disposiciones" class="icon-servicio mb-3" width="100" height="100" />
                             <h5 class="fw-bold" data-i18n="tituloDisposicionesCorto">Disposiciones</h5>
-                            <p class="text-muted px-3 text-center" style="word-break: break-word; white-space: normal;" data-i18n="servicioDisposiciones">
-                                Vehículos premium de 4 o 7 plazas, con chófer profesional a su disposición, adaptados a su horario, al tipo de evento y a 
+                            <p class="text-muted px-3 text-center texto-ajustable" data-i18n="servicioDisposiciones">
+                                Vehículos premium de 4 o 7 plazas, con chófer profesional a su disposición, adaptados a su horario, al tipo de evento y a
                                 sus necesidades
-                            </p>                          
-                        </a>
-                    </div>
-
-                    <!-- Alquiler de coche con conductor -->
-                    <div class="col-12 col-sm-6 col-md-3 mb-4">
-                        <a href="#alquiler" class="d-block text-decoration-none text-dark" aria-label="Ir a sección alquiler Coche">
-                            <img src="resources/img/iconCC_1.webp" alt="Icono AlquilerCoche" class="icon-servicio icon-servicio--cc mb-3" width="100" height="100" />
-                            <h5 class="fw-bold" data-i18n="tituloAlquiler">Alquiler de coche con conductor</h5>
-                            <p class="text-muted px-3 text-center" style="word-break: break-word; white-space: normal;" data-i18n="servicioAlquilerCocheConductor">
-                                Servicio de alquiler de coche con conductor profesional, pensado para moverse con total comodidad y sin preocuparse por la conducción</p>                           
+                            </p>
                         </a>
                     </div>
 
@@ -178,26 +161,85 @@
             </div>
 
             <!-- Botón Solicitar Presupuesto -->
-            <div class="text-center mt-4">
-                <a href="formulario.html"  target="_blank" class="btn btn-success btn-lg px-5 py-3 fw-bold shadow-sm" 
-                   style="background-color: #00695c; border: none; border-radius: 50px;" data-i18n="botonSolicitar">   
+            <div class="text-center mt-1">
+                <a href="formulario.html"  target="_blank" class="btn btn-success btn-lg px-5 py-3 fw-bold shadow-sm boton-presupuesto" data-i18n="botonSolicitar">
                     <span class="visually-hidden">Solicitar presupuesto</span>
                 </a>
             </div>
 
         </section>
 
+        <!-- Alquiler de Coche -->
+        <section id="alquiler" class="bg-dark text-white py-5 position-relative seccion-superpuesta">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <!-- Imagen -->
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <img src="resources/img/furgoN.webp"
+                             alt="Alquiler Coche"
+                             class="img-fluid rounded shadow-sm" />
+                    </div>
+                    <!-- Texto -->
+                    <div class="col-md-6">
+                        <h3 class="fw-bold text-center mb-3" data-i18n="tituloAlquiler">Alquiler de coche con conductor</h3>
+                        <p class="bloque-texto-ajustado"><span data-i18n="textoAlquiler">
+                            Disfrute de un servicio de alquiler de coche con conductor diseñado para ofrecerle una experiencia
+                            de movilidad premium, cómoda y totalmente adaptada a sus necesidades. En Basque Tours & Transfers
+                            ponemos a su disposición vehículos de alta gama y conductores profesionales con amplia experiencia,
+                            garantizando puntualidad, discreción y un trato personalizado en cada desplazamiento. Este servicio es
+                            ideal tanto para traslados urbanos como para jornadas completas, reuniones de trabajo, eventos,
+                            compromisos personales o recorridos turísticos a medida. Nos adaptamos plenamente a su agenda y a sus
+                            preferencias, permitiéndole optimizar su tiempo y viajar con total tranquilidad, sin preocuparse por la
+                            conducción ni por los detalles logísticos.</span> <a class="detalle-movil d-md-none" href="alquiler-coche-con-conductor.html"><span data-i18n="botonMasDetalles">Más detalles</span> <span aria-hidden="true">→</span></a></p>
+                        <div class="text-end mt-3 d-none d-md-block">
+                            <a href="alquiler-coche-con-conductor.html" class="btn btn-outline-secondary btn-sm px-3" data-i18n="botonMasDetalles">Más detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- sección traslados -->
+        <section id="traslados" class="bg-light text-dark py-5 position-relative seccion-superpuesta">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Imagen -->
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <img src="resources/img/cocheJoseIglesias.webp"
+                             alt="Traslados desde aeropuerto y puerto"
+                             class="img-fluid rounded shadow-sm" />
+                    </div>
+                    <!-- Texto -->
+                    <div class="col-md-6">
+                        <h3 class="fw-bold text-center mb-3" data-i18n="tituloTrasladosCorto">Traslados</h3>
+                        <p class="bloque-texto-ajustado"><span data-i18n="textoTraslados">
+                            En Basque Tours & Transfers ofrecemos un servicio de traslados privado, seguro y confortable desde
+                            el momento en que llega al País Vasco hasta su destino final. Ya sea que su llegada se produzca por
+                            vía terrestre, aérea o marítima, nuestro equipo estará esperándole puntualmente para llevarle hasta
+                            su hotel, empresa, evento o residencia, y también para realizar el trayecto inverso. Utilizamos vehículos
+                            de alta gama, equipados con las últimas comodidades y conducidos por profesionales bilingües con amplia
+                            experiencia. Garantizamos puntualidad, discreción y un trato personalizado en cada trayecto, adaptándonos
+                            a sus necesidades y horarios. Nuestra prioridad es que disfrute del viaje desde el primer minuto, con la
+                            tranquilidad de estar en manos expertas.</span> <a class="detalle-movil d-md-none" href="traslados.html"><span data-i18n="botonMasDetalles">Más detalles</span> <span aria-hidden="true">→</span></a></p>
+                        <div class="text-end mt-3 d-none d-md-block">
+                            <a href="traslados.html" class="btn btn-outline-secondary btn-sm px-3" data-i18n="botonMasDetalles">Más detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Sección carrusel -->
-        <section id="tours" class="bg-dark  text-white" style="padding-top: 3rem; padding-bottom: 16rem;">
+        <section id="tours" class="bg-dark  text-white seccion-tours">
             <div class="container">
                 <h2 class="text-center fw-bold text-uppercase mb-4" data-i18n="tituloToursCorto">Nuestros Tours</h2>
-                <div class="mx-auto px-4 px-md-5" style="max-width: 1140px;">
-                    <p class="text-white bloque-texto-ajustado" style="font-family: 'Segoe UI', 'Open Sans', sans-serif;" data-i18n="textoIntro">
+                <div class="mx-auto px-3 px-md-0 tours-contenido">
+                    <p class="text-white bloque-texto-ajustado tours-texto"><span data-i18n="textoIntro">
                         En Basque Tours & Transfers ofrecemos experiencias turísticas exclusivas con recorridos guiados de aproximadamente 8 horas por
                         los destinos más emblemáticos de la región.Nuestros chóferes-guías, con amplia experiencia y conocimiento local, acompañan
-                        a los viajeros en rutas cuidadosamente diseñadas. Garantizamos comodidad, seguridad y atención personalizada.Además, adaptamos los itinerarios a las preferencias de cada cliente y ofrecemos explicaciones en castellano o inglés para una experiencia completa.
-                    </p>
-                    <div class="text-end mt-3">
+                        a los viajeros en rutas cuidadosamente diseñadas. Garantizamos comodidad, seguridad y atención personalizada.Además, adaptamos los itinerarios a las preferencias de cada cliente y ofrecemos explicaciones en castellano o inglés para una experiencia completa.</span> <a class="detalle-movil d-md-none" href="tours.html"><span data-i18n="botonMasDetalles">Más detalles</span> <span aria-hidden="true">→</span></a></p>
+                    <div class="text-end mt-3 d-none d-md-block">
                         <a href="tours.html" class="btn btn-outline-secondary btn-sm px-3" data-i18n="botonMasDetalles">Más detalles</a>
                     </div>
                 </div>
@@ -216,7 +258,7 @@
             </div>
         </div>
 
-        <hr style="border: none; border-top: 4px solid #999; width: 100%; margin-top: 4rem; margin-bottom: 0;" />
+        <hr class="separador-tours" />
 
         <!-- SECCIÓN DE DISPOSICIONES -->
         <section id="disposiciones" class="py-5 bg-white">
@@ -226,10 +268,10 @@
                 <div class="row mb-3">
                     <div class="col-12">
                         <p class="bloque-texto-ajustado" data-i18n="textoIntroDisposiciones">
-                            Disfrute de una experiencia de movilidad premium con nuestro servicio de vehículos con conductor. 
+                            Disfrute de una experiencia de movilidad premium con nuestro servicio de vehículos con conductor.
                             Ofrecemos máxima flexibilidad, confort y eficiencia en cada trayecto.Ponemos a su disposición coches
-                            de alta gama y conductores profesionales, disponibles por horas o jornadas completas. Nos adaptamos a su 
-                            agenda para que optimice su tiempo en desplazamientos de trabajo, compromisos personales o actividades de 
+                            de alta gama y conductores profesionales, disponibles por horas o jornadas completas. Nos adaptamos a su
+                            agenda para que optimice su tiempo en desplazamientos de trabajo, compromisos personales o actividades de
                             ocio.Garantizamos un servicio puntual, discreto y totalmente personalizado.
                         </p>
 
@@ -239,7 +281,7 @@
 
                     <!-- Imagen -->
                     <div class="col-md-6 mb-4 mb-md-0">
-                        <img class="img-fluid rounded shadow-sm" src="resources/img/coche1a.jpg" alt="Vehículo disposición" />
+                        <img class="img-fluid rounded shadow-sm" src="resources/img/FurgoNegra.webp" alt="Vehículo disposición" />
                     </div>
 
                     <!-- Ventajas -->
@@ -251,139 +293,52 @@
                             <li class="mb-3">✅ <strong data-i18n="ventajaDispo3">Servicio ideal para eventos, negocios o turismo</strong></li>
                             <li class="mb-3">✅ <strong data-i18n="ventajaDispo4">Conductores bilingües y atención personalizada</strong></li>
                         </ul>
-                         <div class="text-end mt-3">
+                         <a class="detalle-movil d-md-none" href="disposiciones.html"><span data-i18n="botonMasDetalles">Más detalles</span> <span aria-hidden="true">→</span></a><div class="text-end mt-3 d-none d-md-block">
                         <a href="disposiciones.html" class="btn btn-outline-secondary btn-sm px-3" data-i18n="botonMasDetalles">Más detalles</a>
                     </div>
                     </div>
-                   
-                </div>
-            </div>
-        </section>
 
-        <!-- sección traslados -->
-        <section id="traslados" class="bg-dark text-white py-5 position-relative" style="z-index: 1;">
-            <div class="container">
-                <div class="row align-items-center">
-                    <!-- Imagen -->
-                    <div class="col-md-6 mb-4 mb-md-0">
-                        <img src="resources/img/imgTraslado.webp" 
-                             alt="Traslados desde aeropuerto y puerto"
-                             class="img-fluid rounded shadow-sm" />
-                    </div>
-                    <!-- Texto -->
-                    <div class="col-md-6">
-                        <h3 class="fw-bold text-center mb-3" data-i18n="tituloTrasladosCorto">Traslados</h3>
-                        <p class="bloque-texto-ajustado" data-i18n="textoTraslados">
-                            En Basque Tours & Transfers ofrecemos un servicio de traslados privado, seguro y confortable desde 
-                            el momento en que llega al País Vasco hasta su destino final. Ya sea que su llegada se produzca por 
-                            vía terrestre, aérea o marítima, nuestro equipo estará esperándole puntualmente para llevarle hasta 
-                            su hotel, empresa, evento o residencia, y también para realizar el trayecto inverso. Utilizamos vehículos 
-                            de alta gama, equipados con las últimas comodidades y conducidos por profesionales bilingües con amplia 
-                            experiencia. Garantizamos puntualidad, discreción y un trato personalizado en cada trayecto, adaptándonos 
-                            a sus necesidades y horarios. Nuestra prioridad es que disfrute del viaje desde el primer minuto, con la 
-                            tranquilidad de estar en manos expertas.
-                        </p>
-                        <div class="text-end mt-3">
-                            <a href="traslados.html" class="btn btn-outline-secondary btn-sm px-3" data-i18n="botonMasDetalles">Más detalles</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Alquiler de Coche -->
-        <section id="alquiler" class="bg-light text-dark py-5 position-relative" style="z-index: 1;">
-            <div class="container">
-                <div class="row align-items-center">
-
-                    <!-- Imagen -->
-                    <div class="col-md-6 mb-4 mb-md-0">
-                        <img src="resources/img/dispo6.webp" 
-                             alt="Alquiler Coche"
-                             class="img-fluid rounded shadow-sm" />
-                    </div>
-                    <!-- Texto -->
-                    <div class="col-md-6">
-                        <h3 class="fw-bold text-center mb-3" data-i18n="tituloAlquiler">Alquiler de coche con conductor</h3>
-                        <p class="bloque-texto-ajustado" data-i18n="textoAlquiler">
-                            Disfrute de un servicio de alquiler de coche con conductor diseñado para ofrecerle una experiencia 
-                            de movilidad premium, cómoda y totalmente adaptada a sus necesidades. En Basque Tours & Transfers 
-                            ponemos a su disposición vehículos de alta gama y conductores profesionales con amplia experiencia, 
-                            garantizando puntualidad, discreción y un trato personalizado en cada desplazamiento. Este servicio es 
-                            ideal tanto para traslados urbanos como para jornadas completas, reuniones de trabajo, eventos, 
-                            compromisos personales o recorridos turísticos a medida. Nos adaptamos plenamente a su agenda y a sus 
-                            preferencias, permitiéndole optimizar su tiempo y viajar con total tranquilidad, sin preocuparse por la 
-                            conducción ni por los detalles logísticos.
-                        </p>
-                        <div class="text-end mt-3">
-                            <a href="alquiler-coche-con-conductor.html" class="btn btn-outline-secondary btn-sm px-3" data-i18n="botonMasDetalles">Más detalles</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Sección de contacto -->
-        <section id="contacto" class="bg-dark text-white py-5 text-center">
+        <section id="contacto" class="bg-dark text-white py-5">
             <div class="container">
-                <h2 class="fw-bold text-uppercase mb-4" data-i18n="tituloContactanos">Contáctenos</h2>
-                <p class="mb-5 lead text-center text-wrap" style="word-break: break-word; white-space: normal;" data-i18n="textoIntroContactanos">
-                    Estamos aquí para ayudarle. Escríbanos o llámenos, y estaremos encantados de atenderle.
-                </p>
-
-                <!-- Contenido del formulario o información de contacto -->
-                <div id="bloqueContacto">
-                    <div class="row justify-content-center text-center">
-
-                        <!-- Correo -->
-                        <div class="col-12 col-sm-6 col-md-4 mb-3">
-                            <a id="correoLink" class="text-white  text-decoration-none" aria-label="Enviar email a Basque Tours & Transfers">
-                                <div class="p-2 rounded shadow-sm d-flex flex-column align-items-center h-100">
-                                    <img src="resources/img/gmail_icono.png" alt="Correo" width="30" class="mb-2" />
-                                    <p class="mb-0" style="font-size: 0.95rem; font-weight: 500;">info@basquetoursandtransfers.com</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Teléfono -->
-                        <div class="col-12 col-sm-6 col-md-4 mb-3">
-                            <a href="tel:+34602026725" class="text-white  text-decoration-none" aria-label="Llamar a Basque Tours & Transfers">
-                                <div class="p-2  rounded shadow-sm d-flex flex-column align-items-center h-100">
-                                    <img src="resources/img/telefAzul.png" alt="Teléfono" width="30" class="mb-2" />
-                                    <p class="mb-0" style="font-size: 0.95rem; font-weight: 500;">+34 602 02 67 25</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- WhatsApp -->
-                        <div class="col-12 col-sm-6 col-md-4 mb-3">
-                            <a href="https://wa.me/34602026725" target="_blank" class="text-white  text-decoration-none" aria-label="Contactar por WhatsApp con Basque Tours & Transfers">
-                                <div class="p-2  rounded shadow-sm d-flex flex-column align-items-center h-100">
-                                    <img src="resources/img/whatsapp_icono.png" alt="WhatsApp" width="30" class="mb-2" />
-                                    <p class="mb-0" style="font-size: 0.95rem; font-weight: 500;">+34 602 02 67 25</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Botón Solicitar Presupuesto -->
-                        <div class="text-center mt-4">
-                            <a href="formulario.html"  target="_blank" class="btn btn-success btn-lg px-5 py-3 fw-bold shadow-sm" 
-                               style="background-color: #00695c; border: none; border-radius: 50px;"  data-i18n="botonSolicitar">
-                                <span class="visually-hidden">Solicitar presupuesto</span>
-                            </a>
-                        </div>
+                <div class="contacto-distribucion">
+                    <div class="contacto-presentacion">
+                        <h2 class="fw-bold text-uppercase" data-i18n="tituloContactanos">Contáctenos</h2>
+                        <div class="contacto-logo"><img src="resources/img/logoBTT.webp" alt="Basque Tours &amp; Transfers" /></div>
+                        <p class="lead texto-ajustable" data-i18n="textoIntroContactanos">Estamos aquí para ayudarle. Escríbanos o llámenos, y estaremos encantados de atenderle.</p>
                     </div>
+                    <div id="bloqueContacto" class="contacto-opciones">
+                        <a id="correoLink" class="contacto-opcion" aria-label="Enviar email a Basque Tours &amp; Transfers">
+                            <img src="resources/img/gmail_icono.png" alt="" width="30" />
+                            <span class="contacto-dato">info@basquetoursandtransfers.com</span>
+                        </a>
+                        <a href="tel:+34602026725" class="contacto-opcion" aria-label="Llamar a Basque Tours &amp; Transfers">
+                            <img src="resources/img/telefAzul.png" alt="" width="30" />
+                            <span class="contacto-dato">+34 602 02 67 25</span>
+                        </a>
+                        <a href="https://wa.me/34602026725" target="_blank" rel="noopener noreferrer" class="contacto-opcion" aria-label="Contactar por WhatsApp con Basque Tours &amp; Transfers">
+                            <img src="resources/img/whatsapp_icono.png" alt="" width="30" />
+                            <span class="contacto-dato">+34 602 02 67 25</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center contacto-presupuesto">
+                    <a href="formulario.html" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-lg px-5 py-3 fw-bold shadow-sm boton-presupuesto" data-i18n="botonSolicitar">Solicitar presupuesto</a>
                 </div>
             </div>
         </section>
         <!-- Quiénes somos -->
-        <section id="quienes" class="bg-light text-dark py-5 position-relative" style="z-index: 1;">
+        <section id="quienes" class="bg-light text-dark py-5 position-relative seccion-superpuesta">
             <div class="container">
                 <div class="row align-items-center">
 
                     <!-- Imagen -->
                     <div class="col-md-6 mb-4 mb-md-0">
-                        <img src="resources/img/QuienesORIGINAL.webp" 
+                        <img src="resources/img/QuienesORIGINAL.webp"
                              alt="Quiénes somos"
                              class="img-fluid rounded shadow-sm" />
                     </div>
@@ -391,12 +346,12 @@
                     <div class="col-md-6">
                         <h3 class="fw-bold text-center mb-3" data-i18n="tituloQuienes">Quiénes somos</h3>
                         <p class="bloque-texto-ajustado" data-i18n="textoQuienes_1">
-                            Somos un equipo de chóferes profesionales con años de experiencia, cuya misión es transportar viajeros 
-                            en vehículos privados, ofreciendo los mayores estándares de seguridad, comodidad, confidencialidad y 
-                            puntualidad. Para cumplir nuestra misión, disponemos de vehículos de alta gama (turismos y vans) 
-                            equipados con las últimas tecnologías para garantizar un viaje placentero. Nuestro equipo está formado 
+                            Somos un equipo de chóferes profesionales con años de experiencia, cuya misión es transportar viajeros
+                            en vehículos privados, ofreciendo los mayores estándares de seguridad, comodidad, confidencialidad y
+                            puntualidad. Para cumplir nuestra misión, disponemos de vehículos de alta gama (turismos y vans)
+                            equipados con las últimas tecnologías para garantizar un viaje placentero. Nuestro equipo está formado
                             por conductores experimentados, con amplia formación en atención al cliente, lo que nos permite adaptarnos
-                            a sus necesidades de forma personalizada. Cada trayecto es una oportunidad para demostrar nuestro compromiso 
+                            a sus necesidades de forma personalizada. Cada trayecto es una oportunidad para demostrar nuestro compromiso
                             con la excelencia y convertir el desplazamiento en una experiencia tranquila, segura y profesional.
                         </p>
                     </div>
@@ -426,25 +381,25 @@
                             <img src="resources/img/telefAzul.png" alt="Teléfono" width="30" />
                         </a>
                         <!-- whatsapp -->
-                        <a href="https://wa.me/34602026725?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20informaci%C3%B3n%20sobre%20traslados%20o%20tours." 
+                        <a href="https://wa.me/34602026725?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20informaci%C3%B3n%20sobre%20traslados%20o%20tours."
                            target="_blank" class="btn btn-sm rounded-circle p-2 bg-white" title="WhatsApp"
                            aria-label="Contactar por WhatsApp con Basque Tours & Transfers">
                             <img src="resources/img/whatsapp_icono.png" alt="WhatsApp" width="30" />
                         </a>
                         <!-- instagram -->
-                        <a href="https://www.instagram.com/basque_tours_and_transfers/" target="_blank" 
+                        <a href="https://www.instagram.com/basque_tours_and_transfers/" target="_blank"
                            class="btn btn-sm rounded-circle p-2 bg-white" title="Instagram"
                            aria-label="Instagram Basque Tours & Transfers">
                             <img src="resources/img/instag.png" alt="Instagram" width="30" />
                         </a>
                         <!-- facebook -->
-                        <a href="https://www.facebook.com/basquetoursandtransfers"  target="_blank" 
+                        <a href="https://www.facebook.com/basquetoursandtransfers"  target="_blank"
                            class="btn btn-sm rounded-circle p-2 bg-white" title="Facebook"
                            aria-label="Facebook Basque Tours & Transfers">
                             <img src="resources/img/facebook_icono.png" alt="Facebook" width="30" />
                         </a>
                         <!-- telegram -->
-                        <a href="https://t.me/basquetoursandtransfers" target="_blank" 
+                        <a href="https://t.me/basquetoursandtransfers" target="_blank"
                            class="btn btn-sm rounded-circle p-2 bg-white" title="Telegram"
                            aria-label="Telegram Basque Tours & Transfers">
                             <img src="resources/img/telegram_icono.png" alt="Telegram" width="30" />
@@ -458,81 +413,18 @@
                 </div>
             </div>
         </footer>
-
-        <!-- boton prueba cookies 
-        <div class="text-center py-2 home-footer-bottom">
-            <a href="cookies.html" class="text-muted small">
-                Política de cookies
-            </a>
-        </div>
-
-        <button id="resetCookiesTest" style="
-position: fixed;
-bottom: 80px;
-right: 20px;
-z-index: 100000;
-padding: 8px 12px;
-font-size: 12px;
-">
-  Reset cookies (solo pruebas)
-</button>
-
-        <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const resetBtn = document.getElementById("resetCookiesTest");
-    if (resetBtn) {
-      resetBtn.addEventListener("click", function () {
-        localStorage.removeItem("cookiesAccepted");
-        location.reload();
-      });
-    }
-  });
-</script>
-
-        -->
         <!-- Modal lightbox -->
-        <div id="img-modal" class="modal" style="
-             display: none;
-             position: fixed;
-             top: 0; left: 0;
-             width: 100%; height: 100%;
-             background: rgba(0,0,0,0.8);
-             align-items: center;
-             justify-content: center;
-             z-index: 9999;
-             ">
-            <span id="modal-close" style="
-                  position: absolute;
-                  top: 20px; right: 30px;
-                  font-size: 2rem;
-                  color: #fff;
-                  cursor: pointer;
-                  ">&times;</span>
-            <img id="modal-img" src="" alt="" style="
-                 max-width: 90%;
-                 max-height: 90%;
-                 border-radius: 4px;
-                 "/>
+        <div id="img-modal" class="modal visor-imagen">
+            <span class="visor-cerrar" id="modal-close">&times;</span>
+            <img class="visor-foto" id="modal-img" src="" alt=""/>
         </div>
 
         <!-- Banner de cookies -->
-        <div id="cookie-banner" style="
-             position: fixed;
-             bottom: 0;
-             left: 0;
-             right: 0;
-             background: #00695c;
-             color: #fff;
-             padding: 15px 20px;
-             font-size: 14px;
-             display: none;
-             z-index: 99999;
-             ">
+        <div class="aviso-cookies" id="cookie-banner">
             <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
                 <span>
                     Usamos cookies técnicas para el funcionamiento del sitio.
-                    <a href="cookies.html" target="_blank" rel="noopener noreferrer" 
-                       style="color:#c8f7e5; text-decoration: underline;">
+                    <a class="aviso-cookies-enlace" href="cookies.html" target="_blank" rel="noopener noreferrer">
                         Más información
                     </a>
                 </span>
@@ -544,76 +436,22 @@ font-size: 12px;
             </div>
         </div>
 
-        <script>
-            function hideCookieBanner() {
-                const banner = document.getElementById("cookie-banner");
-                if (banner)
-                    banner.style.display = "none";
-            }
-
-            function showCookieBanner() {
-                const banner = document.getElementById("cookie-banner");
-                if (banner)
-                    banner.style.display = "block";
-            }
-
-            document.addEventListener("DOMContentLoaded", function () {
-                const choice = localStorage.getItem("cookiesAccepted");
-
-                // Si todavía no hay elección, mostramos banner
-                if (!choice)
-                    showCookieBanner();
-
-                // Botones
-                const btnAccept = document.getElementById("btn-accept-cookies");
-                const btnReject = document.getElementById("btn-reject-cookies");
-
-                if (btnAccept) {
-                    btnAccept.addEventListener("click", function () {
-                        localStorage.setItem("cookiesAccepted", "true");
-                        hideCookieBanner();
-                        // Aquí cargarías analytics en el futuro si quieres
-                    });
-                }
-
-                if (btnReject) {
-                    btnReject.addEventListener("click", function () {
-                        localStorage.setItem("cookiesAccepted", "false");
-                        hideCookieBanner();
-                    });
-                }
-            });
-        </script>
-
         <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
         <script src="resources/js/carruselDos.js"></script>
-        <script src="resources/js/idioma.js"></script> 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-                const enlacesCorreo = [document.getElementById("correoLink"), document.getElementById("iconoCorreo")];
-
-                enlacesCorreo.forEach(correoLink => {
-                    if (!correoLink) return;
-                    correoLink.href = isMobile
-                            ? "mailto:info@basquetoursandtransfers.com"
-                            : "https://mail.google.com/mail/?view=cm&fs=1&to=info@basquetoursandtransfers.com&tf=cm";
-                    correoLink.target = "_blank"; // se abre en nueva pestaña, opcional
-                });
-            });
-        </script>
+        <script src="resources/js/idioma.js"></script>
         <!-- Botón volver arriba -->
         <button id="btnScrollTop" aria-label="Volver arriba">
             ↑
         </button>
         <script src="resources/js/scrollTop.js"></script>
+        <script src="resources/js/inicio.js?v=20261121"></script>
 
         <!-- Botón flotante para Solicitar presupuesto -->
-        <button id="btnSolicitarPresupuesto" aria-label="Solicitar presupuesto" 
-                onclick="window.location.href = 'formulario.html'" data-i18n="botonSolicitar">
+        <button id="btnSolicitarPresupuesto" aria-label="Solicitar presupuesto"
+                data-i18n="botonSolicitar">
 
         </button>
 

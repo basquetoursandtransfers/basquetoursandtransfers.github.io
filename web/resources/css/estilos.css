@@ -719,3 +719,113 @@ En pantallas grandes: justificar automáticamente
 /* Selector de idiomas compacto */
 .site-nav .language-menu .dropdown-menu { min-width: 6.5rem; width: 6.5rem; }
 @media (max-width: 991.98px) { .site-nav .language-menu .dropdown-menu { width: 6.5rem; } }
+
+
+/* Página principal */
+/* Paleta de la página principal */
+body.home-page { background-color: #EBECF0; }
+.home-page .text-below-image { background-color: #DCE3E8; }
+.home-page .text-below-image .container { padding-bottom: .3rem !important; }
+.home-page .text-below-image p { margin-bottom: .25rem; }
+.home-page .bloque-carrusel .swiper-zoom-container { aspect-ratio: 4 / 3; overflow: hidden; border-radius: .5rem; }
+.home-page .bloque-carrusel .swiper-slide img { width: 100% !important; height: 100% !important; max-height: none; object-fit: cover; }
+.home-page .bloque-carrusel .swiper-slide img[src$="/cocheAlberto.webp"] { object-position: right center; }
+.home-page main, .home-page section.bg-white, .home-page section.bg-light {
+    background-color: #EBECF0 !important;
+}
+.home-page section.bg-dark { background-color: #20292D !important; }
+.home-page .footer-premium { background-color: #171E21; }
+.home-page .home-footer-bottom { background-color: #EBECF0; }
+
+/* Estilos de los elementos de la página principal */
+.home-page .titulo-principal { color: #21638A; }
+.home-page .subtitulo-principal { color: #58666A; }
+.home-page .texto-ajustable { word-break: break-word; white-space: normal; }
+.home-page .boton-presupuesto { background-color: #00695c; border: none; border-radius: 50px; }
+.home-page .seccion-tours { padding-top: 2rem !important; padding-bottom: 14rem !important; }
+.home-page .tours-contenido { max-width: none; }
+.home-page .tours-contenido .tours-texto { max-width: none; padding-left: 0; padding-right: 0; }
+.home-page #disposiciones .bloque-texto-ajustado { max-width: none; padding-left: 0; padding-right: 0; }
+.home-page .tours-texto { font-family: 'Segoe UI', 'Open Sans', sans-serif; }
+.home-page .separador-tours { border: none; border-top: 4px solid #999; width: 100%; margin-top: 2rem; margin-bottom: 0; }
+.home-page #disposiciones { padding-top: 2rem !important; }
+.home-page .seccion-servicios { padding-top: 2rem !important; }
+.home-page :is(#alquiler, #traslados) { padding-top: 2.25rem !important; padding-bottom: 2.25rem !important; }
+.home-page :is(#alquiler, #traslados, #tours, #disposiciones) .bloque-texto-ajustado { line-height: 1.55; }
+.home-page .seccion-superpuesta { z-index: 1; }
+.home-page .contacto-dato { font-size: 0.95rem; font-weight: 500; }
+.home-page .visor-imagen { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; z-index: 9999; }
+.home-page .visor-cerrar { position: absolute; top: 20px; right: 30px; font-size: 2rem; color: #fff; cursor: pointer; }
+.home-page .visor-foto { max-width: 90%; max-height: 90%; border-radius: 4px; }
+.home-page .aviso-cookies { position: fixed; bottom: 0; left: 0; right: 0; background: #00695c; color: #fff; padding: 15px 20px; font-size: 14px; display: none; z-index: 99999; }
+.home-page .aviso-cookies-enlace { color:#c8f7e5; text-decoration: underline; }
+
+/* Contacto en la página principal */
+.home-page .contacto-distribucion { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 2.5rem; max-width: 960px; margin: 0 auto; }
+.home-page .contacto-presentacion { text-align: center; }
+.home-page .contacto-presentacion h2 { margin-bottom: .75rem; }
+.home-page .contacto-presentacion p { margin: .75rem auto 0; max-width: 32rem; }
+.home-page .contacto-logo { display: inline-flex; align-items: center; justify-content: center; width: 98px; height: 98px; padding: 8px; border-radius: 50%; background: #fff; }
+.home-page .contacto-logo img { width: 100%; height: 100%; object-fit: contain; }
+.home-page .contacto-opciones { display: grid; gap: .35rem; }
+.home-page .contacto-opcion { display: flex; align-items: center; gap: 1rem; padding: .65rem 1rem; border-radius: .35rem; color: #fff; text-decoration: none; transition: color .2s; }
+.home-page .contacto-opcion:hover, .home-page .contacto-opcion:focus-visible { color: #a9d8ca; }
+.home-page .contacto-opcion img { flex: 0 0 30px; height: 30px; object-fit: contain; }
+.home-page .contacto-dato { overflow-wrap: anywhere; }
+.home-page .contacto-presupuesto { margin-top: 1.5rem; }
+@media (max-width: 767.98px) { .home-page .contacto-distribucion { grid-template-columns: 1fr; gap: 1.5rem; } }
+
+/* Espaciado compacto de la portada en móvil */
+@media (max-width: 767.98px) {
+    .home-page .text-below-image h1 { font-size: 1rem !important; line-height: 1.15 !important; margin-bottom: .3rem; }
+    .home-page .text-below-image p { font-size: .9rem; line-height: 1.2; }
+    .home-page :is(#alquiler, #traslados, #tours, #disposiciones, #quienes) .bloque-texto-ajustado { line-height: 1.4; }
+    .home-page #disposiciones li { line-height: 1.4; }
+    .home-page :is(.seccion-servicios, #alquiler, #traslados, #disposiciones, #contacto, #quienes) {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+    .home-page .seccion-servicios { padding-top: .75rem !important; }
+    .home-page .seccion-tours { padding-top: 1.5rem !important; }
+    .home-page :is(.seccion-servicios, #tours, #disposiciones) h2 { margin-bottom: 1rem !important; }
+    .home-page .seccion-servicios .row > div { margin-bottom: .65rem !important; }
+    .home-page .seccion-servicios .icon-servicio { width: 72px; height: 72px; margin-bottom: .35rem !important; }
+    .home-page .seccion-servicios .icon-servicio--cc { transform: scale(1.95); }
+    .home-page .seccion-servicios h5 { margin-bottom: .3rem; }
+    .home-page .seccion-servicios p { margin-bottom: 0; line-height: 1.4; }
+    .home-page .seccion-servicios .boton-presupuesto { padding: .7rem 1.5rem !important; font-size: 1rem; }
+    .home-page #disposiciones h4 { margin-bottom: .75rem !important; }
+    .home-page #disposiciones li { margin-bottom: .5rem !important; }
+    .home-page #disposiciones ul { margin-bottom: .5rem; }
+    .home-page :is(#alquiler, #traslados, #disposiciones, #quienes) .row > div { margin-bottom: 1rem; }
+    .home-page .separador-tours { margin-top: 1rem; }
+    .home-page .contacto-distribucion { gap: .75rem; }
+    .home-page .contacto-presentacion h2 { margin-bottom: .4rem; }
+    .home-page .contacto-logo { width: 76px; height: 76px; }
+    .home-page .contacto-presentacion p { margin-top: .5rem; font-size: 1rem; line-height: 1.4; }
+    .home-page .contacto-opciones { gap: 0; }
+    .home-page .contacto-opcion { min-height: 44px; padding: .4rem .5rem; }
+    .home-page .contacto-presupuesto { margin-top: .75rem; }
+    .home-page .contacto-presupuesto .boton-presupuesto { padding: .65rem 1.5rem !important; font-size: 1rem; }
+    .home-page .footer-premium > .container > div { margin-top: .5rem !important; gap: .75rem !important; }
+    /* Menos espacio entre bloques y al final de cada sección */
+    .home-page :is(.seccion-servicios, #alquiler, #traslados, #disposiciones, #contacto, #quienes) {
+        padding-top: .75rem !important;
+        padding-bottom: .75rem !important;
+    }
+    .home-page :is(#alquiler, #traslados, #disposiciones, #quienes) .row > div { margin-bottom: 0; }
+    .home-page :is(#alquiler, #traslados, #disposiciones, #quienes) .row > .mb-4 { margin-bottom: .5rem !important; }
+    .home-page :is(#alquiler, #traslados, #disposiciones, #quienes) .bloque-texto-ajustado { margin-bottom: .25rem; }
+    .home-page :is(#alquiler, #traslados, #quienes) h3 { margin-bottom: .5rem !important; }
+    .home-page #disposiciones > .container > .row.mb-3 { margin-bottom: .25rem !important; }
+    .home-page .seccion-tours { padding-top: .75rem !important; padding-bottom: 12.75rem !important; }
+    .home-page .tours-texto { margin-bottom: 0; }
+    .home-page .separador-tours { margin-top: .5rem; }
+}
+
+/* Enlace compacto de detalles en móvil */
+@media (max-width: 767.98px) {
+    .home-page .detalle-movil { display: inline; padding: .4rem .2rem; color: #00695c; font-weight: 600; text-decoration: underline; text-underline-offset: .15em; white-space: nowrap; }
+    .home-page .bg-dark .detalle-movil { color: #a9d8ca; }
+    .home-page .detalle-movil:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+}
