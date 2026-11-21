@@ -48,7 +48,13 @@ function traducirPagina(textos) {
         if (!textoTraducido)
             return;
 
-        if (elemento.tagName === "INPUT" || elemento.tagName === "TEXTAREA") {
+        if (clave === "seoH1" && textoTraducido.includes("|")) {
+            const partes = textoTraducido.split("|");
+            const separador = document.createElement("span");
+            separador.className = "separador-titulo";
+            separador.textContent = "|";
+            elemento.replaceChildren(document.createTextNode(partes[0]), separador, document.createTextNode(partes.slice(1).join("|")));
+        } else if (elemento.tagName === "INPUT" || elemento.tagName === "TEXTAREA") {
             elemento.placeholder = textoTraducido;
         } else if (elemento.tagName === "OPTION") {
             elemento.textContent = textoTraducido;

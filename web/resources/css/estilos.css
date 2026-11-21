@@ -777,6 +777,7 @@ body.home-page { background-color: #EBECF0; }
 
 /* Espaciado compacto de la portada en móvil */
 @media (max-width: 767.98px) {
+    .home-page .separador-titulo { display: none; }
     .home-page .text-below-image h1 { font-size: 1rem !important; line-height: 1.15 !important; margin-bottom: .3rem; }
     .home-page .text-below-image p { font-size: .9rem; line-height: 1.2; }
     .home-page :is(#alquiler, #traslados, #tours, #disposiciones, #quienes) .bloque-texto-ajustado { line-height: 1.4; }
