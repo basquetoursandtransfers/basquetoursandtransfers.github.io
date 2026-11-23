@@ -717,6 +717,17 @@ En pantallas grandes: justificar automáticamente
 }
 @media (max-width: 420px) { .site-brand { font-size: .85rem; gap: .3rem; } .site-brand img { max-height: 54px; } }
 
+
+/* Cabecera móvil: marca centrada entre el logotipo y el menú. */
+@media (max-width: 991.98px) {
+    .site-nav { min-height: 64px; }
+    .site-nav .site-brand { flex: 1 1 auto; min-width: 0; gap: .3rem; margin-right: 0; }
+    .site-nav .site-brand img { flex: 0 0 auto; max-height: 64px; }
+    .site-nav .site-brand span { flex: 1 1 auto; min-width: 0; text-align: center; white-space: nowrap; font-size: clamp(.75rem, 3.7vw, 1.25rem); }
+    .site-nav .navbar-toggler { flex: 0 0 48px; border: 0; padding: .5rem; box-shadow: none; }
+    .site-nav .navbar-toggler:focus-visible { outline: 2px solid #285c4d; outline-offset: 2px; }
+}
+
 /* Selector de idiomas compacto */
 .site-nav .language-menu .dropdown-menu { min-width: 6.5rem; width: 6.5rem; }
 @media (max-width: 991.98px) { .site-nav .language-menu .dropdown-menu { width: 6.5rem; } }
@@ -767,6 +778,33 @@ body.home-page { background-color: #C8C8C4; }
 .home-page .tours-contenido .tours-texto { max-width: none; padding-left: 0; padding-right: 0; }
 .home-page #disposiciones .bloque-texto-ajustado { max-width: none; padding-left: 0; padding-right: 0; }
 .home-page .titulo-ventajas { color: #000; }
+.home-page :is(#alquiler, #traslados, #tours, #disposiciones) :is(h2, h3),
+.home-page .seccion-servicios h5 { color: var(--verde-presupuesto); }
+.home-page :is(#alquiler h3, #traslados h3, #tours h2, #disposiciones h2) {
+    position: relative;
+    isolation: isolate;
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .2rem .6rem;
+}
+.home-page :is(#alquiler h3, #traslados h3, #tours h2, #disposiciones h2)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(to right, transparent, #d7dbd5 2%, #d7dbd5 98%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
+    pointer-events: none;
+}
+.home-page :is(#traslados h3, #tours h2, #disposiciones h2) { overflow: visible; }
+.home-page :is(#traslados h3, #tours h2, #disposiciones h2)::before {
+    left: -1rem;
+    right: -1rem;
+    background: linear-gradient(to right, transparent, #d7dbd5 1rem, #d7dbd5 calc(100% - 1rem), transparent);
+}
 .home-page .tours-texto { font-family: 'Segoe UI', 'Open Sans', sans-serif; }
 .home-page .separador-tours { border: none; border-top: 4px solid #999; width: 100%; margin-top: 2rem; margin-bottom: 0; }
 .home-page #disposiciones { padding-top: 2rem !important; }
@@ -798,6 +836,7 @@ body.home-page { background-color: #C8C8C4; }
 
 /* Espaciado compacto de la portada en móvil */
 @media (max-width: 767.98px) {
+    .home-page #alquiler h3 { white-space: nowrap; font-size: calc((1.3rem + .6vw) * .97); }
     .home-page .separador-titulo { display: none; }
     .home-page .text-below-image h1 { font-size: 1rem !important; line-height: 1.15 !important; margin-bottom: .3rem; }
     .home-page .text-below-image p { font-size: .9rem; line-height: 1.2; }
