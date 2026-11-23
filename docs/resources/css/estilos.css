@@ -1,3 +1,4 @@
+:root { --verde-presupuesto: #3b7a57; --verde-presupuesto-hover: #2b5d41; }
 
 /* HEADER fijo y con fondo blanco   ///////////////////////////////////////  */
 header {
@@ -521,7 +522,7 @@ En pantallas grandes: justificar automáticamente
     height: 42px;
     border-radius: 50%;
     border: none;
-    background-color: #3b7a57; /* verde discreto */
+    background-color: var(--verde-presupuesto);
     color: #fff;
     font-size: 1.4rem;
     cursor: pointer;
@@ -666,7 +667,7 @@ En pantallas grandes: justificar automáticamente
     padding: 0 08px; /* Reduce el espacio a la izquierda y derecha */
     border-radius: 15px;
     border: none;
-    background-color: #3b7a57; /* Mismo color verde */
+    background-color: var(--verde-presupuesto);
     color: #fff;
     font-size: 0.5rem;
     cursor: pointer;
@@ -705,8 +706,8 @@ En pantallas grandes: justificar automáticamente
 .site-nav .dropdown-item:hover, .site-nav .dropdown-item:focus { background: #edf5f3; color: #00695c; }
 .site-nav .language-toggle { display: flex; align-items: center; gap: .4rem; }
 .site-nav .language-toggle img, .site-nav .lang-selector img { width: 25px; height: 17px; object-fit: cover; margin-right: .35rem; }
-.site-nav-cta { display: inline-block; padding: .7rem 1.1rem; border-radius: 2rem; background: #00695c; color: white; text-decoration: none; font-weight: 700; }
-.site-nav-cta:hover, .site-nav-cta:focus { background: #004d43; color: white; }
+.site-nav-cta { display: inline-block; padding: .7rem 1.1rem; border-radius: 2rem; background: var(--verde-presupuesto); color: white; text-decoration: none; font-weight: 700; }
+.site-nav-cta:hover, .site-nav-cta:focus { background: var(--verde-presupuesto-hover); color: white; }
 @media (max-width: 991.98px) {
     .site-nav .navbar-collapse { flex-basis: 100%; padding: .5rem 0 1rem; }
     .site-nav .navbar-nav { flex-direction: column; align-items: stretch; }
@@ -723,6 +724,7 @@ En pantallas grandes: justificar automáticamente
 
 /* Página principal */
 /* Paleta de la página principal */
+.home-page .imagen-seccion { border: 1px solid #A8B0AC; box-shadow: 0 10px 26px rgba(0, 0, 0, .35) !important; }
 body.home-page { background-color: #C8C8C4; }
 .home-page .text-below-image { background-color: #DCE3E8; }
 .home-page .text-below-image .container { padding-bottom: .3rem !important; }
@@ -738,20 +740,38 @@ body.home-page { background-color: #C8C8C4; }
 .home-page .footer-premium { background-color: #171E21; }
 .home-page .home-footer-bottom { background-color: #EBECF0; }
 
+/* Franja de transición, reservada fuera del contenido de cada sección. */
+.home-page :is(.seccion-servicios, #alquiler, #traslados) {
+    position: relative;
+    padding-bottom: calc(3rem + 40px) !important;
+}
+.home-page :is(.seccion-servicios, #alquiler, #traslados)::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 40px;
+    pointer-events: none;
+}
+.home-page .seccion-servicios::after { background: linear-gradient(to bottom, #EBECF0 0%, #e0e1e5 15%, #868d90 50%, #293237 85%, #20292D 100%); }
+.home-page #alquiler::after { background: linear-gradient(to bottom, #20292D, #C8C8C4); }
+.home-page #traslados::after { background: linear-gradient(to bottom, #C8C8C4 0%, #bebfbc 15%, #747b7c 50%, #293237 85%, #20292D 100%); }
+
 /* Estilos de los elementos de la página principal */
 .home-page .titulo-principal { color: #21638A; }
 .home-page .subtitulo-principal { color: #58666A; }
 .home-page .texto-ajustable { word-break: break-word; white-space: normal; }
-.home-page .boton-presupuesto { background-color: #00695c; border: none; border-radius: 50px; }
+.boton-presupuesto { background-color: var(--verde-presupuesto); border: none; border-radius: 50px; color: #fff; }
+.boton-presupuesto:hover, .boton-presupuesto:focus-visible { background-color: var(--verde-presupuesto-hover); color: #fff; }
 .home-page .seccion-tours { padding-top: 2rem !important; padding-bottom: 14rem !important; }
 .home-page .tours-contenido { max-width: none; }
 .home-page .tours-contenido .tours-texto { max-width: none; padding-left: 0; padding-right: 0; }
 .home-page #disposiciones .bloque-texto-ajustado { max-width: none; padding-left: 0; padding-right: 0; }
+.home-page .titulo-ventajas { color: #000; }
 .home-page .tours-texto { font-family: 'Segoe UI', 'Open Sans', sans-serif; }
 .home-page .separador-tours { border: none; border-top: 4px solid #999; width: 100%; margin-top: 2rem; margin-bottom: 0; }
 .home-page #disposiciones { padding-top: 2rem !important; }
 .home-page .seccion-servicios { padding-top: 2rem !important; }
-.home-page :is(#alquiler, #traslados) { padding-top: 2.25rem !important; padding-bottom: 2.25rem !important; }
+.home-page :is(#alquiler, #traslados) { padding-top: 2.25rem !important; padding-bottom: calc(2.25rem + 40px) !important; }
 .home-page :is(#alquiler, #traslados, #tours, #disposiciones) .bloque-texto-ajustado { line-height: 1.55; }
 .home-page .seccion-superpuesta { z-index: 1; }
 .home-page .contacto-dato { font-size: 0.95rem; font-weight: 500; }
@@ -796,7 +816,7 @@ body.home-page { background-color: #C8C8C4; }
     .home-page .seccion-servicios h5 { margin-bottom: .3rem; }
     .home-page .seccion-servicios p { margin-bottom: 0; line-height: 1.4; }
     .home-page .seccion-servicios .boton-presupuesto { padding: .7rem 1.5rem !important; font-size: 1rem; }
-    .home-page #disposiciones h4 { margin-bottom: .75rem !important; }
+    .home-page #disposiciones h4 { margin-bottom: .75rem !important; font-size: clamp(.8rem, 4vw, 1.1rem); }
     .home-page #disposiciones li { margin-bottom: .5rem !important; }
     .home-page #disposiciones ul { margin-bottom: .5rem; }
     .home-page :is(#alquiler, #traslados, #disposiciones, #quienes) .row > div { margin-bottom: 1rem; }
@@ -811,10 +831,11 @@ body.home-page { background-color: #C8C8C4; }
     .home-page .contacto-presupuesto .boton-presupuesto { padding: .65rem 1.5rem !important; font-size: 1rem; }
     .home-page .footer-premium > .container > div { margin-top: .5rem !important; gap: .75rem !important; }
     /* Menos espacio entre bloques y al final de cada sección */
-    .home-page :is(.seccion-servicios, #alquiler, #traslados, #disposiciones, #contacto, #quienes) {
+    .home-page :is(.seccion-servicios, #alquiler, #traslados) {
         padding-top: .75rem !important;
-        padding-bottom: .75rem !important;
+        padding-bottom: calc(.75rem + 40px) !important;
     }
+    .home-page :is(#disposiciones, #contacto, #quienes) { padding-top: .75rem !important; padding-bottom: .75rem !important; }
     .home-page :is(#alquiler, #traslados, #disposiciones, #quienes) .row > div { margin-bottom: 0; }
     .home-page :is(#alquiler, #traslados, #disposiciones, #quienes) .row > .mb-4 { margin-bottom: .5rem !important; }
     .home-page :is(#alquiler, #traslados, #disposiciones, #quienes) .bloque-texto-ajustado { margin-bottom: .25rem; }
