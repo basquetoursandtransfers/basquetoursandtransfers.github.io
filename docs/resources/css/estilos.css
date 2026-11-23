@@ -817,7 +817,21 @@ body.home-page { background-color: #C8C8C4; }
     background: linear-gradient(to right, transparent, #d7dbd5 1rem, #d7dbd5 calc(100% - 1rem), transparent);
 }
 .home-page .tours-texto { font-family: 'Segoe UI', 'Open Sans', sans-serif; }
-.home-page .separador-tours { border: none; border-top: 4px solid #999; width: 100%; margin-top: 2rem; margin-bottom: 0; }
+.home-page .fondo-carrusel {
+    display: flow-root;
+    background: #20292D;
+    position: relative;
+    padding-bottom: 40px;
+}
+.home-page .fondo-carrusel::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 40px;
+    background: linear-gradient(to bottom, #20292D, #C8C8C4);
+    pointer-events: none;
+}
+.home-page .separador-tours { border: 0; height: 0; margin: 2rem 0 0; }
 .home-page #disposiciones { padding-top: 2rem !important; }
 .home-page .seccion-servicios { padding-top: 2rem !important; }
 .home-page :is(#alquiler, #traslados) { padding-top: 2.25rem !important; padding-bottom: calc(2.25rem + 40px) !important; }
