@@ -770,6 +770,17 @@ body.home-page { background-color: #C8C8C4; }
 /* Estilos de los elementos de la página principal */
 .home-page .titulo-principal { color: #21638A; }
 .home-page .subtitulo-principal { color: #58666A; }
+.home-page .frase-hero {
+    position: absolute;
+    top: 9%;
+    left: 38%;
+    width: 58%;
+    margin: 0;
+    text-align: center;
+    line-height: 1.2;
+    font-size: clamp(1.25rem, 2vw, 2.1rem);
+    font-weight: 700;
+}
 .home-page .texto-ajustable { word-break: break-word; white-space: normal; }
 .boton-presupuesto { background-color: var(--verde-presupuesto); border: none; border-radius: 50px; color: #fff; }
 .boton-presupuesto:hover, .boton-presupuesto:focus-visible { background-color: var(--verde-presupuesto-hover); color: #fff; }
@@ -836,6 +847,7 @@ body.home-page { background-color: #C8C8C4; }
 
 /* Espaciado compacto de la portada en móvil */
 @media (max-width: 767.98px) {
+    .home-page .frase-hero { top: 7%; font-size: clamp(.65rem, 3.2vw, .9rem); white-space: nowrap; }
     .home-page #alquiler h3 { white-space: nowrap; font-size: calc((1.3rem + .6vw) * .97); }
     .home-page .separador-titulo { display: none; }
     .home-page .text-below-image h1 { font-size: 1rem !important; line-height: 1.15 !important; margin-bottom: .3rem; }
